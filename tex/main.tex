@@ -1,0 +1,225 @@
+\documentclass[12pt,letterpaper]{article}
+
+\PassOptionsToPackage{hyphens}{url}
+
+
+\usepackage{setspace}
+\onehalfspacing
+
+% === MARGINS ===
+\addtolength{\hoffset}{-0.75in} 
+\addtolength{\voffset}{-1.25in}
+\addtolength{\textwidth}{1.5in} 
+\addtolength{\textheight}{2.25in}
+
+% == ENVS ==
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{
+  \end{center}
+}
+
+% == PACKS ==
+\usepackage{color,soul}
+\usepackage{graphicx} % to use pngs in tex (include graphix)
+\usepackage{calc} % To scale \pagewidth with \real{float}
+\usepackage{pgfplots} % To draw histogram
+
+\pgfplotsset{
+  compat=1.17, 
+colormap/viridis
+} % request specific version of pgfplots
+
+\usepackage{calc} % to use \real for text -> numeric
+\usepackage{pgf} % to store numeric variables
+\usepackage{subcaption} % to place two figures horizontally
+\usepackage{caption} % to refer subfigure
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+\captionsetup[sub]{labelformat=simple}
+\captionsetup[table]{font={stretch=1.2}}  % adjust line space in captions of TABLE and FIGURES
+\captionsetup[figure]{font={stretch=1.2}}  
+
+
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+\usetikzlibrary{arrows.meta, positioning, automata}
+\usetikzlibrary{spy}
+\usetikzlibrary{shadows}
+\usetikzlibrary{arrows,positioning,shapes.geometric} % for dnn flowchart
+
+
+\tikzset{
+  font={\fontsize{10pt}{0}\selectfont}}
+\usepackage{forest}
+\tikzset{
+  Decision/.style = {%
+    draw,
+    line width=1.4pt
+  },
+  Lottery/.style = {%
+    draw,
+    line width=1.4pt
+  },
+  Outcome/.style = {%
+    circle,
+    minimum width=3pt,
+    fill,
+    inner sep=0pt
+  }
+}
+\usepackage{csquotes}
+\usepackage{lipsum}
+\usetikzlibrary{arrows.meta,automata,positioning} % to draw directed-weighted-graph
+
+
+\usepackage{amsmath, amssymb, latexsym} % NN
+\usepackage{tikz}% NN
+\usetikzlibrary{decorations.pathreplacing}% NN
+\usetikzlibrary{fadings}% NN
+
+
+\usepackage{xltabular}
+\usepackage{booktabs}
+
+\usepackage[breakable, skins]{tcolorbox} % to add factual asepct inside a frame
+
+\usepackage[title]{appendix}
+
+%to prevent page and footnotes swalloen by the table
+
+
+% == Checkmarks == 
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{amssymb}
+% ================
+
+% == BIBS ==
+\usepackage{natbib}
+
+\usepackage{diagbox}
+
+\usepackage[bottom]{footmisc}
+
+\usepackage[
+  hidelinks,
+  pdftex, 
+  bookmarksopen=true, 
+  bookmarksnumbered=true,
+  pdfstartview=FitH, 
+  breaklinks=true, 
+  urlbordercolor={0 1 0}, 
+  citebordercolor={0 0 1}]
+  {hyperref}
+
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\SetKwFor{For}{for (}{) $\lbrace$}{$\rbrace$}
+
+%%% Coloring the comment as blue
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
+
+\SetKwInput{KwInput}{Input}                % Set the Input
+\SetKwInput{KwOutput}{Output}   
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\usepackage{varwidth}% http://ctan.org/pkg/varwidth
+
+
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\bibliographystyle{apsr}
+
+% == SPACES == 
+
+% == CMMDS ==
+\newcommand{\tit}{
+\bf 
+The Privileged Advantage: Evidence of Congressional Insider Trading
+}
+\newcommand\spacingset[1]{\renewcommand{\baselinestretch}
+{#1}\small\normalsize}
+
+% To draw embedding layer
+\newcommand*{\xMin}{0}%
+\newcommand*{\xMax}{6}%
+\newcommand*{\yMin}{0}%
+\newcommand*{\yMax}{9}%
+% To draw conv output
+\newcommand*{\xMinOut}{10}%
+\newcommand*{\xMaxOut}{11}%
+\newcommand*{\yMinOut}{1}%
+\newcommand*{\yMaxOut}{8}%
+
+
+% == VARS == 
+\pgfmathsetmacro{\heatmap}{1}
+
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+% == START (PageCounter, Mode)
+\begin{document}
+
+\spacingset{1.25}
+
+\setcounter{page}{0}
+\vspace{-.1in}
+
+% == TITLE (includes DraftDate)
+{\title{
+    \tit
+  }
+  \author{
+  %   Suyeol Yun
+  % \thanks{Applicant to Ph.D. program of MIT Political Science,
+  % Address: 118 Seorim-gil, Sillim-dong, Gwanak-gu, Seoul,
+  % 08839. Email: \href{mailto:syyun@snu.ac.kr}{syyun@snu.ac.kr}
+  % % , URL: \href{http://web.mit.edu/insong/www/}{http://web.mit.edu/insong/www/}
+  % }
+  }
+  \maketitle
+}
+
+\thispagestyle{empty}
+\vspace{-.1in}
+
+\begin{abstract}
+  This paper examines the issue of whether members of Congress enjoy excess returns from their personal securities investments. Previous studies have reached conflicting conclusions on the matter. This paper collects and analyzes all securities transaction data of US Senators from 2014-2021, and provides empirical evidence that suggests that the occurrence of "excess-return" is not as widespread as previously believed. However, the study also identifies a few Senators who appear to enjoy outlier excess returns, which could be confounded by factors other than privileged information, such as general market knowledge or macro-economic factors. This paper argues that further research is necessary to identify the sources of excess returns for these Senators, including the development of methodologies to ascertain whether they use privileged knowledge. Such methodologies might involve causal inference based on the possible connections inferred from transaction data such as committee assignments or a better understanding of local companies in their constituencies.
+\end{abstract}
+
+\spacingset{1.5} % gives a slightly more margin between abstract and introduction
+
+\clearpage
+
+% == INTRO ==
+\section{Introduction}
+The investment behavior of members of Congress has long been a topic of concern among the public, the media, and scholars. The issue raises concerns about conflicts of interest, insider trading, and abuse of power, as members of Congress have access to privileged and confidential information that may provide them with an unfair advantage in the stock market. Furthermore, the use of such information for personal financial gain can be seen as a breach of public trust and may undermine the integrity of the democratic system.
+
+In recent years, several studies have examined the investment behavior of Congressmen, including Ziobrowski et al. (2004, 2011) and Eggers & Hainmuller (2013, 2014). Ziobrowski's studies found that Senators and House representatives beat the market and enjoyed excess returns, while Eggers and Hainmuller's studies found the opposite. However, all of these studies were conducted before the most recent legislation to regulate congressional investment, the Stock Act (2012), which became effective as of April 4, 2012.
+
+Moreover, the data used in these studies are outdated, as all of them are collected before 2001. Additionally, the findings are not reproducible, as Ziobrowski refused to provide data and Eggers and Hainmuller lost their data as well.
+
+In response to these limitations, this paper collected data on all transaction records of Senators buying and selling securities between 2014-2021. The data was obtained from the Senate Financial Disclosure website, which provides detailed information on the securities holdings and transactions of Senators. In total, there were 25,000 transactions included in the dataset.
+
+To assess the investment behavior of Senators, the paper computed the excess return for each life cycle of transactions, starting from the purchase of a specific ticker of securities and ending with the sale. Excess returns were computed as returns above the average risk-free federal reserve rates over those periods.
+
+The findings of this study show that Senators do not enjoy "wide-spread" excess returns from their trading, which is consistent with the findings of Eggers and Hainmuller (2013). However, the study also found a few outliers who gained significant financial gains, and some of these transactions have already been exposed to the public by journalists, while others remain undisclosed.
+
+The biggest challenge in this line of research is how to prove that Congressmen use their privileged knowledge for their stock trading. While the "excess return" does not necessarily imply that Congressmen use privileged knowledge, many of the famous transactions can be linked to the Congressmen's titles, committees, sponsorships, and their representation of specific states. Therefore, future research will focus on the design of proper empirical strategies to effectively track down the sources of privileged knowledge that are more closely linked to investment and that can identify instances of unethical investment behavior among Congressmen.
+% \clearpage 
+% \bibliography{bibtemplate}
+
+
+\end{document}
