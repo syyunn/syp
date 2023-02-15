@@ -196,11 +196,8 @@ The Privileged Advantage: Evidence of Congressional Insider Trading
 \vspace{-.1in}
 
 \begin{abstract}
-  This paper examines the issue of whether members of Congress enjoy excess returns from their personal securities investments. Previous studies have reached conflicting conclusions on the matter. This paper collects and analyzes all securities transaction data of US Senators from 2014-2021, and provides empirical evidence that suggests that the occurrence of "excess-return" is not as widespread as previously believed. However, the study also identifies a few Senators who appear to enjoy outlier excess returns, which could be confounded by factors other than privileged information, such as general market knowledge or macro-economic factors. This paper argues that further research is necessary to identify the sources of excess returns for these Senators, including the development of methodologies to ascertain whether they use privileged knowledge. Such methodologies might involve causal inference based on the possible connections inferred from transaction data such as committee assignments or a better understanding of local companies in their constituencies.
-\end{abstract}
-
+  Research on congressional investment has produced conflicting conclusions regarding whether members of Congress enjoy excess returns from their investments. In this paper, I collected all securities transaction data of US senators from 2014-2021 and found empirical evidence that excess return is not as common as the public believes. However, I address the point that a few senators were identified as enjoying outlier excess returns from their investments. I explain that excess return itself does not conclusively indicate the use of "privileged" or "insider" information, as other factors such as higher levels of general understanding of financial markets and macroeconomics could also be at play. In conclusion, further investigation and the development of proper methodologies are needed to identify the sources of excess return for those senators who have been identified as enjoying outlier excess returns. 
 \spacingset{1.5} % gives a slightly more margin between abstract and introduction
-
 \clearpage
 
 % == INTRO ==
@@ -208,8 +205,7 @@ The Privileged Advantage: Evidence of Congressional Insider Trading
 The investment behavior of members of Congress has long been a topic of concern among the public, the media, and scholars. The issue raises concerns about conflicts of interest, insider trading, and abuse of power, as members of Congress have access to privileged and confidential information that may provide them with an unfair advantage in the stock market. Furthermore, the use of such information for personal financial gain can be seen as a breach of public trust and may undermine the integrity of the democratic system.
 
 In recent years, several studies have examined the investment behavior of Congressmen, including Ziobrowski et al. (2004, 2011) and Eggers & Hainmuller (2013, 2014). Ziobrowski's studies found that Senators and House representatives beat the market and enjoyed excess returns, while Eggers and Hainmuller's studies found the opposite. However, all of these studies were conducted before the most recent legislation to regulate congressional investment, the Stock Act (2012), which became effective as of April 4, 2012.
-
-Moreover, the data used in these studies are outdated, as all of them are collected before 2001. Additionally, the findings are not reproducible, as Ziobrowski refused to provide data and Eggers and Hainmuller lost their data as well.
+Therefore, the data used in these studies are outdated, as all of them are collected before 2001. Additionally, the findings are not reproducible, as Ziobrowski refused to provide data and Eggers and Hainmuller lost their data as well.
 
 In response to these limitations, this paper collected data on all transaction records of Senators buying and selling securities between 2014-2021. The data was obtained from the Senate Financial Disclosure website, which provides detailed information on the securities holdings and transactions of Senators. In total, there were 25,000 transactions included in the dataset.
 
@@ -218,8 +214,43 @@ To assess the investment behavior of Senators, the paper computed the excess ret
 The findings of this study show that Senators do not enjoy "wide-spread" excess returns from their trading, which is consistent with the findings of Eggers and Hainmuller (2013). However, the study also found a few outliers who gained significant financial gains, and some of these transactions have already been exposed to the public by journalists, while others remain undisclosed.
 
 The biggest challenge in this line of research is how to prove that Congressmen use their privileged knowledge for their stock trading. While the "excess return" does not necessarily imply that Congressmen use privileged knowledge, many of the famous transactions can be linked to the Congressmen's titles, committees, sponsorships, and their representation of specific states. Therefore, future research will focus on the design of proper empirical strategies to effectively track down the sources of privileged knowledge that are more closely linked to investment and that can identify instances of unethical investment behavior among Congressmen.
-% \clearpage 
-% \bibliography{bibtemplate}
 
+\section{Data}
+
+This section describes the dataset used in this study. The data was obtained from the Senate Financial Disclosure database and an API provided by ``polygon.io''. This section explains the sources of the dataset, how it was collected, and the process involved in preparing the dataset for analysis.
+
+
+\subsection{Sources of the dataset}
+
+According to The Ethics in Government Act (EIGA, specifically 5 U.S.C. app. §§ 101-112) and Stop Trading on Congressional Knowledge Act (STOCK Act), senators are required to report their financial transactions to Senate and Senate maintains those information to be publicly accessible. Therefore, the list of Senators for the 115th to 118th Congress, a total of 410 senators, was collected. Then the Senate Financial Disclosure database was queried to collect their annual financial reports, which include their entire transactions for that specific year, covering the years ranging from 2014-2021, which resulted in 1183 reports.
+
+
+\subsection{Data Collection}
+
+After obtaining the financial reports of the Senators, each transaction record was parsed out, consisting of ticker, transaction type, transaction date, and amount. In total, 25023 transactions were collected. The amount in the data only discloses the "range" of values, from min to max, such as \$1,001 to \$15,000, \$15,001 to \$50,000, etc. This range of estimates makes the estimate of the return of the congressmen hard, but later in the paper, the method of overcoming this uncertainty is explained.
+
+
+\subsection{Data Preparation}
+
+After collecting the transaction data, an API provided by "polygon.io" was used to query the stock price for each transaction. The VWAP, which is the volume-weighted average price, was used because it is the most representative price of each transaction date. Then the stock price data was merged with the transaction data to obtain the complete information about each transaction. Finally, the dataset was prepared for analysis, with each row of data representing a senator's transaction, with columns for the senator's name, ticker, transaction date, transaction type, amount, and VWAP.
+
+As an example, a row in the final dataset looks like this: \\ \begin{center} David A. Perdue, Jr. AAPL 2016-02-03 Purchase \$1,001 \$15,000 \$49.7576 \end{center}
+
+\section{Analysis}
+
+The purpose of this paper is to investigate the investment activities of Congressmen and to determine whether they obtain abnormal returns. 
+In this section, I explain the methodology, which is a ``buy-sell matching approach'' that differs from the previous ``calendar-time transaction-based'' approach used in previous literature.
+
+\subsection{Methodology}
+
+In previous literature, Ziobrowski et al. (2004), Ziobrowski et al. (2011), Eggers & Hainmuleer (2013), and Eggers & Hainmuleer (2014) used the ``calendar-time transaction-based'' approach to compare two synthetic portfolios built from members' stock purchases and sales. This approach mimics members' stock purchases and sales, buying each stock on the day when the member buys it and selling it 12 months later. However, since I have the exact date of each transaction, I used a ``buy-sell matching approach.''
+
+This approach matches each purchased unit with a sale based on a first-in, first-out (FIFO) approach to compute the return in percent, which denotes how much was earned for a dollar invested. We subtracted on-average federal fund rates over the period of each matched transaction, which is a risk-free income that could be earned if the senator did not invest it but put it into their savings account. However, since I only have a range of amounts for each transaction, I randomly sampled the amount from the uniform distribution to compute how many units were purchased or sold. For each record of transactions for each (Senator, Ticker) pair, I iteratively computed the distribution of their estimated return until the mean and standard deviation of the distribution converged within a threshold of $0.001$ compared to the previous iteration.
+
+\subsection{Results}
+From our approach, we recorded transaction records for 333 distinct pairs of (Senator, Ticker). I found that the average excess return was 3.048\% with a standard deviation of 19.42\%. 
+% This result indicates that, on average, Congressmen earn a higher return on their investments compared to the general public, and the high standard deviation indicates that the return varies widely across Congressmen and investments.
+
+\section{}
 
 \end{document}
