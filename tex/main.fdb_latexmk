@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1676438013 "main.aux" "main.bbl" "main" 1676438048
+["bibtex main"] 1676438013 "main.aux" "main.bbl" "main" 1676438495
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   "biblo.bib" 1676431766 2227 02cbed957abf38ef8905486d686d2761 ""
-  "main.aux" 1676438048 4114 c3eddea4f9f9b2393a226f1ae1c99de2 "pdflatex"
+  "main.aux" 1676438495 4114 c3eddea4f9f9b2393a226f1ae1c99de2 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1676438046 "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" "main.pdf" "main" 1676438048
-  "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" 1676438046 21077 2c98d832f7fd7ef0ee7557df97e72230 ""
+["pdflatex"] 1676438493 "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" "main.pdf" "main" 1676438495
+  "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" 1676438493 21079 67adf962b8a266dec5610b116a0cecf0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -310,10 +310,10 @@
   "imgs/RW-AMAT/RW-AMAT.png" 1676433225 15842 1fcd560708249e2a29da8ef6c2ca223e ""
   "imgs/RW-AMAT/RW-Trans.png" 1676433254 410135 48f41145762d784f4d6b0f78f5ce0694 ""
   "imgs/ex-r/aggregate.png" 1676435905 190574 9a4f08d7429ea6a39a31711e8d600af7 ""
-  "main.aux" 1676438048 4114 c3eddea4f9f9b2393a226f1ae1c99de2 "pdflatex"
+  "main.aux" 1676438495 4114 c3eddea4f9f9b2393a226f1ae1c99de2 "pdflatex"
   "main.bbl" 1676438013 1098 896ef92d7e97addf133375fab6711a18 "bibtex main"
-  "main.out" 1676438048 2542 a4a5fbeae226428ee16f9ac4957cfbba "pdflatex"
-  "main.tex" 1676438046 21077 2c98d832f7fd7ef0ee7557df97e72230 ""
+  "main.out" 1676438495 2542 a4a5fbeae226428ee16f9ac4957cfbba "pdflatex"
+  "main.tex" 1676438493 21079 67adf962b8a266dec5610b116a0cecf0 ""
   (generated)
   "main.aux"
   "main.log"
