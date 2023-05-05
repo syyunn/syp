@@ -211,11 +211,11 @@ Decoding the Congressional Portfolio: Unveiling Industry Specialization in Congr
 \spacingset{2} % gives a slightly more margin between abstract and introduction
 % [MOTIVATION]
 
-In democratic societies, electoral accountability is a central mechanism through which politicians, vested with the power to make significant public decisions, remain answerable for their actions (Fearon, 1999; Ferejohn, 1986). However, the intermingling of public service and personal financial interests can blur the lines of accountability. A key question arises: how closely intertwined are a politician's personal financial gains and their public service role? Are these two realms neatly partitioned, or do they bleed into each other?
+In democratic societies, electoral accountability is a central mechanism through which politicians, vested with the power to make significant public decisions, remain answerable for their actions (Besley 2006, Fearon, 1999 Ferejohn, 1986). However, the intermingling of public service and personal financial interests can blur the lines of accountability. A key question arises: how closely intertwined are a politician's personal financial gains and their public service role? Are these two realms neatly partitioned, or do they bleed into each other?
 
 The moral hazard theory raises concerns that when individuals are shielded from the repercussions of their actions, they might behave differently than if they bore the full consequences (Holmstrom, 1979). This theory is especially pertinent in the political sphere, where politicians could leverage their positions for personal financial gains, leading to potential conflicts of interest. The theory underscores the need for a deeper theoretical and empirical examination of politicians' behavior in this regard. 
 
-Public choice theory, on the other hand, posits that it is unrealistic to presume a clear-cut divide between the public and private domains of a politician's life (Buchanan and Tollison, 1984). The theory suggests that individuals aim to maximize their personal utility in both their public and private roles. This notion aligns with Fenno's home style approach, which suggests that personal interests can often shape political actions aimed at re-election (Fenno, 1973).
+Public choice theory, in addition, posits that it is unrealistic to presume a clear-cut divide between the public and private domains of a politician's life (Buchanan and Tollison, 1984). The theory suggests that individuals aim to maximize their personal utility in both their public and private roles. This notion aligns with Fenno's home style approach, which suggests that personal interests can often shape political actions aimed at re-election (Fenno, 1973).
 
 Given these theoretical considerations, the financial behavior of politicians, particularly their stock trading activities, warrants closer examination. The trading activities of U.S. Congresspersons offer a unique opportunity to investigate the relationship between public service and personal financial interests. By analyzing the stock trading patterns of Congresspersons and their legislative activities, we can gain valuable insights into the potential conflicts of interest and the implications for electoral accountability.
 The issue of financial behavior among politicians has been explored from various angles. Legal scholars have examined the use of political intelligence for profit and the potential for insider trading within the political sphere (Jerke, 2010; Bainbridge, 2010). These studies highlight the challenges of designing legal and enforcement structures to prevent and deter such behavior. Additionally, research by Lenz and Lim (2010) provides an indirect test of corruption in Congress by comparing wealth accumulation among U.S. House members and the general public. Their findings suggest that representatives accumulate wealth about 50 percent faster than expected, raising questions about the sources of this wealth accumulation and its implications for political integrity.
@@ -231,7 +231,10 @@ However, the notion that members of Congress achieve excess returns on their inv
 The studies that employ the ``excess return" approach to analyze congressional stock trading in the U.S. typically focus on the ``average'' performance of Congresspersons as a whole. This approach aggregates the stock trading activities and returns of all members of Congress, calculating an average excess return for the entire group. 
 While this methodology provides insights into the overall trading performance of Congress as a collective entity, it may not fully capture the individual-level behavior of specific politicians. By aggregating the data and calculating average returns, the approach may mask variations and nuances in the trading behavior of individual members of Congress. As a result, instances of potentially unethical trading behavior by specific politicians, who may leverage privileged information for personal financial gain, could be obscured within the average calculations. This limitation is particularly relevant in light of anecdotal findings, such as those presented by Schweizer (2011) in ``Throw Them All Out," which highlight case studies of individual politicians who have allegedly profited from insider stock tips, land deals, and cronyism. These accounts underscore the need for a more granular examination of stock trading behavior at the individual level, moving beyond the analysis of average excess returns for the entire group of Congresspersons.
 
-In this regard, my research aims to delve deeper into the stock trading activities of individual Congresspersons, estimating the excess return of each Congressperson-ticker level transaction. This granular analysis allows for a more precise examination of individual trading behavior, shedding light on potentially questionable activities that might otherwise be concealed within broader, aggregate assessments.
+Additionally, the excess return approach on congressional stock trading mostly adopts a calendar time-based synthetic portfolio approach, which involves buying and selling stocks according to the Congressperson's decisions and then selling them a year later. This methodology obscures the importance of the "timing" aspect of such Congresspersons' stock trading, an aspect already well-highlighted by researches like Schweizer (2014) and Tahoun (2014). By focusing on calendar time and ignoring the timing of trades, these studies may miss critical insights into the potential exploitation of non-public information by individual politicians. This underscores the need for further research and alternative methodologies that take into account both the individual-level trading behavior and the timing of trades to provide a more comprehensive understanding of congressional stock trading practices.
+
+In this regard, my research aims to delve deeper into the stock trading activities of individual Congresspersons, estimating the excess return of each Congressperson-ticker level transaction for each specific cycle of such transactions. These transaction cycles begin with a series of iterative purchases (purchase-purchase-purchase...) up to a certain point, after which they transition into a series of sales (sell-sell-sell...). This granular analysis allows for a more precise examination of individual trading behavior, shedding light on potentially questionable activities that might otherwise be concealed within broader, aggregate assessments.
+
 % Take, for instance, the alleged well-timed trading activity of Senator Ron Wyden, involving the stock of Applied Materials Inc. (AMAT). Wyden's transactions with AMAT stock were executed in synchronization with U.S. legislative activity to subsidize the semiconductor industry in 2021. By estimating the excess return of Wyden's buy/sell transactions of AMAT stock, we can gain a clearer understanding of whether the timing of these transactions could potentially suggest the use of privileged information.
 Throughout this estimation, the findings of this study lend further support to the conclusions drawn by Egger and Hainmueller (2013). Their research found no widespread evidence of excess returns among Congresspersons, suggesting that insider trading is not a pervasive issue within the U.S. Congress. However, they noted that certain anomalies did exist, implying that a few individual Congresspersons could potentially be generating excess returns on specific tickers.
 % Consequently, this approach will offer a much-needed transparency to congressional stock trading, allowing for the identification of any potentially unethical trading behavior.
@@ -268,16 +271,9 @@ The strength of a GNN lies in its capability for representation learning (Bengio
 Moreover, GNNs excel at learning these embeddings and aggregating them (Hamilton et al., 2017). Crucially, these learned representations are tailored to be most effective for the specific downstream task they are applied to. In the context of this research, the downstream task is binary classification, where the goal is to predict whether a given Congressperson transacted with a specific ticker on a specific date. By leveraging the strengths of GNNs in processing graph-structured data and dynamically learning representations that effectively capture the local structure of each node and edge within the graph, this research aims to provide a more comprehensive understanding of the relationship between congressional activities and stock trading behavior, shedding light on the potential influences that drive these transactions.
 
 
-
-
-
-
-
 % Building on this, the power of a Graph Neural Network (GNN) resides in its capability for representation learning (Bengio et al., 2013), wherein it learns to transform the raw, complex data about entities (like Congresspersons, firms, and bills) into a meaningful, numerical representation. These representations, or embeddings, capture essential features and relationships of the entities within the legislative landscape, making GNNs particularly well-suited for the task at hand.
 
 % Finally, GNNs excel not only at learning these embeddings but also at aggregating them (Hamilton et al., 2017). Importantly, these learned representations are tailored to be most effective for the specific downstream task they are applied to. In the context of this research, the downstream task is binary classification, where the goal is to predict whether a given Congressperson transacted with a specific ticker on a specific date. By leveraging the strengths of GNNs in processing graph-structured data and dynamically learning representations that effectively capture the local structure of each node and edge within the graph, this research aims to provide a more comprehensive understanding of the relationship between congressional activities and stock trading behavior, shedding light on the potential influences that drive these transactions.
-
-
 
 % Notably, studies by Ziobrowski et al. (2004, 2011) exemplify this approach, where the researchers investigate the average excess returns of Senators and House Representatives, respectively.
 
@@ -382,165 +378,198 @@ Moreover, GNNs excel at learning these embeddings and aggregating them (Hamilton
 % % \end{figure}
 
 
-% \section{Data} \label{data}
+\section{Data} \label{data}
 
-% The data utilized in this study is a congressional network that records the legislative activities of Senators and their investment behavior. The network is created by merging data from LobbyView with Senate financial disclosures. It contains details about the Senators' buying/selling of company stocks, the dates of these transactions, their committee assignments during specific Congresses, the bills that are being lobbied by companies, and which bills are assigned to which committee. The firms are classified according to NAICS codes, as shown in Figure \ref{fig:cbd}.
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=1.2\textwidth]{imgs/data/CGD.png}
-%   \caption{The network data includes various types of nodes and edges that represent different entities and interactions within the congressional activities.}
-%   \label{fig:cbd}
-% \end{figure}
+\subsection{Data Description}
+% The data utilized in this study is a congressional network that records the legislative activities of Senators and their investment behavior. The network is created by merging data from LobbyView with Senate financial disclosures. It contains details about the Senators' buying/selling of company stocks, the dates of these transactions, their committee assignments during specific Congresses, the bills that are being lobbied by companies, and which bills are assigned to which committee. The firms are classified according to NAICS codes, as shown in Figure 
+The data utilized in this study is a large graph-structured dataset that captures both congressional activities and Congresspersons' stock transactions simultaneously. The dataset, represented as a heterograph, consists of various types of nodes and edges that incorporate transaction data, detailing Senate and House members' stock buying and selling activities, along with the specific dates of those transactions. The graph-structured data also encompasses information on congressional activities, such as committee assignments, bills being lobbied by firms, bill assignments to committees, and firms classified under specific NAICS codes. The detailed specifications of the node types can be found in Table \ref{tab:nodes}, while the edge types are described in Table \ref{tab:edges}, encompassing the connections between firms and their respective NAICS codes.
+Different types of nodes and their relationships, captured by different types of edges, are illustrated in Figure \ref{fig:cbd}.
+\begin{table}[h!]
+  \centering
+  \caption{Heterograph (Nodes)}
+  \label{tab:nodes}
+  \begin{tabular}{@{}llll@{}}
+  \toprule
+  Node Type & N & Period & Source \\ \midrule
+  Firm (Ticker) & 4,202 & - & Lobbyview \& Finance Disclosure \\
+  Bills & 47,767 & 110-117th Congress & Lobbyview \\
+  Congressperson & 2,431 & 113-118th Congress & Lobbyview \& Finance Disclosure \\
+  Committee & 556 & - & Lobbyview \\
+  NAICS code & 744 & - &  naics.com \\ \bottomrule
+  \end{tabular}
+\end{table}
 
+\begin{table}[h!]
+  \centering
+  \caption{Heterograph (Edges)}
+  \label{tab:edges}
+  \begin{tabular}{@{}llll@{}}
+  \toprule
+  Edge Types & N & Period & Source \\ \midrule
+  Congressperson- Buy/Sell- Firm (Ticker) & 24,675 & [2013-01-24, 2023-03-08] & Finance Disclosure \\
+  Firm (Ticker) - Lobby On - Bill & 148,487 & [2016-01-02, 2022-02-24] & Lobbyview \\
+  Ticker- Classified as - NAICS Codes & 4,147 & - & Finance Disclosure \& naics.com \\
+  Bill- Referred to - Committee & 75,626 & [2016-01-05, 2021-12-17] & Lobbyview \\
+  Congressperson- Assigend to - Committee & 11,698 & 115-117th Congress & Finance Disclosure \& Lobbyview \\ 
+  \bottomrule
+  \end{tabular}
+  \end{table}
 
-% In addition, descriptive statistics for the nodes and edges included in the congressional network are presented in Table \ref{tab:nodes} and Table \ref{tab:edges}, respectively. Table \ref{tab:nodes} provides information about the number and type of nodes in the network, including firms, bills, senators, committees, and NAICS codes. Table \ref{tab:edges} presents data on the number and type of edges in the network, including the number of links between firms and bills, senators and bills, and committees and bills, as well as the number of bills assigned to each committee.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1.0\textwidth]{imgs/illus.png}
+  \caption{The network data includes various types of nodes and edges that represent different entities and interactions within the congressional activities and investment behavior of Congresspersons.}
+  \label{fig:cbd}
+\end{figure}
 
+To provide a more concrete understanding of the data, Figure \ref{fig:trip} displays a subgraph related to Senator Ron Wyden's transaction in Trip Advisor stock (Ticker: TRIP). 
+This subgraph illustrates the relationships between Senator Ron Wyden's congressional activities, including his membership in the Senate Finance Committee, his involvement with a specific bill related to airport improvements, and the economic sectors represented by NAICS codes, thereby providing insights into how these activities could potentially influence or be influenced by his stock transactions.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{imgs/trip.png}
+  \caption{\textbf{A subgraph illustrating the congressional network related to the transaction of Senator Ron Wyden's Trip Advisor stock.} The node labeled W000779 corresponds to Ron Wyden's bioguide-id, which is a unique identifier provided by Congress for each senator. SSFI represents the Senate Finance Committee, of which Ron Wyden is a member. S1405-116 is a bill in the 116th Congress that revises requirements for the airport improvement program and pilot program for passenger facility charges at nonhub airports. The node labeled 518210 represents the NAICS Code for Data Processing, Hosting, and Related Services, while 561510 represents Travel Agencies.}
+  \label{fig:trip}
+\end{figure}
 
-% \begin{table}[h!]
-%   \centering
-%   \caption{Data for Congressional Network (Nodes)}
-%   \label{tab:nodes}
-%   \begin{tabular}{@{}llll@{}}
-%   \toprule
-%   Node Type & N & Period & Source \\ \midrule
-%   Firms (Ticker) & 3,552 & 2014-2021 & Lobbyview \& Senate Finance Disclosure \\
-%   Bills & 64,031 & 113-117th Congress & Lobbyview \\
-%   Senators & 95 & 114-117th Congress & Lobbyview \& Senate Finance Disclosure \\
-%   Committee & 62 & - & Lobbyview \\
-%   NAICS codes & 414 & - & Additional scraping (from naics.com) \\ \bottomrule
-%   \end{tabular}
-% \end{table}
+In addition to the subgraph related to Senator Wyden's transactions, I also provide two more subgraphs in Figure \ref{fig:semi} and Figure \ref{fig:ssbk} to further aid understanding. These figures capture the industry-level congressional activities, illustrating how firms project their interests through lobbying to specific bills, and how committees oversee such bills. These subgraphs collectively demonstrate how firm/industry-level specific interests are funneled through lobbying to bills and aggregated to specific committees, ultimately conveying this information to congresspersons assigned to those committees. By examining these interconnections, we can gain a deeper understanding of the potential influences on stock transactions made by members of Congress.
 
-% \begin{table}[h]
-%   \centering
-%   \caption{Data for Congressional Network (Edges)}
-%   \label{tab:edges}
-%   \begin{tabular}{@{}llll@{}}
-%   \toprule
-%   Edge Types & N & Period & Source \\ \midrule
-%   Purchase/Sale of Stock & 29,475 & 2014-2021 & Senate Finance Disclosure \\
-%   Firms' Lobbying on Bills & 1,534,097 & 2012-2021 & Lobbyview \\
-%   Ticker-NAICS Codes & 414 & 2014-2021 & Senate Finance Disclosure and naics.com \\
-%   Bill-Committee Assignments & 109,307 & 113-117th Congress & Lobbyview \\
-%   Senator-Committee Assignments & 6,708 & 114-117th Congress & Senate Finance Disclosure and Lobbyview \\ \bottomrule
-%   \end{tabular}
-%   \end{table}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{imgs/semic.png}
+  \caption{\textbf{Subgraph capturing how the semiconductor industry's interests were funneled through the Senate Finance Committee during the 117th Congress} The NAICS code 334413 indicates Semiconductor and Related Device Manufacturing, which involves companies such as Qualcomm (QCOM), Intel (INTC), and Advanced Micro Devices (AMD), lobbying for bills such as the CHIPS Act and FABS Act that are closely related to the subsidization of semiconductor manufacturing facilities. Relevant companies such as Apple Inc. and IBM, with NAICS codes of 334220 Wireless Communications Equipment Manufacturing and 334118 Computer Equipment Manufacturing, respectively, are direct customers of these semiconductor chips for manufacturing smartphone and computer hardware. The bills in which these companies have an interest are assigned to the Senate Finance Committee as well.
+  }
+  \label{fig:semi}
+\end{figure}
 
-%   To provide a more concrete understanding of the data, Figure \ref{fig:trip} displays a subgraph related to Senator Ron Wyden's transaction in Trip Advisor stock (Ticker: TRIP). The node labeled W000779 corresponds to Ron Wyden's bioguide-id, which is a unique identifier provided by Congress for each senator. SSFI represents the Senate Finance Committee, of which Ron Wyden is a member. S1405-116 is a bill in the 116th Congress that revises requirements for the airport improvement program and pilot program for passenger facility charges at nonhub airports. The node labeled 518210 represents the NAICS Code for Data Processing, Hosting, and Related Services, while 561510 represents Travel Agencies.
-
-
-
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=1\textwidth]{imgs/trip.png}
-%   \caption{A subgraph illustrating the congressional network related to the transaction of Senator Ron Wyden's Trip Advisor stock.}
-%   \label{fig:trip}
-% \end{figure}
-
-
-% \section{Empirical Strategy}
-
-% The mission of this paper is to provide evidence that Congressmen's investment patterns are affected by the information they acquire through their congressional activities. To establish a causal relationship, it is necessary to identify a proper treatment and its associated dependent variable that can demonstrate such behavioral changes.
-
-% To accomplish this, I conducted preliminary research to identify those who are obtaining a high level of excess return, which is indicated by abnormally high returns from their stock transactions. As previously emphasized in the introduction, excess return alone does not constitute direct evidence of insider trading. However, it can provide a hint about the information that Congressmen are primarily using for their investment decisions, and aid in determining a viable treatment and dependent variable to establish the impact of congressional activities on investment patterns.
-
-% \subsection{Preliminary Analysis: Excess Returns on Investments of Congressmen} \label{prelim}
-
-% Firstly, I gained insights into the mechanisms behind their trading decisions by reviewing news articles. For example, there were several media reports\footnote{\url{https://nypost.com/2021/05/20/us-sen-ron-wyden-boosts-chipmakers-while-his-wife-buys-their-shares/}} in May 2021 regarding Ron Wyden's semiconductor stocks trading.
-% I searched for Senator Ron Wyden's stock transactions that occurred prior to May 2021, but within a year, with a NAICS code beginning with 334, which indicates computer and electronic product manufacturing.
-% I found that three different tickers (AMAT, AVGO, KLAC) of the transactions that met this condition have a commonality in that they all started on the same date, April 6th, 2020, and ended on either April 6th or April 16th, 2021. Furthermore, all of them follow a similar pattern of multiple purchases followed by sales after certain critical points, such as $Purchase-Purchase- \hdots - Purchase \text{ } |  \text { } Sales - Sales - \hdots - Sales$ as shown in Fig \ref{fig:trans}.
-
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=1\textwidth]{imgs/trans.png}
-%   \caption{Senator Ron Wyden's stock transactions for Broadcom Inc. (ticker AVGO) exhibited a pattern of multiple purchases followed by sales after certain critical points, spanning from April 6th, 2020 to April 6th, 2021.}
-%   \label{fig:trans}
-% \end{figure}
-
-% On April 1st, 2021, President Biden announced a plan to invest \$50 billion to boost the U.S. chip industry\footnote{https://www.wsj.com/articles/biden-urges-50-billion-to-boost-chip-manufacturing-in-u-s-11617211570}. After this announcement, Senator Ron Wyden sold all of his semiconductor stocks. This suggests that members of Congress may have access to legislative information that can impact certain industries and enable them to design their own portfolio based on this information, potentially resulting in profitable stock trades.
-
-% Based on this observation, I developed an algorithm to calculate the excess returns for each (Senator, Ticker) pair. Unlike previous literature \citep{zi11, zi24,eg13} that computes excess returns at the year-chamber level, such as the excess return of the Senate or House over a specific year, I hypothesized that insider trading occurs in a time-specific manner. Therefore, it should be estimated accordingly, rather than a year-based approach. As a result, I selected all transaction chains that start with multiple purchases followed by sales within six months of the transition from purchase to sale.
-
-% There is a methodological challenge with using the Senate Finance Disclosure data, as it only provides the minimum and maximum range of amounts spent on purchasing or selling each ticker on a specific day (See Figure \ref{fig:trans}). To estimate the distribution of excess returns for each particular Purchase-Sale chain at the (Senate, Ticker) level, I randomly sampled the amount from a uniform distribution with support equal to the min/max range of the amount in the data. To obtain a more conservative estimate of the excess return, I penalized the monetization of a unit stock by the average Federal Reserve Rate during the holding period, even though the savings account rate is typically lower.
-
-% I am presenting the excess return distributions for Senator Ron Wyden's transactions involving two companies: Applied Materials Inc. (AMAT), which provides manufacturing equipment, services, and software to the semiconductor industry, and Marriott International Inc. (MAR), a global hotel brand. These distributions were computed using the random sampling method explained earlier. The X-axis of Figure 4 represents the percentage of return for a unit investment, with a value of 120 indicating a gain of \$1.20 for every \$1 invested.
-% \begin{figure}[htbp]
-%   \centering
-%   \begin{subfigure}[t]{0.45\textwidth}
-%   \centering
-%   \includegraphics[width=\textwidth]{imgs/RWAMAT.png}
-%   \caption{Ron Wyden's excess returns from transactions involving Applied Materials Inc. (AMAT) from April 2020 to April 2021.}
-%   \label{fig:er_klac}
-%   \end{subfigure}
-%   \hfill
-%   \begin{subfigure}[t]{0.45\textwidth}
-%   \centering
-%   \includegraphics[width=\textwidth]{imgs/RWMAR.png}
-%   \caption{Ron Wyden's excess returns from transactions involving Marriott International Inc. (MAR) from May to August 2020.}
-%   \label{fig:er_mar}
-%   \end{subfigure}
-%   \caption{Excess return distributions of Senator Ron Wyden's transactions for AMAT and MAR
-%   }
-%   \label{fig:er}
-% \end{figure}
-
-% As shown in Figure 5, it appears that Senator Ron Wyden may have access to legislative information regarding bills that could impact both the semiconductor and hospitality industries. During the 117th Congress, which coincides with Senator Ron Wyden's transaction involving AMAT, the company lobbied for two bills: S.2107 FABS Act and S.749 American Innovation and Jobs Act. Both bills include provisions that provide subsidies to the semiconductor industry. Additionally, during the 117th Congress, which overlaps with Senator Ron Wyden's transaction involving MAR, the company lobbied for two bills: S.477 Hospitality and Commerce Job Recovery Act of 2021, which extends tax credits to assist the hospitality and restaurant industry, and S.1519, which grants awards to hotel owners. It is worth noting that this legislative information likely flowed from the firms' lobbying efforts directed towards the Senate Finance Committee, which oversees the bills listed.
-% \begin{figure}[htbp]
-%   \centering
-%   \begin{subfigure}[t]{0.45\textwidth}
-%   \centering
-%   \includegraphics[width=\textwidth]{imgs/AMATDAG.png}
-%   \caption{Subgraph extracted from the congressional network that is in close proximity to Senator Ron Wyden's purchase or sale transaction involving AMAT.}
-%   \label{fig:er_klac}
-%   \end{subfigure}
-%   \hfill
-%   \begin{subfigure}[t]{0.45\textwidth}
-%   \centering
-%   \includegraphics[width=\textwidth]{imgs/RWMAR2.png}
-%   \caption{Subgraph extracted from the congressional network that is in close proximity to Senator Ron Wyden's purchase or sale transaction involving MAR.}
-%   \label{fig:er_mar}
-%   \end{subfigure}
-%   \caption{Potential Access to Legislative Information by Senator Ron Wyden Regarding Bills Impacting Semiconductor and Hospitality Industries during the 117th Congress
-%   }
-%   \label{fig:er2}
-% \end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{imgs/SSBKs.png}
+  \caption{\textbf{Subgraph capturing how the financial industry's interests were funneled through the Senate Banking Committee during the 117th Congress} the Senate Banking Committee (SSBK) serves as a channel for different financial companies to project their lobbying interests over bills. NAICS codes starting from 52 generally relate to the financial industry in Figure \ref{fig:ssbk}. For instance, Wells Fargo (WFC) and AIG are lobbying for H.R.1996 - SAFE Banking Act of 2021, which prohibits a federal banking regulator from penalizing a depository institution for providing banking services to a legitimate cannabis-related business. Capital One Inc. (COF) and MetLife Inc. (MET) are lobbying for H.R.4616, which allows for the transition of certain financial contracts away from the London Interbank Offered Rate (LIBOR). These bills are all funneled through the Senate Banking Committee, thus a committee member of SSBK is more likely to be equipped with in-depth knowledge of the financial industry.
+  }
+  \label{fig:ssbk}
+\end{figure}
 
 
-% Based on both Figure \ref{fig:er} and Figure \ref{fig:er2}, we can conclude that although Senator may have access to legislative information about certain industries, it is not always possible to profit from it due to external factors that the legislative information from congressional activity cannot explain. This example provides suggestive evidence as to why a simple excess return approach cannot provide a persuasive argument that proves or disproves the existence of insider trading.  
+\subsection{Data Merging and Entity Disambiguation}
 
-% Finally, I provide a distribution of the mean estimated excess return for each (Senator, Ticker) pair in Figure \ref{fig:erfin}. The plot shows that only a few transactions are acquiring abnormal positive profits over 50\%, and almost half of them record negative returns. This statistic is consistent with the findings reported by \cite{eg13}, which suggests that there is little evidence of systematic abnormal returns for members of Congress. However, thanks to the current approach that delves more into the Senator and Ticker level, we can conclude that it is hard to deny that a few transactions are acquiring abnormally high returns connected to the relevant legislative information that is accessible during congressional activity.
+One of the key challenges in this study is the effective disambiguation of entities, as the data is collected from multiple sources, including LobbyView, Senate/House Financial Disclosures, and naics.com. In this graph-structured dataset, entities such as Congresspersons and firms may appear under different names or expressions. For example, "Ron Wyden" may also be referred to as "Ron L. Wyden," and "Apple" may appear as "Apple, Inc." To accurately analyze the relationships between these entities, it is essential to establish a unique identifier for each entity, regardless of the variations in their names.
 
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=1\textwidth]{imgs/ERFin.png}
-%   \caption{Distribution of congressmen's excess returns at the Senate-ticker level.}
-%   \label{fig:erfin}
-% \end{figure}
+Theoretically, matching entities based on text similarity between two datasets with $n$ and $m$ rows has a computational complexity of 
+$O(n m)$. 
+However, as the datasets grow larger, this complexity becomes prohibitively expensive. For instance, matching 70,000 firm names from LobbyView to 4,000 firm names appearing in the ticker table would require 280,000,000 text similarity computations. To address this challenge, I developed a novel approach that leverages URLs as unique identifiers for entities.
+
+The approach involves acquiring the corresponding URL for each entity through Google searches, such as \url{https://en.wikipedia.org/wiki/Ron_Wyden} for Ron Wyden and \url{https://www.apple.com/} for Apple, Inc. A key advantage of using URLs as unique identifiers is that they facilitate effective entity disambiguation. For example, if two different expressions, "Ron Wyden" and "Ron L. Wyden," are both assigned the same URL \url{https://en.wikipedia.org/wiki/Ron_Wyden}, we can confidently recognize that these two expressions refer to the same entity. This approach allows us to accurately consolidate information about entities that may be represented in various ways across different data sources. Additionally, this method reduces the computational complexity to 
+$O(n+m)$, as only one query is required for each row of data. To further scale up this process, I parallelized the URL acquisition process by batching queries and distributing them across multiple servers available through commercial cloud services like AWS.
+
+
+In summary, this innovative approach to entity disambiguation through URL acquisition and parallelization enables efficient data merging from diverse sources, ensuring the accuracy and scalability of the analysis.
+
+\subsection{Effective Parsing Technique for Financial Disclosures}
+
+Financial Disclosures from the House are provided as encrypted PDF files. While text can be extracted from these files, the encryption results in irregular patterns, particularly in the tables that contain information about Congresspersons' stock buying and selling activities. These irregular patterns make it challenging to parse the data using manually coded patterns, as the deviations are difficult to anticipate and account for. To address this challenge, I utilized OpenAI's APIs, specifically the GPT-3.5 Turbo language model, to parse the PDFs into a CSV format that includes information such as when and who bought or sold which ticker, and how much.
+
+The process involves querying the Large Language Model (LLM) with the extracted text from the PDFs and instructing the model to convert the irregularly formatted tables into structured CSV data. The CSV format includes columns such as the date of the transaction, the name of the Congressperson, the ticker symbol of the stock, the type of transaction (buy or sell), and the amount of the transaction.
+
+By leveraging the capabilities of the GPT-3.5 Turbo language model, I was able to effectively parse information contained in PDF files that would normally require manual human labor. This approach significantly streamlines the data extraction process and ensures the accuracy and consistency of the parsed data.
+
+\section{Estimating Excess Returns at the Congressperson-Ticker Level} \label{ex-r}
+
+The broader literature on insider trading has long explored the information advantages that certain individuals, such as corporate insiders or well-connected investors, may possess when trading in the stock market. For example, Jeng et al. (2003) estimated returns to insider trading from a performance-evaluation perspective, while Ivković and Weisbenner (2005) studied the information content of the geography of individual investors' common stock investments. These studies highlight the importance of understanding the impact of information asymmetry and potential insider trading in financial markets.
+
+Despite the extensive research on insider trading in general, the application of this approach to congressional stock trading has been limited. In the context of congressional stock trading, previous studies, such as those conducted by Ziobrowski (2004, 2011) and Egger \& Hainmueller (2013), have predominantly used calendar-time based portfolio approaches (
+  Hoechle, D., M. Schmid, and H. Zimmermann. 2009) to estimate excess returns. This involves creating synthetic buy and sell portfolios that mimic congresspersons' stock purchases and sales but sell or buy such stocks after a year. However, this approach masks the importance of transaction timing, which is a crucial aspect of insider trading (Tahoun, 2014, Schweizer, 2011), as it fails to account for short-term fluctuations in stock prices that may be driven by the congresspersons' access to privileged information. This presents a severe limitation in understanding the true extent of potential insider trading among U.S. members of Congress.
+
+Moreover, averaging excess returns across congresspersons may not capture the full extent of insider trading within the Beltway, 
+the inner circle of Washington D.C. politics. Schweizer (2011) provided anecdotal evidence of politicians and their friends profiting from insider stock tips, 
+while Lenz \& Lim (2010) studied corruption and wealth accumulation in Congress, and Jerke (2010) and Bainbridge (2010) 
+examined the use of political intelligence for profit and insider trading inside the Beltway, respectively. 
+These case studies suggest that certain congresspersons might engage in insider trading with specific firms or industries,
+ which would be overlooked in an aggregate analysis.
+
+In this section, we aim to address these limitations by estimating the excess returns at the congressperson-ticker level, with a focus on the life cycle of each buy/sell chain of specific tickers consecutively transacted by a congressperson. This approach offers a more granular analysis of potential insider trading among U.S. members of Congress, allowing us to better evaluate whether widespread insider trading exists at the congressperson-ticker level. By doing so, we build upon both the general insider trading literature and the existing research on congressional stock trading, contributing to a more comprehensive understanding of the potential information advantages leveraged by politicians in the stock market and the importance of transaction timing.
+
+
+\subsection{Uncanny Timing of Investments of Congressmen} \label{prelim}
+
+Firstly, I gained insights into the mechanisms behind their trading decisions by reviewing news articles. For example, there were several media reports\footnote{\url{https://nypost.com/2021/05/20/us-sen-ron-wyden-boosts-chipmakers-while-his-wife-buys-their-shares/}} in May 2021 regarding Ron Wyden's semiconductor stocks trading.
+I searched for Senator Ron Wyden's stock transactions that occurred prior to May 2021, but within a year, with a NAICS code beginning with 334, which indicates computer and electronic product manufacturing.
+I found that three different tickers (AMAT, AVGO, KLAC) of the transactions that met this condition have a commonality in that they all started on the same date, April 6th, 2020, and ended on either April 6th or April 16th, 2021. Furthermore, all of them follow a similar pattern of multiple purchases followed by sales after certain critical points, such as $Purchase-Purchase- \hdots - Purchase \text{ } |  \text { } Sales - Sales - \hdots - Sales$ as shown in Fig \ref{fig:trans}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{imgs/trans.png}
+  \caption{Senator Ron Wyden's stock transactions for Broadcom Inc. (ticker AVGO) exhibited a pattern of multiple purchases followed by sales after certain critical points, spanning from April 6th, 2020 to April 6th, 2021.}
+  \label{fig:trans}
+\end{figure}
+
+On April 1st, 2021, President Biden announced a plan to invest \$50 billion to boost the U.S. chip industry\footnote{https://www.wsj.com/articles/biden-urges-50-billion-to-boost-chip-manufacturing-in-u-s-11617211570}. After this announcement, Senator Ron Wyden sold all of his semiconductor stocks. This suggests that members of Congress may have access to legislative information that can impact certain industries and enable them to design their own portfolio based on this information, potentially resulting in profitable stock trades.
+
+Based on this observation, I developed an algorithm to calculate the excess returns for each (Senator, Ticker) pair. Unlike previous literature \citep{zi11, zi24,eg13} that computes excess returns at the year-chamber level, such as the excess return of the Senate or House over a specific year, I hypothesized that insider trading occurs in a time-specific manner. Therefore, it should be estimated accordingly, rather than a year-based approach. As a result, I selected all transaction chains that start with multiple purchases followed by sales within six months of the transition from purchase to sale.
+
+There is a methodological challenge with using the Senate Finance Disclosure data, as it only provides the minimum and maximum range of amounts spent on purchasing or selling each ticker on a specific day (See Figure \ref{fig:trans}). To estimate the distribution of excess returns for each particular Purchase-Sale chain at the (Senate, Ticker) level, I randomly sampled the amount from a uniform distribution with support equal to the min/max range of the amount in the data. To obtain a more conservative estimate of the excess return, I penalized the monetization of a unit stock by the average Federal Reserve Rate during the holding period, even though the savings account rate is typically lower.
+
+I am presenting the excess return distributions for Senator Ron Wyden's transactions involving two companies: Applied Materials Inc. (AMAT), which provides manufacturing equipment, services, and software to the semiconductor industry, and Marriott International Inc. (MAR), a global hotel brand. These distributions were computed using the random sampling method explained earlier. The X-axis of Figure 4 represents the percentage of return for a unit investment, with a value of 120 indicating a gain of \$1.20 for every \$1 invested.
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{imgs/RWAMAT.png}
+  \caption{Ron Wyden's excess returns from transactions involving Applied Materials Inc. (AMAT) from April 2020 to April 2021.}
+  \label{fig:er_klac}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{imgs/RWMAR.png}
+  \caption{Ron Wyden's excess returns from transactions involving Marriott International Inc. (MAR) from May to August 2020.}
+  \label{fig:er_mar}
+  \end{subfigure}
+  \caption{Excess return distributions of Senator Ron Wyden's transactions for AMAT and MAR
+  }
+  \label{fig:er}
+\end{figure}
+
+As shown in Figure 5, it appears that Senator Ron Wyden may have access to legislative information regarding bills that could impact both the semiconductor and hospitality industries. During the 117th Congress, which coincides with Senator Ron Wyden's transaction involving AMAT, the company lobbied for two bills: S.2107 FABS Act and S.749 American Innovation and Jobs Act. Both bills include provisions that provide subsidies to the semiconductor industry. Additionally, during the 117th Congress, which overlaps with Senator Ron Wyden's transaction involving MAR, the company lobbied for two bills: S.477 Hospitality and Commerce Job Recovery Act of 2021, which extends tax credits to assist the hospitality and restaurant industry, and S.1519, which grants awards to hotel owners. It is worth noting that this legislative information likely flowed from the firms' lobbying efforts directed towards the Senate Finance Committee, which oversees the bills listed.
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{imgs/AMATDAG.png}
+  \caption{Subgraph extracted from the congressional network that is in close proximity to Senator Ron Wyden's purchase or sale transaction involving AMAT.}
+  \label{fig:er_klac}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{imgs/RWMAR2.png}
+  \caption{Subgraph extracted from the congressional network that is in close proximity to Senator Ron Wyden's purchase or sale transaction involving MAR.}
+  \label{fig:er_mar}
+  \end{subfigure}
+  \caption{Potential Access to Legislative Information by Senator Ron Wyden Regarding Bills Impacting Semiconductor and Hospitality Industries during the 117th Congress
+  }
+  \label{fig:er2}
+\end{figure}
+
+
+Based on both Figure \ref{fig:er} and Figure \ref{fig:er2}, we can conclude that although Senator may have access to legislative information about certain industries, it is not always possible to profit from it due to external factors that the legislative information from congressional activity cannot explain. This example provides suggestive evidence as to why a simple excess return approach cannot provide a persuasive argument that proves or disproves the existence of insider trading.  
+
+Finally, I provide a distribution of the mean estimated excess return for each (Senator, Ticker) pair in Figure \ref{fig:erfin}. The plot shows that only a few transactions are acquiring abnormal positive profits over 50\%, and almost half of them record negative returns. This statistic is consistent with the findings reported by \cite{eg13}, which suggests that there is little evidence of systematic abnormal returns for members of Congress. However, thanks to the current approach that delves more into the Senator and Ticker level, we can conclude that it is hard to deny that a few transactions are acquiring abnormally high returns connected to the relevant legislative information that is accessible during congressional activity.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{imgs/ERFin.png}
+  \caption{Distribution of congressmen's excess returns at the Senate-ticker level.}
+  \label{fig:erfin}
+\end{figure}
 
 % \subsection{Committees: A Channel for Legislators to Acquire Industry-Specific Information}\label{comm}
-
 % Based on multiple anecdotes and observations, I hypothesize that legislators acquire industry-specific information from their committee assignments that they may use for personal investments. For example, Senator Ron Wyden's semiconductor stock transactions involving multiple tickers in the same industry, such as AMAT, AVGO, and KLAC, can be explained by this hypothesis. These companies lobbied for bills relevant to the semiconductor industry, and the industry-level preferences and possible impacts of legislation on the semiconductor industry were aggregated in the Senate Finance Committee, which oversees such bills. As a member of the Senate Finance Committee, Ron Wyden acquired a more detailed understanding of how vital these bills were to the industry, and may have timed his transactions accordingly.
-
-% I also provide an additional illustration that shows how the preferences of the semiconductor industry were focused on the Senate Finance Committee during the 117th Congress in Figure \ref{fig:semi}. The NAICS code 334413 indicates Semiconductor and Related Device Manufacturing, which involves companies such as Qualcomm (QCOM), Intel (INTC), and Advanced Micro Devices (AMD), lobbying for bills such as the CHIPS Act and FABS Act that are closely related to the subsidization of semiconductor manufacturing facilities. Relevant companies such as Apple Inc. and IBM, with NAICS codes of 334220 Wireless Communications Equipment Manufacturing and 334118 Computer Equipment Manufacturing, respectively, are direct customers of these semiconductor chips for manufacturing smartphone and computer hardware. The bills in which these companies have an interest are assigned to the Senate Finance Committee as well.
-
+I also provide an additional illustration that shows how the preferences of the semiconductor industry were focused on the Senate Finance Committee during the 117th Congress in Figure \ref{fig:semi}. The NAICS code 334413 indicates Semiconductor and Related Device Manufacturing, which involves companies such as Qualcomm (QCOM), Intel (INTC), IBM (IBM) and Advanced Micro Devices (AMD), lobbying for bills such as the CHIPS Act and FABS Act that are closely related to the subsidization of semiconductor manufacturing facilities. Relevant companies such as Apple Inc. and IBM, with NAICS codes of 334220 Wireless Communications Equipment Manufacturing and 334118 Computer Equipment Manufacturing, respectively, are direct customers of these semiconductor chips for manufacturing smartphone and computer hardware. The bills in which these companies have an interest are assigned to the Senate Finance Committee as well.
 
 
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=1\textwidth]{imgs/semic.png}
-%   \caption{The illustration demonstrates how the semiconductor industry's interests were funneled through the Senate Finance Committee during the 117th Congress, with relevant bills assigned to the committee.}
-%   \label{fig:semi}
-% \end{figure}
 
-% As another example, I provide how the Senate Banking Committee (SSBK) serves as a channel for different financial companies to project their lobbying interests over bills. NAICS codes starting from 52 generally relate to the financial industry in Figure \ref{fig:ssbk}. For instance, Wells Fargo (WFC) and AIG are lobbying for H.R.1996 - SAFE Banking Act of 2021, which prohibits a federal banking regulator from penalizing a depository institution for providing banking services to a legitimate cannabis-related business. Capital One Inc. (COF) and MetLife Inc. (MET) are lobbying for H.R.4616, which allows for the transition of certain financial contracts away from the London Interbank Offered Rate (LIBOR). These bills are all funneled through the Senate Banking Committee, thus a committee member of SSBK is more likely to be equipped with in-depth knowledge of the financial industry.
-
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=1\textwidth]{imgs/SSBKs.png}
-%   \caption{The illustration demonstrates how the financial industry's interests were funneled through the Senate Banking Committee during the 117th Congress, with relevant bills assigned to the committee.}
-%   \label{fig:ssbk}
-% \end{figure}
+As another example, I provide how the Senate Banking Committee (SSBK) serves as a channel for different financial companies to project their lobbying interests over bills. NAICS codes starting from 52 generally relate to the financial industry in Figure \ref{fig:ssbk}. For instance, Wells Fargo (WFC) and AIG are lobbying for H.R.1996 - SAFE Banking Act of 2021, which prohibits a federal banking regulator from penalizing a depository institution for providing banking services to a legitimate cannabis-related business. Capital One Inc. (COF) and MetLife Inc. (MET) are lobbying for H.R.4616, which allows for the transition of certain financial contracts away from the London Interbank Offered Rate (LIBOR). These bills are all funneled through the Senate Banking Committee, thus a committee member of SSBK is more likely to be equipped with in-depth knowledge of the financial industry.
 
 % \subsection{Causal Quantity of Interest: Effect of Committee Membership on Trading Behavior}
 
