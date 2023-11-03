@@ -1,0 +1,85 @@
+\begin{thebibliography}{}
+
+\bibitem[Asher, 1974]{Asher1974CommitteesAT}
+Asher, H.~B. (1974).
+\newblock Committees and the norm of specialization.
+\newblock {\em The Annals of the American Academy of Political and Social
+  Science}, 411:63 -- 74.
+
+\bibitem[Eggers and Hainmueller, 2012]{eg13}
+Eggers, A. and Hainmueller, J. (2012).
+\newblock Capitol losses: The mediocre performance of congressional stock
+  portfolios, 2004-2008.
+\newblock {\em Journal of Politics}, 75.
+
+\bibitem[Hall and Deardorff, 2006]{hall_deardorff_2006}
+Hall, R.~L. and Deardorff, A.~V. (2006).
+\newblock Lobbying as legislative subsidy.
+\newblock {\em American Political Science Review}, 100(1):69–84.
+
+\bibitem[Hojnacki and Kimball, 1998]{Hojnacki1998OrganizedIA}
+Hojnacki, M. and Kimball, D. (1998).
+\newblock Organized interests and the decision of whom to lobby in congress.
+\newblock {\em American Political Science Review}, 92:775 -- 790.
+
+\bibitem[Johansson et~al., 2020]{tlearner}
+Johansson, F.~D., Shalit, U., Kallus, N., and Sontag, D.~A. (2020).
+\newblock Generalization bounds and representation learning for estimation of
+  potential outcomes and causal effects.
+\newblock {\em CoRR}, abs/2001.07426.
+
+\bibitem[Kim, 2012]{Kim2012TheLT}
+Kim, S.~H. (2012).
+\newblock The last temptation of congress: Legislator insider trading and the
+  fiduciary norm against corruption.
+\newblock {\em Microeconomics: Welfare Economics \& Collective Decision-Making
+  eJournal}.
+
+\bibitem[K{\"u}nzel et~al., 2019]{metalearner}
+K{\"u}nzel, S.~R., Sekhon, J.~S., Bickel, P.~J., and Yu, B. (2019).
+\newblock Metalearners for estimating heterogeneous treatment effects using
+  machine learning.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  116(10):4156--4165.
+
+\bibitem[McCrone and Kuklinski, 1979]{rep-del}
+McCrone, D.~J. and Kuklinski, J.~H. (1979).
+\newblock The delegate theory of representation.
+\newblock {\em American Journal of Political Science}, 23(2):278--300.
+
+\bibitem[Shalit et~al., 2016]{tarnet}
+Shalit, U., Johansson, F.~D., and Sontag, D. (2016).
+\newblock Estimating individual treatment effect: generalization bounds and
+  algorithms.
+
+\bibitem[Smith, 1995]{smith}
+Smith, R.~A. (1995).
+\newblock Interest group influence in the u. s. congress.
+\newblock {\em Legislative Studies Quarterly}, 20(1):89--139.
+
+\bibitem[Tahoun, 2014]{TAHOUN201486}
+Tahoun, A. (2014).
+\newblock The role of stock ownership by us members of congress on the market
+  for political favors.
+\newblock {\em Journal of Financial Economics}, 111(1):86--110.
+
+\bibitem[Ying et~al., 2019]{gnne}
+Ying, R., Bourgeois, D., You, J., Zitnik, M., and Leskovec, J. (2019).
+\newblock {GNN} explainer: {A} tool for post-hoc explanation of graph neural
+  networks.
+\newblock {\em CoRR}, abs/1903.03894.
+
+\bibitem[Ziobrowski et~al., 2011]{zi11}
+Ziobrowski, A.~J., Boyd, J.~W., Cheng, P., and Ziobrowski, B.~J. (2011).
+\newblock Abnormal returns from the common stock investments of members of the
+  u.s. house of representatives.
+\newblock {\em Business and Politics}, 13(1):1–22.
+
+\bibitem[Ziobrowski et~al., 2004]{zi24}
+Ziobrowski, A.~J., Cheng, P., Boyd, J.~W., and Ziobrowski, B.~J. (2004).
+\newblock Abnormal returns from the common stock investments of the u.s.
+  senate.
+\newblock {\em The Journal of Financial and Quantitative Analysis},
+  39(4):661--676.
+
+\end{thebibliography}
