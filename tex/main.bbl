@@ -189,6 +189,11 @@ Hastie, T., Tibshirani, R., and Friedman, J. (2001).
 \newblock Springer Series in Statistics. Springer New York Inc., New York, NY,
   USA.
 
+\bibitem[Hayashi et~al., 2019]{Hayashi2019LatentRL}
+Hayashi, H., Hu, Z., Xiong, C., and Neubig, G. (2019).
+\newblock Latent relation language models.
+\newblock {\em ArXiv}, abs/1908.07690.
+
 \bibitem[Henaff et~al., 2015]{g1}
 Henaff, M., Bruna, J., and LeCun, Y. (2015).
 \newblock Deep convolutional networks on graph-structured data.
@@ -268,11 +273,28 @@ Kingma, D.~P. and Ba, J. (2014).
 \newblock Adam: A method for stochastic optimization.
 \newblock {\em arXiv preprint arXiv:1412.6980}.
 
+\bibitem[Kojima et~al., 2022]{Kojima2022LargeLM}
+Kojima, T., Gu, S.~S., Reid, M., Matsuo, Y., and Iwasawa, Y. (2022).
+\newblock Large language models are zero-shot reasoners.
+\newblock {\em ArXiv}, abs/2205.11916.
+
 \bibitem[Krehbiel, 1992]{krehbiel1992information}
 Krehbiel, K. (1992).
 \newblock {\em Information and Legislative Organization}.
 \newblock Michigan Studies in Political Analysis. University of Michigan Press,
   Ann Arbor.
+
+\bibitem[Lampinen et~al., 2022]{Lampinen2022CanLM}
+Lampinen, A.~K., Dasgupta, I., Chan, S. C.~Y., Matthewson, K., Tessler, M.~H.,
+  Creswell, A., McClelland, J.~L., Wang, J.~X., and Hill, F. (2022).
+\newblock Can language models learn from explanations in context?
+\newblock In {\em Conference on Empirical Methods in Natural Language
+  Processing}.
+
+\bibitem[Lazer, 2011]{Lazer2011NetworksIP}
+Lazer, D. M.~J. (2011).
+\newblock Networks in political science: Back to the future.
+\newblock {\em PS: Political Science \& Politics}, 44:61 -- 68.
 
 \bibitem[Lenz and Lim, 2009]{lim2009}
 Lenz, G. and Lim, K. (2009).
@@ -290,6 +312,12 @@ Lu, Y. and Lu, J. (2020).
   expressing distributions.
 \newblock {\em CoRR}, abs/2004.08867.
 
+\bibitem[Luitse and Denkena, 2021]{Luitse2021TheGT}
+Luitse, D. and Denkena, W. (2021).
+\newblock The great transformer: Examining the role of large language models in
+  the political economy of ai.
+\newblock {\em Big Data \& Society}, 8.
+
 \bibitem[Madhavan, 2002]{vwap1}
 Madhavan, A.~N. (2002).
 \newblock Vwap strategies.
@@ -301,6 +329,13 @@ Mao, J., Yao, D., and Wang, C. (2013).
   applications.
 \newblock {\em Knowledge-Based Systems}, 48:37--45.
 
+\bibitem[Mauerer et~al., 2015]{lasso2}
+Mauerer, I., Pößnecker, W., Thurner, P., and Tutz, G. (2015).
+\newblock Modeling electoral choices in multiparty systems with
+  high-dimensional data: A regularized selection of parameters using the lasso
+  approach.
+\newblock {\em Journal of Choice Modelling}, 16:23--42.
+
 \bibitem[Mayhew, 1974]{mayhew1974congress}
 Mayhew, D.~R. (1974).
 \newblock {\em Congress: The Electoral Connection}.
@@ -309,6 +344,11 @@ Mayhew, D.~R. (1974).
 \bibitem[Mayhew, 1975]{Mayhew1975CongressTE}
 Mayhew, D.~R. (1975).
 \newblock Congress: The electoral connection.
+
+\bibitem[Montgomery and Olivella, 2018]{Montgomery}
+Montgomery, J.~M. and Olivella, S. (2018).
+\newblock Tree-based models for political science data.
+\newblock {\em American Journal of Political Science}, 62(3):729--744.
 
 \bibitem[Myers, 2009]{myers2009}
 Myers, B.~W. (2009).
@@ -321,6 +361,11 @@ Olden, J.~D. and Jackson, D.~A. (2002).
   understanding variable contributions in artificial neural networks.
 \newblock {\em Ecological modelling}, 154(1-2):135--150.
 
+\bibitem[Patil et~al., 2023]{patil2023gorilla}
+Patil, S.~G., Zhang, T., Wang, X., and Gonzalez, J.~E. (2023).
+\newblock Gorilla: Large language model connected with massive apis.
+\newblock {\em arXiv preprint arXiv:2305.15334}.
+
 \bibitem[Patterson, 1970]{patterson1970}
 Patterson, S.~C. (1970).
 \newblock The professional staffs of congressional committees.
@@ -332,11 +377,23 @@ Price, D.~E. (1978).
   “environmental” factors.
 \newblock {\em American Political Science Review}, 72(2):548--574.
 
+\bibitem[Qin et~al., 2023]{Qin2023ToolLLMFL}
+Qin, Y., Liang, S., Ye, Y., Zhu, K., Yan, L., Lu, Y.-T., Lin, Y., Cong, X.,
+  Tang, X., Qian, B., Zhao, S., Tian, R., Xie, R., Zhou, J., Gerstein, M.~H.,
+  Li, D., Liu, Z., and Sun, M. (2023).
+\newblock Toolllm: Facilitating large language models to master 16000+
+  real-world apis.
+\newblock {\em ArXiv}, abs/2307.16789.
+
 \bibitem[Querubin and Snyder, 2013]{querubin2013}
 Querubin, P. and Snyder, James~M., J. (2013).
 \newblock The control of politicians in normal times and times of crisis:
   Wealth accumulation by u.s. congressmen, 1850–1880.
 \newblock {\em Quarterly Journal of Political Science}, 8(4):409--450.
+
+\bibitem[Radford and Narasimhan, 2018]{Radford2018ImprovingLU}
+Radford, A. and Narasimhan, K. (2018).
+\newblock Improving language understanding by generative pre-training.
 
 \bibitem[Rauber et~al., 2016]{hd1}
 Rauber, P.~E., Fadel, S.~G., Falcao, A.~X., and Telea, A.~C. (2016).
@@ -393,6 +450,11 @@ Shanken, J. (1996).
 \newblock 23 statistical methods in tests of portfolio efficiency: A synthesis.
 \newblock {\em Handbook of statistics}, 14:693--711.
 
+\bibitem[Shinn et~al., 2023]{shinn2023reflexion}
+Shinn, N., Cassano, F., Berman, E., Gopinath, A., Narasimhan, K., and Yao, S.
+  (2023).
+\newblock Reflexion: Language agents with verbal reinforcement learning.
+
 \bibitem[Shrikumar et~al., 2016]{bb4}
 Shrikumar, A., Greenside, P., Shcherbina, A., and Kundaje, A. (2016).
 \newblock Not just a black box: Learning important features through propagating
@@ -423,6 +485,34 @@ Tang, J., Deng, C., and Huang, G.-B. (2016).
 \newblock {\em IEEE Transactions on Neural Networks and Learning Systems},
   27(4):809--821.
 
+\bibitem[Tang and Liu, 2012]{Tang2012FeatureSW}
+Tang, J. and Liu, H. (2012).
+\newblock Feature selection with linked data in social media.
+\newblock In {\em SDM}.
+
+\bibitem[Thi and Nguyen-Hoang, 2013]{Thi2013FeaturesEF}
+Thi, D.~B. and Nguyen-Hoang, T.-A. (2013).
+\newblock Features extraction for link prediction in social networks.
+\newblock {\em 2013 13th International Conference on Computational Science and
+  Its Applications}, pages 192--195.
+
+\bibitem[Wang et~al., 2023]{wang2023voyager}
+Wang, G., Xie, Y., Jiang, Y., Mandlekar, A., Xiao, C., Zhu, Y., Fan, L., and
+  Anandkumar, A. (2023).
+\newblock Voyager: An open-ended embodied agent with large language models.
+
+\bibitem[Ward et~al., 2011]{Ward2011NetworkAA}
+Ward, M.~D., Stovel, K., and Sacks, A. (2011).
+\newblock Network analysis and political science.
+\newblock {\em Annual Review of Political Science}, 14:245--264.
+
+\bibitem[Wei et~al., 2022]{cot}
+Wei, J., Wang, X., Schuurmans, D., Bosma, M., Chi, E.~H., Le, Q., and Zhou, D.
+  (2022).
+\newblock Chain of thought prompting elicits reasoning in large language
+  models.
+\newblock {\em CoRR}, abs/2201.11903.
+
 \bibitem[Weiss, 1989]{weiss1989congressional}
 Weiss, C.~H. (1989).
 \newblock Congressional committees as users of analysis.
@@ -446,10 +536,25 @@ Wu, Z., Pan, S., Chen, F., Long, G., Zhang, C., and Philip, S.~Y. (2020).
 \newblock {\em IEEE transactions on neural networks and learning systems},
   32(1):4--24.
 
+\bibitem[Yang et~al., 2023]{yang2023large}
+Yang, C., Wang, X., Lu, Y., Liu, H., Le, Q.~V., Zhou, D., and Chen, X. (2023).
+\newblock Large language models as optimizers.
+
 \bibitem[Yang et~al., 2020]{nns}
 Yang, Z., Ding, M., Zhou, C., Yang, H., Zhou, J., and Tang, J. (2020).
 \newblock Understanding negative sampling in graph representation learning.
 \newblock {\em CoRR}, abs/2005.09863.
+
+\bibitem[Yao et~al., 2023a]{yao2023tree}
+Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T.~L., Cao, Y., and
+  Narasimhan, K. (2023a).
+\newblock Tree of thoughts: Deliberate problem solving with large language
+  models.
+
+\bibitem[Yao et~al., 2023b]{yao2023react}
+Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., and Cao, Y.
+  (2023b).
+\newblock React: Synergizing reasoning and acting in language models.
 
 \bibitem[Ying et~al., 2019]{gex}
 Ying, Z., Bourgeois, D., You, J., Zitnik, M., and Leskovec, J. (2019).
@@ -467,11 +572,24 @@ Zhang, M. and Chen, Y. (2018).
 \newblock Link prediction based on graph neural networks.
 \newblock {\em CoRR}, abs/1802.09691.
 
+\bibitem[Zhao et~al., 2023]{Zhao2023ASO}
+Zhao, W.~X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y., Min, Y., Zhang, B.,
+  Zhang, J., Dong, Z., Du, Y., Yang, C., Chen, Y., Chen, Z., Jiang, J., Ren,
+  R., Li, Y., Tang, X., Liu, Z., Liu, P., Nie, J., and rong Wen, J. (2023).
+\newblock A survey of large language models.
+\newblock {\em ArXiv}, abs/2303.18223.
+
 \bibitem[Zhou et~al., 2020]{gnn1}
 Zhou, J., Cui, G., Hu, S., Zhang, Z., Yang, C., Liu, Z., Wang, L., Li, C., and
   Sun, M. (2020).
 \newblock Graph neural networks: A review of methods and applications.
 \newblock {\em AI open}, 1:57--81.
+
+\bibitem[Zhu et~al., 2023]{zhu2023ghost}
+Zhu, X., Chen, Y., Tian, H., Tao, C., Su, W., Yang, C., Huang, G., Li, B., Lu,
+  L., Wang, X., Qiao, Y., Zhang, Z., and Dai, J. (2023).
+\newblock Ghost in the minecraft: Generally capable agents for open-world
+  environments via large language models with text-based knowledge and memory.
 
 \bibitem[Ziobrowski et~al., 2011]{zi11}
 Ziobrowski, A.~J., Boyd, J.~W., Cheng, P., and Ziobrowski, B.~J. (2011).

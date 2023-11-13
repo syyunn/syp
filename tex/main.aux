@@ -74,29 +74,29 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2}Estimating Excess Returns of Congressional Stock Trading}{9}{section.2}\protected@file@percent }
 \newlabel{ex-r}{{2}{9}{Estimating Excess Returns of Congressional Stock Trading}{section.2}{}}
 \citation{zi11,zi24,eg13,eg14}
+\citation{vwap1,vwap2,vwap3}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Data}{10}{subsection.2.1}\protected@file@percent }
 \newlabel{sen-data}{{2.1}{10}{Data}{subsection.2.1}{}}
-\citation{vwap1,vwap2,vwap3}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Range of the min-max amount of each stock transaction.\relax }}{11}{table.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{tb:rg}{{1}{11}{Range of the min-max amount of each stock transaction.\relax }{table.caption.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Senator's Stock Transactions Data (Compiled)} The table shows the compiled stock transactions data which includes the name, ticker, date, amount min/max, and VWAP for each transaction.\relax }}{11}{figure.caption.2}\protected@file@percent }
 \newlabel{fig:trans-example}{{1}{11}{\textbf {Senator's Stock Transactions Data (Compiled)} The table shows the compiled stock transactions data which includes the name, ticker, date, amount min/max, and VWAP for each transaction.\relax }{figure.caption.2}{}}
-\citation{tahoun2014}
-\citation{schweizer2011}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Uncanny Timing of Congressional Stock Trading}{12}{subsection.2.2}\protected@file@percent }
 \newlabel{uct}{{2.2}{12}{Uncanny Timing of Congressional Stock Trading}{subsection.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {Senator Ron Wyden's stock transactions for Broadcom Inc. (Ticker: AVGO)} The transactions exhibits a pattern of multiple purchases followed by sales after certain critical points, spanning from April 6th, 2020 to April 6th, 2021.\relax }}{12}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:trans}{{2}{12}{\textbf {Senator Ron Wyden's stock transactions for Broadcom Inc. (Ticker: AVGO)} The transactions exhibits a pattern of multiple purchases followed by sales after certain critical points, spanning from April 6th, 2020 to April 6th, 2021.\relax }{figure.caption.3}{}}
+\citation{tahoun2014}
+\citation{schweizer2011}
 \citation{event1,event2}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {Senator Ron Wyden's stock transactions for Broadcom Inc. (Ticker: AVGO)} The transactions exhibits a pattern of multiple purchases followed by sales after certain critical points, spanning from April 6th, 2020 to April 6th, 2021.\relax }}{13}{figure.caption.3}\protected@file@percent }
-\newlabel{fig:trans}{{2}{13}{\textbf {Senator Ron Wyden's stock transactions for Broadcom Inc. (Ticker: AVGO)} The transactions exhibits a pattern of multiple purchases followed by sales after certain critical points, spanning from April 6th, 2020 to April 6th, 2021.\relax }{figure.caption.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Sub-sequences of Congressional Stock Transactions}{13}{subsection.2.3}\protected@file@percent }
-\newlabel{subsq}{{2.3}{13}{Sub-sequences of Congressional Stock Transactions}{subsection.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}``Purchsaes-then-Sales'': Sub-sequences of Congressional Stock Transactions}{13}{subsection.2.3}\protected@file@percent }
+\newlabel{subsq}{{2.3}{13}{``Purchsaes-then-Sales'': Sub-sequences of Congressional Stock Transactions}{subsection.2.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Partitioning of transaction sequences into sub-sequences based on consecutive purchase and sale transactions.\relax }}{14}{figure.caption.4}\protected@file@percent }
 \newlabel{fig:transaction_partition}{{3}{14}{Partitioning of transaction sequences into sub-sequences based on consecutive purchase and sale transactions.\relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Estimating Excess Returns of Sub-sequences}{14}{subsection.2.4}\protected@file@percent }
+\newlabel{excess}{{2.4}{14}{Estimating Excess Returns of Sub-sequences}{subsection.2.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textbf  {Frequencies of durations of long positions held by congressmen at the Senator-Ticker level} The durations are measured in days and represent the length of time between the start and end dates of each subchain. The mean duration of holding such long positions is approximately 340 days. Notably, around 65\% of these long positions are held for less than a year\relax }}{15}{figure.caption.5}\protected@file@percent }
 \newlabel{fig:erfin}{{4}{15}{\textbf {Frequencies of durations of long positions held by congressmen at the Senator-Ticker level} The durations are measured in days and represent the length of time between the start and end dates of each subchain. The mean duration of holding such long positions is approximately 340 days. Notably, around 65\% of these long positions are held for less than a year\relax }{figure.caption.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Estimating Excess Returns of Sub-sequences}{15}{subsection.2.4}\protected@file@percent }
-\newlabel{excess}{{2.4}{15}{Estimating Excess Returns of Sub-sequences}{subsection.2.4}{}}
 \citation{fed1,fed2}
 \citation{eg13}
 \citation{zi24}
@@ -119,86 +119,110 @@
 \citation{eg14}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Graph-Structured Data for Representing Congressional Activities}{20}{section.3}\protected@file@percent }
 \newlabel{sec:data}{{3}{20}{Graph-Structured Data for Representing Congressional Activities}{section.3}{}}
-\citation{eg14}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Heterograph (Nodes)\relax }}{21}{table.caption.8}\protected@file@percent }
 \newlabel{tab:nodes}{{2}{21}{Heterograph (Nodes)\relax }{table.caption.8}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Heterograph (Edges)\relax }}{21}{table.caption.9}\protected@file@percent }
 \newlabel{tab:edges}{{3}{21}{Heterograph (Edges)\relax }{table.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The network data includes various types of nodes and edges that represent different entities and interactions within the congressional activities and investment behavior of Congresspersons.\relax }}{21}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:cbd}{{7}{21}{The network data includes various types of nodes and edges that represent different entities and interactions within the congressional activities and investment behavior of Congresspersons.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \textbf  {A subgraph illustrating the congressional network related to the transaction of Senator Ron Wyden's Trip Advisor stock.} The node labeled W000779 corresponds to Ron Wyden's bioguide-id, which is a unique identifier provided by Congress for each senator. SSFI represents the Senate Finance Committee, of which Ron Wyden is a member. S1405-116 is a bill in the 116th Congress that revises requirements for the airport improvement program and pilot program for passenger facility charges at nonhub airports. The node labeled 518210 represents the NAICS Code for Data Processing, Hosting, and Related Services, while 561510 represents Travel Agencies.\relax }}{22}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:trip}{{8}{22}{\textbf {A subgraph illustrating the congressional network related to the transaction of Senator Ron Wyden's Trip Advisor stock.} The node labeled W000779 corresponds to Ron Wyden's bioguide-id, which is a unique identifier provided by Congress for each senator. SSFI represents the Senate Finance Committee, of which Ron Wyden is a member. S1405-116 is a bill in the 116th Congress that revises requirements for the airport improvement program and pilot program for passenger facility charges at nonhub airports. The node labeled 518210 represents the NAICS Code for Data Processing, Hosting, and Related Services, while 561510 represents Travel Agencies.\relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Identifying Informative Predictors in Congressional Stock Trading Using an LLM Agent}{22}{section.4}\protected@file@percent }
+\citation{Ward2011NetworkAA}
+\citation{Tang2012FeatureSW,Thi2013FeaturesEF}
+\citation{Montgomery}
+\citation{lasso2}
+\citation{Lazer2011NetworksIP,Ward2011NetworkAA}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}High-Dimensional Complexity and Theorization in Network Data}{23}{subsection.4.1}\protected@file@percent }
+\citation{Zhao2023ASO}
+\citation{Radford2018ImprovingLU}
+\citation{Lampinen2022CanLM}
+\citation{Kojima2022LargeLM,Hayashi2019LatentRL}
+\citation{Luitse2021TheGT}
+\citation{cot,yao2023tree}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Large Language Models (LLMs) and LLM Agents}{24}{subsection.4.2}\protected@file@percent }
+\citation{yao2023react}
+\citation{Qin2023ToolLLMFL,patil2023gorilla}
+\citation{yang2023large,zhu2023ghost,wang2023voyager}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Advancements in Designing Self-Learning LLM Agents}{25}{subsection.4.3}\protected@file@percent }
+\newlabel{llm-agent-lit}{{4.3}{25}{Advancements in Designing Self-Learning LLM Agents}{subsection.4.3}{}}
+\citation{yang2023large}
+\citation{shinn2023reflexion}
+\citation{wang2023voyager}
+\citation{wang2023voyager}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Predictive Theorization with Self-Learning LLM Agents}{26}{subsection.4.4}\protected@file@percent }
+\citation{eg14}
 \citation{patterson1970}
 \citation{king1994}
 \citation{asher1974}
 \citation{10.2307/40709444,10.2307/2111156,kiewiet1991logic,krehbiel1992information,curry2018knowledge}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Industry-level Similarities between Congresspersons and Committees}{27}{section.5}\protected@file@percent }
+\newlabel{sec:ce}{{5}{27}{Industry-level Similarities between Congresspersons and Committees}{section.5}{}}
 \citation{price1978policy}
 \citation{weiss1989congressional}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The network data includes various types of nodes and edges that represent different entities and interactions within the congressional activities and investment behavior of Congresspersons.\relax }}{22}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:cbd}{{7}{22}{The network data includes various types of nodes and edges that represent different entities and interactions within the congressional activities and investment behavior of Congresspersons.\relax }{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Industry-level Similarities between Congresspersons and Committees}{22}{section.4}\protected@file@percent }
-\newlabel{sec:ce}{{4}{22}{Industry-level Similarities between Congresspersons and Committees}{section.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \textbf  {A subgraph illustrating the congressional network related to the transaction of Senator Ron Wyden's Trip Advisor stock.} The node labeled W000779 corresponds to Ron Wyden's bioguide-id, which is a unique identifier provided by Congress for each senator. SSFI represents the Senate Finance Committee, of which Ron Wyden is a member. S1405-116 is a bill in the 116th Congress that revises requirements for the airport improvement program and pilot program for passenger facility charges at nonhub airports. The node labeled 518210 represents the NAICS Code for Data Processing, Hosting, and Related Services, while 561510 represents Travel Agencies.\relax }}{23}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:trip}{{8}{23}{\textbf {A subgraph illustrating the congressional network related to the transaction of Senator Ron Wyden's Trip Advisor stock.} The node labeled W000779 corresponds to Ron Wyden's bioguide-id, which is a unique identifier provided by Congress for each senator. SSFI represents the Senate Finance Committee, of which Ron Wyden is a member. S1405-116 is a bill in the 116th Congress that revises requirements for the airport improvement program and pilot program for passenger facility charges at nonhub airports. The node labeled 518210 represents the NAICS Code for Data Processing, Hosting, and Related Services, while 561510 represents Travel Agencies.\relax }{figure.caption.11}{}}
 \citation{Boxer2012}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Measuring Industry-level Specialization}{24}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Measuring Industry-level Specialization}{29}{subsection.5.1}\protected@file@percent }
 \citation{wu2018entropy,mao2013novel}
-\newlabel{fig:senator_density}{{9(a)}{27}{Sen. Sheldon Whitehouse's NAICS Distribution\relax }{figure.caption.12}{}}
-\newlabel{sub@fig:senator_density}{{(a)}{27}{Sen. Sheldon Whitehouse's NAICS Distribution\relax }{figure.caption.12}{}}
-\newlabel{fig:ssfi_density}{{9(b)}{27}{Senate Finance Committee (SSFI) NAICS Distribution\relax }{figure.caption.12}{}}
-\newlabel{sub@fig:ssfi_density}{{(b)}{27}{Senate Finance Committee (SSFI) NAICS Distribution\relax }{figure.caption.12}{}}
-\newlabel{fig:ssbk_density}{{9(c)}{27}{Senate Banking Committee (SSBK) NAICS Distribution\relax }{figure.caption.12}{}}
-\newlabel{sub@fig:ssbk_density}{{(c)}{27}{Senate Banking Committee (SSBK) NAICS Distribution\relax }{figure.caption.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison of NAICS code distributions for Sen. Sheldon Whitehouse, Senate Finance Committee (SSFI), and Senate Banking Committee (SSBK). The figure illustrates how the distribution of Sen. Whitehouse's stock transactions resembles the Senate Finance Committee's distribution more closely than that of the Senate Banking Committee.\relax }}{27}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:density_plots}{{9}{27}{Comparison of NAICS code distributions for Sen. Sheldon Whitehouse, Senate Finance Committee (SSFI), and Senate Banking Committee (SSBK). The figure illustrates how the distribution of Sen. Whitehouse's stock transactions resembles the Senate Finance Committee's distribution more closely than that of the Senate Banking Committee.\relax }{figure.caption.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Paired T-Test: Comparing Assigned and Unassigned Committees}{27}{subsection.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textbf  {One-sided Paired t-test results for the cross-entropy of assigned and unassigned committees.} The figure shows the comparison between the average cross-entropy of assigned and unassigned committees, with a sample size of 235 unique pairs of (Congressperson, Congressional year). The significantly lower average cross-entropy for the assigned group suggests that the stock trading patterns of Congress members more closely resemble the industry distribution of their assigned committees compared to unassigned committees.\relax }}{29}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:paired_ttest}{{10}{29}{\textbf {One-sided Paired t-test results for the cross-entropy of assigned and unassigned committees.} The figure shows the comparison between the average cross-entropy of assigned and unassigned committees, with a sample size of 235 unique pairs of (Congressperson, Congressional year). The significantly lower average cross-entropy for the assigned group suggests that the stock trading patterns of Congress members more closely resemble the industry distribution of their assigned committees compared to unassigned committees.\relax }{figure.caption.13}{}}
+\newlabel{fig:senator_density}{{9(a)}{31}{Sen. Sheldon Whitehouse's NAICS Distribution\relax }{figure.caption.12}{}}
+\newlabel{sub@fig:senator_density}{{(a)}{31}{Sen. Sheldon Whitehouse's NAICS Distribution\relax }{figure.caption.12}{}}
+\newlabel{fig:ssfi_density}{{9(b)}{31}{Senate Finance Committee (SSFI) NAICS Distribution\relax }{figure.caption.12}{}}
+\newlabel{sub@fig:ssfi_density}{{(b)}{31}{Senate Finance Committee (SSFI) NAICS Distribution\relax }{figure.caption.12}{}}
+\newlabel{fig:ssbk_density}{{9(c)}{31}{Senate Banking Committee (SSBK) NAICS Distribution\relax }{figure.caption.12}{}}
+\newlabel{sub@fig:ssbk_density}{{(c)}{31}{Senate Banking Committee (SSBK) NAICS Distribution\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison of NAICS code distributions for Sen. Sheldon Whitehouse, Senate Finance Committee (SSFI), and Senate Banking Committee (SSBK). The figure illustrates how the distribution of Sen. Whitehouse's stock transactions resembles the Senate Finance Committee's distribution more closely than that of the Senate Banking Committee.\relax }}{31}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:density_plots}{{9}{31}{Comparison of NAICS code distributions for Sen. Sheldon Whitehouse, Senate Finance Committee (SSFI), and Senate Banking Committee (SSBK). The figure illustrates how the distribution of Sen. Whitehouse's stock transactions resembles the Senate Finance Committee's distribution more closely than that of the Senate Banking Committee.\relax }{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Paired T-Test: Comparing Assigned and Unassigned Committees}{32}{subsection.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textbf  {One-sided Paired t-test results for the cross-entropy of assigned and unassigned committees.} The figure shows the comparison between the average cross-entropy of assigned and unassigned committees, with a sample size of 235 unique pairs of (Congressperson, Congressional year). The significantly lower average cross-entropy for the assigned group suggests that the stock trading patterns of Congress members more closely resemble the industry distribution of their assigned committees compared to unassigned committees.\relax }}{33}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:paired_ttest}{{10}{33}{\textbf {One-sided Paired t-test results for the cross-entropy of assigned and unassigned committees.} The figure shows the comparison between the average cross-entropy of assigned and unassigned committees, with a sample size of 235 unique pairs of (Congressperson, Congressional year). The significantly lower average cross-entropy for the assigned group suggests that the stock trading patterns of Congress members more closely resemble the industry distribution of their assigned committees compared to unassigned committees.\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \textbf  {Normal Q-Q plot of the differences in cross-entropy values:} Significantly small p-value of $3.8304 \times 10^{-26}$, decisively rejecting the null hypothesis and suggesting that the differences in cross-entropy are not normally distributed.\relax }}{34}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:wstat}{{11}{34}{\textbf {Normal Q-Q plot of the differences in cross-entropy values:} Significantly small p-value of $3.8304 \times 10^{-26}$, decisively rejecting the null hypothesis and suggesting that the differences in cross-entropy are not normally distributed.\relax }{figure.caption.14}{}}
 \citation{eg14}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \textbf  {Normal Q-Q plot of the differences in cross-entropy values:} Significantly small p-value of $3.8304 \times 10^{-26}$, decisively rejecting the null hypothesis and suggesting that the differences in cross-entropy are not normally distributed.\relax }}{30}{figure.caption.14}\protected@file@percent }
-\newlabel{fig:wstat}{{11}{30}{\textbf {Normal Q-Q plot of the differences in cross-entropy values:} Significantly small p-value of $3.8304 \times 10^{-26}$, decisively rejecting the null hypothesis and suggesting that the differences in cross-entropy are not normally distributed.\relax }{figure.caption.14}{}}
 \citation{eg14}
 \citation{eg14}
 \citation{10.2307/40709444,10.2307/2111156,kiewiet1991logic,krehbiel1992information,curry2018knowledge}
 \citation{Mayhew1975CongressTE,fenno1977}
 \citation{eg14}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Predicting Congressional Stock Transactions using Graph Neural Networks}{37}{section.6}\protected@file@percent }
+\newlabel{sec:gnn}{{6}{37}{Predicting Congressional Stock Transactions using Graph Neural Networks}{section.6}{}}
 \citation{gnn1,gnn2,gnn3,gnn4}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Predicting Congressional Stock Transactions using Graph Neural Networks}{33}{section.5}\protected@file@percent }
-\newlabel{sec:gnn}{{5}{33}{Predicting Congressional Stock Transactions using Graph Neural Networks}{section.5}{}}
 \citation{hd1,hd2}
 \citation{hdforc}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Designing a Binary Classifier with Graph Neural Networks}{34}{subsection.5.1}\protected@file@percent }
 \citation{Gardner1998ArtificialNN,7103337}
 \citation{nonl}
 \citation{relu}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Designing a Binary Classifier with Graph Neural Networks}{39}{subsection.6.1}\protected@file@percent }
 \citation{gnn1,gnn2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Design of the Graph Neural Network Architecture}{36}{subsection.5.2}\protected@file@percent }
 \citation{nnconv1,nnconv2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Design of the Graph Neural Network Architecture}{41}{subsection.6.2}\protected@file@percent }
 \citation{nns}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Training \& Evaluation of the GNN}{38}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Dataset Preparation}{38}{subsubsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Training of the GNN}{38}{subsubsection.5.3.2}\protected@file@percent }
 \citation{bcsec}
 \citation{lp}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Training \& Evaluation of the GNN}{43}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.1}Dataset Preparation}{43}{subsubsection.6.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.2}Training of the GNN}{43}{subsubsection.6.3.2}\protected@file@percent }
 \citation{kingma2014adam}
 \citation{AMARI1993185}
 \citation{kingma2014adam}
 \citation{elem}
 \citation{lp}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.3}Evaluation \& Ablation Study}{44}{subsubsection.6.3.3}\protected@file@percent }
 \citation{shapley1,shapley2,shapley3}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}Evaluation \& Ablation Study}{40}{subsubsection.5.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \textbf  {Accuracy drop for different edge types.} The figure shows the accuracy of the model with all edge types included and with each edge type removed one at a time. With all edge types included, the model achieved an accuracy of approximately 81\%. The most significant drop in accuracy, to 67\%, was observed when the edge type (`congressperson', `assignment', `committee') was removed. This suggests that the (`congressperson', `assignment', `committee') edge type carries significant information for predicting a congressperson's stock transactions.\relax }}{41}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:accuracy_drop}{{12}{41}{\textbf {Accuracy drop for different edge types.} The figure shows the accuracy of the model with all edge types included and with each edge type removed one at a time. With all edge types included, the model achieved an accuracy of approximately 81\%. The most significant drop in accuracy, to 67\%, was observed when the edge type (`congressperson', `assignment', `committee') was removed. This suggests that the (`congressperson', `assignment', `committee') edge type carries significant information for predicting a congressperson's stock transactions.\relax }{figure.caption.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces \textbf  {AUC-ROC drop for different edge types.} The figure shows the AUC-ROC of the model with all edge types included and with each edge type removed one at a time. With all edge types included, the model achieved an AUC-ROC of approximately 0.89. The most significant drop in AUC-ROC, to 0.76, was observed when the edge type (`congressperson',`'assignment', `committee') was removed. This suggests that the (`congressperson', `assignment', `committee') edge type carries significant information for predicting a congressperson's stock transactions.\relax }}{42}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:auc_roc_drop}{{13}{42}{\textbf {AUC-ROC drop for different edge types.} The figure shows the AUC-ROC of the model with all edge types included and with each edge type removed one at a time. With all edge types included, the model achieved an AUC-ROC of approximately 0.89. The most significant drop in AUC-ROC, to 0.76, was observed when the edge type (`congressperson',`'assignment', `committee') was removed. This suggests that the (`congressperson', `assignment', `committee') edge type carries significant information for predicting a congressperson's stock transactions.\relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \textbf  {Accuracy drop for different edge types.} The figure shows the accuracy of the model with all edge types included and with each edge type removed one at a time. With all edge types included, the model achieved an accuracy of approximately 81\%. The most significant drop in accuracy, to 67\%, was observed when the edge type (`congressperson', `assignment', `committee') was removed. This suggests that the (`congressperson', `assignment', `committee') edge type carries significant information for predicting a congressperson's stock transactions.\relax }}{45}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:accuracy_drop}{{12}{45}{\textbf {Accuracy drop for different edge types.} The figure shows the accuracy of the model with all edge types included and with each edge type removed one at a time. With all edge types included, the model achieved an accuracy of approximately 81\%. The most significant drop in accuracy, to 67\%, was observed when the edge type (`congressperson', `assignment', `committee') was removed. This suggests that the (`congressperson', `assignment', `committee') edge type carries significant information for predicting a congressperson's stock transactions.\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces \textbf  {AUC-ROC drop for different edge types.} The figure shows the AUC-ROC of the model with all edge types included and with each edge type removed one at a time. With all edge types included, the model achieved an AUC-ROC of approximately 0.89. The most significant drop in AUC-ROC, to 0.76, was observed when the edge type (`congressperson',`'assignment', `committee') was removed. This suggests that the (`congressperson', `assignment', `committee') edge type carries significant information for predicting a congressperson's stock transactions.\relax }}{46}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:auc_roc_drop}{{13}{46}{\textbf {AUC-ROC drop for different edge types.} The figure shows the AUC-ROC of the model with all edge types included and with each edge type removed one at a time. With all edge types included, the model achieved an AUC-ROC of approximately 0.89. The most significant drop in AUC-ROC, to 0.76, was observed when the edge type (`congressperson',`'assignment', `committee') was removed. This suggests that the (`congressperson', `assignment', `committee') edge type carries significant information for predicting a congressperson's stock transactions.\relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces \textbf  {Shapley values for different edge types.} The figure shows the Shapley values for each edge type, computed over all $16 (2^4)$ possible combinations of the four different edge types. The Shapley value for an edge type represents its average marginal contribution to the performance of the model, considering all possible combinations of edge types. The most important feature, according to the Shapley value analysis, was (`congressperson', `assignment', `committee'), followed by (`ticker', `classified\_as', `naics') and (`ticker', `lobbies\_on', `bill'). This further reinforces the conclusion that the (`congressperson', `assignment', `committee') edge type plays a crucial role in predicting congressperson's stock transactions.\relax }}{47}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:shap_values}{{14}{47}{\textbf {Shapley values for different edge types.} The figure shows the Shapley values for each edge type, computed over all $16 (2^4)$ possible combinations of the four different edge types. The Shapley value for an edge type represents its average marginal contribution to the performance of the model, considering all possible combinations of edge types. The most important feature, according to the Shapley value analysis, was (`congressperson', `assignment', `committee'), followed by (`ticker', `classified\_as', `naics') and (`ticker', `lobbies\_on', `bill'). This further reinforces the conclusion that the (`congressperson', `assignment', `committee') edge type plays a crucial role in predicting congressperson's stock transactions.\relax }{figure.caption.17}{}}
 \citation{gex}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces \textbf  {Shapley values for different edge types.} The figure shows the Shapley values for each edge type, computed over all $16 (2^4)$ possible combinations of the four different edge types. The Shapley value for an edge type represents its average marginal contribution to the performance of the model, considering all possible combinations of edge types. The most important feature, according to the Shapley value analysis, was (`congressperson', `assignment', `committee'), followed by (`ticker', `classified\_as', `naics') and (`ticker', `lobbies\_on', `bill'). This further reinforces the conclusion that the (`congressperson', `assignment', `committee') edge type plays a crucial role in predicting congressperson's stock transactions.\relax }}{43}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:shap_values}{{14}{43}{\textbf {Shapley values for different edge types.} The figure shows the Shapley values for each edge type, computed over all $16 (2^4)$ possible combinations of the four different edge types. The Shapley value for an edge type represents its average marginal contribution to the performance of the model, considering all possible combinations of edge types. The most important feature, according to the Shapley value analysis, was (`congressperson', `assignment', `committee'), followed by (`ticker', `classified\_as', `naics') and (`ticker', `lobbies\_on', `bill'). This further reinforces the conclusion that the (`congressperson', `assignment', `committee') edge type plays a crucial role in predicting congressperson's stock transactions.\relax }{figure.caption.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Interpreting Predictions with GNNExplainer}{43}{subsection.5.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces \textbf  {GNNExplainer output for Senator Ron Wyden's transaction of AMAT's stock.} The figure shows the subgraph extracted from the entire graph using the node and edge masks trained by the GNNExplainer. The GNNExplainer identified S3933-116 (the CHIPS Act) and HR7617-116th among the bills that AMAT lobbied on, NAICS code 333242 (Semiconductor Machinery Manufacturing) among the NAICS code classifications of AMAT, and ASML, among the firms classified as 3333242 as the most influential factors for this transaction.\relax }}{45}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:rw-amat}{{15}{45}{\textbf {GNNExplainer output for Senator Ron Wyden's transaction of AMAT's stock.} The figure shows the subgraph extracted from the entire graph using the node and edge masks trained by the GNNExplainer. The GNNExplainer identified S3933-116 (the CHIPS Act) and HR7617-116th among the bills that AMAT lobbied on, NAICS code 333242 (Semiconductor Machinery Manufacturing) among the NAICS code classifications of AMAT, and ASML, among the firms classified as 3333242 as the most influential factors for this transaction.\relax }{figure.caption.18}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces \textbf  {GNNExplainer output for Senator Pat Roberts's transaction of Amazon's stock.} The figure shows the subgraph extracted from the entire graph using the node and edge masks trained by the GNNExplainer. The nodes and edges in the subgraph were selected based on their high scores in the masks, indicating their relevance to the model's prediction for this specific transaction. The GNNExplainer identified H.R.2930-115 (Drone Innovation Act of 2017) and S.1410 (Safe DRONE Act of 2017) among the bills that Amazon lobbied on as the most influential factors for this transaction. This is particularly interesting given Senator Roberts's known legislative activities related to drone technology.\relax }}{46}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:pat-gnnex}{{16}{46}{\textbf {GNNExplainer output for Senator Pat Roberts's transaction of Amazon's stock.} The figure shows the subgraph extracted from the entire graph using the node and edge masks trained by the GNNExplainer. The nodes and edges in the subgraph were selected based on their high scores in the masks, indicating their relevance to the model's prediction for this specific transaction. The GNNExplainer identified H.R.2930-115 (Drone Innovation Act of 2017) and S.1410 (Safe DRONE Act of 2017) among the bills that Amazon lobbied on as the most influential factors for this transaction. This is particularly interesting given Senator Roberts's known legislative activities related to drone technology.\relax }{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Interpreting Predictions with GNNExplainer}{48}{subsection.6.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces \textbf  {GNNExplainer output for Senator Ron Wyden's transaction of AMAT's stock.} The figure shows the subgraph extracted from the entire graph using the node and edge masks trained by the GNNExplainer. The GNNExplainer identified S3933-116 (the CHIPS Act) and HR7617-116th among the bills that AMAT lobbied on, NAICS code 333242 (Semiconductor Machinery Manufacturing) among the NAICS code classifications of AMAT, and ASML, among the firms classified as 3333242 as the most influential factors for this transaction.\relax }}{49}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:rw-amat}{{15}{49}{\textbf {GNNExplainer output for Senator Ron Wyden's transaction of AMAT's stock.} The figure shows the subgraph extracted from the entire graph using the node and edge masks trained by the GNNExplainer. The GNNExplainer identified S3933-116 (the CHIPS Act) and HR7617-116th among the bills that AMAT lobbied on, NAICS code 333242 (Semiconductor Machinery Manufacturing) among the NAICS code classifications of AMAT, and ASML, among the firms classified as 3333242 as the most influential factors for this transaction.\relax }{figure.caption.18}{}}
 \citation{bb4,bb5,bb6}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces \textbf  {GNNExplainer output for Senator Pat Roberts's transaction of Amazon's stock.} The figure shows the subgraph extracted from the entire graph using the node and edge masks trained by the GNNExplainer. The nodes and edges in the subgraph were selected based on their high scores in the masks, indicating their relevance to the model's prediction for this specific transaction. The GNNExplainer identified H.R.2930-115 (Drone Innovation Act of 2017) and S.1410 (Safe DRONE Act of 2017) among the bills that Amazon lobbied on as the most influential factors for this transaction. This is particularly interesting given Senator Roberts's known legislative activities related to drone technology.\relax }}{51}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:pat-gnnex}{{16}{51}{\textbf {GNNExplainer output for Senator Pat Roberts's transaction of Amazon's stock.} The figure shows the subgraph extracted from the entire graph using the node and edge masks trained by the GNNExplainer. The nodes and edges in the subgraph were selected based on their high scores in the masks, indicating their relevance to the model's prediction for this specific transaction. The GNNExplainer identified H.R.2930-115 (Drone Innovation Act of 2017) and S.1410 (Safe DRONE Act of 2017) among the bills that Amazon lobbied on as the most influential factors for this transaction. This is particularly interesting given Senator Roberts's known legislative activities related to drone technology.\relax }{figure.caption.19}{}}
 \citation{eg13}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion and Future Directions}{47}{section.6}\protected@file@percent }
 \citation{eg14}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion and Future Directions}{52}{section.7}\protected@file@percent }
 \citation{eg14}
 \citation{eg14}
 \citation{gex}
@@ -237,61 +261,82 @@
 \bibcite{goldman2009}{{32}{2009}{{Goldman et~al.}}{{}}}
 \bibcite{shapley2}{{33}{1989}{{Hart}}{{}}}
 \bibcite{elem}{{34}{2001}{{Hastie et~al.}}{{}}}
-\bibcite{g1}{{35}{2015}{{Henaff et~al.}}{{}}}
-\bibcite{hdz07}{{36}{2007}{{Hoechle and Zimmermann}}{{}}}
-\bibcite{holmstrom1979}{{37}{1979}{{Holmström}}{{}}}
-\bibcite{hsu2014paired}{{38}{2014}{{Hsu and Lachenbruch}}{{}}}
-\bibcite{ivkovic2005}{{39}{2005}{{Ivković and Weisbenner}}{{}}}
-\bibcite{jeng2003}{{40}{2003}{{Jeng et~al.}}{{}}}
-\bibcite{jerke2010}{{41}{2010}{{Jerke}}{{}}}
-\bibcite{bb5}{{42}{2021}{{Joshi et~al.}}{{}}}
-\bibcite{g2}{{43}{2002}{{Kaushik et~al.}}{{}}}
-\bibcite{khwaja2005}{{44}{2005}{{Khwaja and Mian}}{{}}}
-\bibcite{kiewiet1991logic}{{45}{1991}{{Kiewiet and McCubbins}}{{}}}
-\bibcite{kim2018}{{46}{2018}{{Kim}}{{}}}
-\bibcite{king1994}{{47}{1994}{{King}}{{}}}
-\bibcite{kingma2014adam}{{48}{2014}{{Kingma and Ba}}{{}}}
-\bibcite{krehbiel1992information}{{49}{1992}{{Krehbiel}}{{}}}
-\bibcite{lim2009}{{50}{2009}{{Lenz and Lim}}{{}}}
-\bibcite{shapley3}{{51}{1973}{{Littlechild and Owen}}{{}}}
-\bibcite{nonl}{{52}{2020}{{Lu and Lu}}{{}}}
-\bibcite{vwap1}{{53}{2002}{{Madhavan}}{{}}}
-\bibcite{mao2013novel}{{54}{2013}{{Mao et~al.}}{{}}}
-\bibcite{mayhew1974congress}{{55}{1974}{{Mayhew}}{{}}}
-\bibcite{Mayhew1975CongressTE}{{56}{1975}{{Mayhew}}{{}}}
-\bibcite{myers2009}{{57}{2009}{{Myers}}{{}}}
-\bibcite{bb3}{{58}{2002}{{Olden and Jackson}}{{}}}
-\bibcite{patterson1970}{{59}{1970}{{Patterson}}{{}}}
-\bibcite{price1978policy}{{60}{1978}{{Price}}{{}}}
-\bibcite{querubin2013}{{61}{2013}{{Querubin and Snyder}}{{}}}
-\bibcite{hd1}{{62}{2016}{{Rauber et~al.}}{{}}}
-\bibcite{roberts1990}{{63}{1990}{{Roberts}}{{}}}
-\bibcite{onm}{{64}{2012}{{Rom{\'a}n et~al.}}{{}}}
-\bibcite{bcsec}{{65}{2020}{{Ruby and Yendapalli}}{{}}}
-\bibcite{fed2}{{66}{2003}{{Sarno and Thornton}}{{}}}
-\bibcite{gnn3}{{67}{2008}{{Scarselli et~al.}}{{}}}
-\bibcite{schweizer2011}{{68}{2011}{{Schweizer}}{{}}}
-\bibcite{seasholes2009}{{69}{2009}{{Seasholes and Zhu}}{{}}}
-\bibcite{syn1}{{70}{1996}{{Shanken}}{{}}}
-\bibcite{bb4}{{71}{2016}{{Shrikumar et~al.}}{{}}}
-\bibcite{nnconv2}{{72}{2017}{{Simonovsky and Komodakis}}{{}}}
-\bibcite{event2}{{73}{1994}{{Sivakumar and Waymire}}{{}}}
-\bibcite{tahoun2014}{{74}{2014}{{Tahoun}}{{}}}
-\bibcite{7103337}{{75}{2016}{{Tang et~al.}}{{}}}
-\bibcite{weiss1989congressional}{{76}{1989}{{Weiss}}{{}}}
-\bibcite{shapley1}{{77}{2002}{{Winter}}{{}}}
-\bibcite{wu2018entropy}{{78}{2018}{{Wu et~al.}}{{}}}
-\bibcite{gnn2}{{79}{2020}{{Wu et~al.}}{{}}}
-\bibcite{nns}{{80}{2020}{{Yang et~al.}}{{}}}
-\bibcite{gex}{{81}{2019}{{Ying et~al.}}{{}}}
-\bibcite{gnn4}{{82}{2019}{{Zhang et~al.}}{{}}}
-\bibcite{lp}{{83}{2018}{{Zhang and Chen}}{{}}}
-\bibcite{gnn1}{{84}{2020}{{Zhou et~al.}}{{}}}
-\bibcite{zi11}{{85}{2011}{{Ziobrowski et~al.}}{{}}}
-\bibcite{zi24}{{86}{2004}{{Ziobrowski et~al.}}{{}}}
+\bibcite{Hayashi2019LatentRL}{{35}{2019}{{Hayashi et~al.}}{{}}}
+\bibcite{g1}{{36}{2015}{{Henaff et~al.}}{{}}}
+\bibcite{hdz07}{{37}{2007}{{Hoechle and Zimmermann}}{{}}}
+\bibcite{holmstrom1979}{{38}{1979}{{Holmström}}{{}}}
+\bibcite{hsu2014paired}{{39}{2014}{{Hsu and Lachenbruch}}{{}}}
+\bibcite{ivkovic2005}{{40}{2005}{{Ivković and Weisbenner}}{{}}}
+\bibcite{jeng2003}{{41}{2003}{{Jeng et~al.}}{{}}}
+\bibcite{jerke2010}{{42}{2010}{{Jerke}}{{}}}
+\bibcite{bb5}{{43}{2021}{{Joshi et~al.}}{{}}}
+\bibcite{g2}{{44}{2002}{{Kaushik et~al.}}{{}}}
+\bibcite{khwaja2005}{{45}{2005}{{Khwaja and Mian}}{{}}}
+\bibcite{kiewiet1991logic}{{46}{1991}{{Kiewiet and McCubbins}}{{}}}
+\bibcite{kim2018}{{47}{2018}{{Kim}}{{}}}
+\bibcite{king1994}{{48}{1994}{{King}}{{}}}
+\bibcite{kingma2014adam}{{49}{2014}{{Kingma and Ba}}{{}}}
+\bibcite{Kojima2022LargeLM}{{50}{2022}{{Kojima et~al.}}{{}}}
+\bibcite{krehbiel1992information}{{51}{1992}{{Krehbiel}}{{}}}
+\bibcite{Lampinen2022CanLM}{{52}{2022}{{Lampinen et~al.}}{{}}}
+\bibcite{Lazer2011NetworksIP}{{53}{2011}{{Lazer}}{{}}}
+\bibcite{lim2009}{{54}{2009}{{Lenz and Lim}}{{}}}
+\bibcite{shapley3}{{55}{1973}{{Littlechild and Owen}}{{}}}
+\bibcite{nonl}{{56}{2020}{{Lu and Lu}}{{}}}
+\bibcite{Luitse2021TheGT}{{57}{2021}{{Luitse and Denkena}}{{}}}
+\bibcite{vwap1}{{58}{2002}{{Madhavan}}{{}}}
+\bibcite{mao2013novel}{{59}{2013}{{Mao et~al.}}{{}}}
+\bibcite{lasso2}{{60}{2015}{{Mauerer et~al.}}{{}}}
+\bibcite{mayhew1974congress}{{61}{1974}{{Mayhew}}{{}}}
+\bibcite{Mayhew1975CongressTE}{{62}{1975}{{Mayhew}}{{}}}
+\bibcite{Montgomery}{{63}{2018}{{Montgomery and Olivella}}{{}}}
+\bibcite{myers2009}{{64}{2009}{{Myers}}{{}}}
+\bibcite{bb3}{{65}{2002}{{Olden and Jackson}}{{}}}
+\bibcite{patil2023gorilla}{{66}{2023}{{Patil et~al.}}{{}}}
+\bibcite{patterson1970}{{67}{1970}{{Patterson}}{{}}}
+\bibcite{price1978policy}{{68}{1978}{{Price}}{{}}}
+\bibcite{Qin2023ToolLLMFL}{{69}{2023}{{Qin et~al.}}{{}}}
+\bibcite{querubin2013}{{70}{2013}{{Querubin and Snyder}}{{}}}
+\bibcite{Radford2018ImprovingLU}{{71}{2018}{{Radford and Narasimhan}}{{}}}
+\bibcite{hd1}{{72}{2016}{{Rauber et~al.}}{{}}}
+\bibcite{roberts1990}{{73}{1990}{{Roberts}}{{}}}
+\bibcite{onm}{{74}{2012}{{Rom{\'a}n et~al.}}{{}}}
+\bibcite{bcsec}{{75}{2020}{{Ruby and Yendapalli}}{{}}}
+\bibcite{fed2}{{76}{2003}{{Sarno and Thornton}}{{}}}
+\bibcite{gnn3}{{77}{2008}{{Scarselli et~al.}}{{}}}
+\bibcite{schweizer2011}{{78}{2011}{{Schweizer}}{{}}}
+\bibcite{seasholes2009}{{79}{2009}{{Seasholes and Zhu}}{{}}}
+\bibcite{syn1}{{80}{1996}{{Shanken}}{{}}}
+\bibcite{shinn2023reflexion}{{81}{2023}{{Shinn et~al.}}{{}}}
+\bibcite{bb4}{{82}{2016}{{Shrikumar et~al.}}{{}}}
+\bibcite{nnconv2}{{83}{2017}{{Simonovsky and Komodakis}}{{}}}
+\bibcite{event2}{{84}{1994}{{Sivakumar and Waymire}}{{}}}
+\bibcite{tahoun2014}{{85}{2014}{{Tahoun}}{{}}}
+\bibcite{7103337}{{86}{2016}{{Tang et~al.}}{{}}}
+\bibcite{Tang2012FeatureSW}{{87}{2012}{{Tang and Liu}}{{}}}
+\bibcite{Thi2013FeaturesEF}{{88}{2013}{{Thi and Nguyen-Hoang}}{{}}}
+\bibcite{wang2023voyager}{{89}{2023}{{Wang et~al.}}{{}}}
+\bibcite{Ward2011NetworkAA}{{90}{2011}{{Ward et~al.}}{{}}}
+\bibcite{cot}{{91}{2022}{{Wei et~al.}}{{}}}
+\bibcite{weiss1989congressional}{{92}{1989}{{Weiss}}{{}}}
+\bibcite{shapley1}{{93}{2002}{{Winter}}{{}}}
+\bibcite{wu2018entropy}{{94}{2018}{{Wu et~al.}}{{}}}
+\bibcite{gnn2}{{95}{2020}{{Wu et~al.}}{{}}}
+\bibcite{yang2023large}{{96}{2023}{{Yang et~al.}}{{}}}
+\bibcite{nns}{{97}{2020}{{Yang et~al.}}{{}}}
+\bibcite{yao2023tree}{{98}{2023a}{{Yao et~al.}}{{}}}
+\bibcite{yao2023react}{{99}{2023b}{{Yao et~al.}}{{}}}
+\bibcite{gex}{{100}{2019}{{Ying et~al.}}{{}}}
+\bibcite{gnn4}{{101}{2019}{{Zhang et~al.}}{{}}}
+\bibcite{lp}{{102}{2018}{{Zhang and Chen}}{{}}}
+\bibcite{Zhao2023ASO}{{103}{2023}{{Zhao et~al.}}{{}}}
+\bibcite{gnn1}{{104}{2020}{{Zhou et~al.}}{{}}}
+\bibcite{zhu2023ghost}{{105}{2023}{{Zhu et~al.}}{{}}}
+\bibcite{zi11}{{106}{2011}{{Ziobrowski et~al.}}{{}}}
+\bibcite{zi24}{{107}{2004}{{Ziobrowski et~al.}}{{}}}
 \citation{onm}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Data Merging and Entity Disambiguation}{56}{appendix.A}\protected@file@percent }
-\newlabel{app:disambiguation}{{A}{56}{Data Merging and Entity Disambiguation}{appendix.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Effective Parsing Technique for Financial Disclosures}{57}{appendix.B}\protected@file@percent }
-\newlabel{app:par}{{B}{57}{Effective Parsing Technique for Financial Disclosures}{appendix.B}{}}
-\gdef \@abspage@last{58}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Data Merging and Entity Disambiguation}{62}{appendix.A}\protected@file@percent }
+\newlabel{app:disambiguation}{{A}{62}{Data Merging and Entity Disambiguation}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Effective Parsing Technique for Financial Disclosures}{63}{appendix.B}\protected@file@percent }
+\newlabel{app:par}{{B}{63}{Effective Parsing Technique for Financial Disclosures}{appendix.B}{}}
+\gdef \@abspage@last{64}

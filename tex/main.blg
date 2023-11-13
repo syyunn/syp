@@ -6,45 +6,46 @@ Database file #1: biblo.bib
 Warning--empty title in 10.2307/40709444
 Warning--empty journal in lim2009
 Warning--empty booktitle in Mayhew1975CongressTE
-You've used 86 entries,
+Warning--empty booktitle in Radford2018ImprovingLU
+You've used 107 entries,
             1935 wiz_defined-function locations,
-            970 strings with 16957 characters,
-and the built_in function-call counts, 32793 in all, are:
-= -- 3250
-> -- 1256
-< -- 65
-+ -- 451
-- -- 409
-* -- 2763
-:= -- 5759
-add.period$ -- 262
-call.type$ -- 86
-change.case$ -- 625
-chr.to.int$ -- 86
-cite$ -- 89
-duplicate$ -- 1232
-empty$ -- 2304
-format.name$ -- 553
-if$ -- 6346
-int.to.chr$ -- 1
+            1068 strings with 21370 characters,
+and the built_in function-call counts, 42499 in all, are:
+= -- 4104
+> -- 1993
+< -- 72
++ -- 726
+- -- 679
+* -- 3665
+:= -- 7561
+add.period$ -- 318
+call.type$ -- 107
+change.case$ -- 865
+chr.to.int$ -- 106
+cite$ -- 111
+duplicate$ -- 1515
+empty$ -- 2769
+format.name$ -- 854
+if$ -- 8125
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 89
-newline$ -- 431
-num.names$ -- 261
-pop$ -- 484
+missing$ -- 104
+newline$ -- 529
+num.names$ -- 324
+pop$ -- 708
 preamble$ -- 1
-purify$ -- 633
+purify$ -- 873
 quote$ -- 0
-skip$ -- 964
+skip$ -- 1180
 stack$ -- 0
-substring$ -- 2374
-swap$ -- 125
-text.length$ -- 7
+substring$ -- 2740
+swap$ -- 148
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 500
-warning$ -- 3
-while$ -- 277
+type$ -- 626
+warning$ -- 4
+while$ -- 326
 width$ -- 0
-write$ -- 1107
-(There were 3 warnings)
+write$ -- 1356
+(There were 4 warnings)

@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1684759467 "main.aux" "main.bbl" "main" 1699047691
+["bibtex main"] 1699919367 "main.aux" "main.bbl" "main" 1699919395
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "biblo.bib" 1684704049 42991 e96b8e8bd1f299854c1abbd77908f029 ""
-  "main.aux" 1699047691 29572 891f66c9d4c2c654c9dd976b721b016c "pdflatex"
+  "biblo.bib" 1699917985 57248 1c9024d31aa257dba966c6c9afdc85fa ""
+  "main.aux" 1699919394 32374 8d2ca8f4c1c96c68b32879a5fe07f724 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1699047684 "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" "main.pdf" "main" 1699047691
-  "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" 1699047684 201591 40af2420ed5c90a238346459509f1bec ""
+["pdflatex"] 1699919388 "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" "main.pdf" "main" 1699919395
+  "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" 1699919387 216246 21049a8cdfcc20ee3a2892475f494dda ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -352,10 +352,10 @@
   "imgs/trans.png" 1678821609 1409648 ec5cecead992f92172e2bc727d2464d2 ""
   "imgs/trip.png" 1678814286 138618 4c99436a0526afb1cd54133d47bfea18 ""
   "imgs/wstat2.png" 1684698677 285383 83194390c283b20db045eb130bdd979d ""
-  "main.aux" 1699047691 29572 891f66c9d4c2c654c9dd976b721b016c "pdflatex"
-  "main.bbl" 1684759467 19001 d43d073b022f82a15254b128e9ef7e6b "bibtex main"
-  "main.out" 1699047691 6154 d510f5bdee8b58e9f803817605181767 "pdflatex"
-  "main.tex" 1699047684 201591 40af2420ed5c90a238346459509f1bec ""
+  "main.aux" 1699919394 32374 8d2ca8f4c1c96c68b32879a5fe07f724 "pdflatex"
+  "main.bbl" 1699919367 24120 d0ad84dc1b3219f1099dedbbf680058d "bibtex main"
+  "main.out" 1699919394 8215 c17cf150beceafcab6793fef38e9163d "pdflatex"
+  "main.tex" 1699919387 216246 21049a8cdfcc20ee3a2892475f494dda ""
   (generated)
   "main.aux"
   "main.log"
