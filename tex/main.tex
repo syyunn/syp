@@ -1000,8 +1000,8 @@ This enables the utilization of similarity searches over vector space, enhancing
 \subsection{Predictive Theorization with Self-Learning LLM Agents}
 
 % The complex heterograph dataset comprising 55K nodes and 264K edges, incorporating 5 different types of nodes and edges. This heterograph encapsulates congressional activities, potentially influencing the stock trading behavior of congresspersons. The primary question is whether these activities affect stock trading and if it's possible to theorize or hypothesize about these behaviors, despite the data's high dimensionality and dense interconnections, which differ significantly from traditional tabular formats.
-To analyze the dataset introduced in Section \ref{sec:data}, 
-a complex heterograph with 55K nodes and 264K edges featuring five distinct types of nodes and edges, 
+To analyze the dataset in Section \ref{sec:data}, 
+a complex heterograph with 55K nodes and 264K edges featuring 5 distinct types of nodes and edges, 
 we face a substantial challenge. This dataset, encapsulating a variety of congressional activities, 
 offers insights into how these activities might influence the stock trading behavior of congresspersons. 
 The central inquiry revolves around the impact of these activities on stock trading, aiming to develop theories or hypotheses about such behaviors. This endeavor is complicated by the dataset's high dimensionality and the dense interconnections of its heterograph structure, which markedly deviates from the simplicity of traditional tabular data formats.
@@ -1010,7 +1010,33 @@ As discussed in Section \ref{llm-agent-lit}, self-learning Large Language Model 
 
 In this context, I propose an innovative methodology where the traditional task of link prediction, commonly used in Graph Neural Networks (GNN), is approached through a self-learning LLM Agent. This method entails having the Agent predict the presence or absence of a link for a given legislator-ticker pair. Following each prediction, the agent engages in self-reflection or evaluation, analyzing the reasons behind its success or failure in comparison to the ground truth.
 
-This approach not only leverages the advanced capabilities of LLMs in handling high-dimensional data but also introduces a novel dimension of self-assessment and learning. It allows the LLM Agent to progressively refine its understanding and approach to the data, potentially uncovering significant insights about the relationship between congressional activities and stock trading behaviors. This method represents a significant step forward in the application of AI in political science, particularly in analyzing complex, graph-structured data.
+This approach not only leverages the advanced capabilities of LLMs in handling high-dimensional data but also introduces a novel dimension of self-assessment and learning. It allows the LLM Agent to progressively refine its understanding and approach to the data, potentially uncovering significant insights about the relationship between congressional activities and stock trading behaviors. 
+
+In the subsequent subsection, 
+I will delve into the detailed design of this agent, elaborating on the specific tasks it was assigned and the methodology employed in its development. 
+This will include a thorough explanation of how the agent operates, 
+the nature of its self-learning and self-evaluating mechanisms, and the 
+rationale behind how the agent organizes its memory in a manner that 
+aids in formulating appropriate theories or hypotheses, 
+which in turn facilitates its achievement of high accuracy in the link prediction task.
+
+
+\subsubsection{Dual-Tool for the LLM Agent: GraphDB and MemoryDB Access}
+
+In order to undertake the link prediction task within the complex heterograph dataset, I developed an LLM Agent endowed with two distinctive tools: Graph Database (GraphDB) Access and Memory Database (MemoryDB) Access as follows: 
+
+\textbf{GraphDB Access:} This tool allows the agent to directly interact with the heterograph data from Section \ref{sec:data} stored in a GraphDB. The agent has the freedom to connect to this database and execute queries based on its own logic and requirements. For instance, it can formulate a query like "Legislator: Assignment -- [custom Cypher query to be defined later]", which could retrieve a list of all stock tickers that a legislator has transacted in, provided these tickers belong to the same NAICS code industry classification as the Ticker of interest. This tool empowers the agent with the ability to dynamically explore and analyze the relational data stored in the graph database.
+
+\textbf{MemoryDB Access:} The second key component is the MemoryDB Access, which allows the agent to connect with a Vector Database. This database serves as a repository for the agent's historical analysis and decision-making processes. Following each iteration of the link prediction task, the agent is programmed to self-generate feedback on its performance. This introspective process is informed by the agent's own logs and reasoning paths used during prediction.
+
+From this self-reflection, the agent develops key-value pairs that encapsulate specific conditions and corresponding actions. The intention behind this mechanism is to create a set of principles that are not only applicable to the current scenario but also generalizable to future tasks. These principles are then converted into text-based dictionary formats, each paired with an OpenAI embedding that represents the textual description of the conditions. These embeddings, along with their associated condition-action pairs, are stored in the Vector Database.
+
+This approach enables the agent to query the Vector Database for relevant decision-making criteria when faced with similar conditions in the future where the similarity is measured by the cosine similairy. Importantly, this system is designed to abstract away from specific legislator-ticker details, instead focusing on broader principles and strategies. By doing so, the agent is not just recalling past decisions but is actively learning and adapting its approach for improved predictive performance in future link prediction tasks.
+
+Through this dual-tool system, the agent is equipped not only to access and analyze complex network data but also to learn from its experiences, improving its predictive accuracy and developing a more nuanced understanding of the underlying patterns and relationships within the data.
+
+\subsubsection{Prediction and Reflection Task Pipeline for the LLM Agent}
+
 
 
 
