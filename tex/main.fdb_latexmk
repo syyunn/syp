@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1700043061 "main.aux" "main.bbl" "main" 1700043068
+["bibtex main"] 1700043061 "main.aux" "main.bbl" "main" 1700067961
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   "biblo.bib" 1699976265 57248 1c9024d31aa257dba966c6c9afdc85fa ""
-  "main.aux" 1700043068 34588 6e2385bb511b906d4aeca7a21a6d0207 "pdflatex"
+  "main.aux" 1700067960 34588 6e2385bb511b906d4aeca7a21a6d0207 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1700043061 "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" "main.pdf" "main" 1700043068
-  "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" 1700043053 267070 4e55a18f1a6cdc33007e93ff002cc164 ""
+["pdflatex"] 1700067953 "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" "main.pdf" "main" 1700067961
+  "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" 1700067952 267068 585fdc72881ded7b7578f0bbc8af7f36 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -364,10 +364,10 @@
   "imgs/trans.png" 1678821609 1409648 ec5cecead992f92172e2bc727d2464d2 ""
   "imgs/trip.png" 1678814286 138618 4c99436a0526afb1cd54133d47bfea18 ""
   "imgs/wstat2.png" 1684698677 285383 83194390c283b20db045eb130bdd979d ""
-  "main.aux" 1700043068 34588 6e2385bb511b906d4aeca7a21a6d0207 "pdflatex"
+  "main.aux" 1700067960 34588 6e2385bb511b906d4aeca7a21a6d0207 "pdflatex"
   "main.bbl" 1700043061 23951 94f900e0a0ad94299f671a813f089465 "bibtex main"
-  "main.out" 1700043068 10808 0fb81648bed5b943ee23ec3033575d92 "pdflatex"
-  "main.tex" 1700043053 267070 4e55a18f1a6cdc33007e93ff002cc164 ""
+  "main.out" 1700067960 10808 0fb81648bed5b943ee23ec3033575d92 "pdflatex"
+  "main.tex" 1700067952 267068 585fdc72881ded7b7578f0bbc8af7f36 ""
   (generated)
   "main.aux"
   "main.log"
