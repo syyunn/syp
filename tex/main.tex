@@ -1,5 +1,4 @@
 \documentclass[15pt,letterpaper]{article}
-
 \PassOptionsToPackage{hyphens}{url}
 
 \usepackage{booktabs}
@@ -145,6 +144,9 @@ colormap/viridis
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+\usepackage{mdframed} % Add this in your preamble
 
 % == SPACES == 
 
@@ -191,7 +193,7 @@ Unveiling the Influence of Industry-Level Information and Committees on Congress
   }
   \author{
     Suyeol Yun
-  \thanks{PhD Student, Department of Political Science, MIT. Email: \href{mailto:syyun@mit.edu}{syyun@mit.edu}\\
+  \thanks{Master Student, Department of Political Science, MIT. Email: \href{mailto:syyun@mit.edu}{syyun@mit.edu}\\
   % **The reproducible code and data can be found at the following link: \href{https://github.com/syyunn/efd}{https://github.com/syyunn/efd}.
   }
   }
@@ -213,7 +215,26 @@ Unveiling the Influence of Industry-Level Information and Committees on Congress
 % Through an ablation study on the GNN's predictions, I identify the committee assignment of a congressperson and firm-level lobbying on specific bills as crucial factors in predicting a congressperson's specific stock choices.
 % This research thus offers a fresh perspective that aligns more closely with traditional literature on committee specialization, demonstrating that such legislative roles also significantly influence a congressperson's stock trading behavior. This finding underscores the relevance of committee-level specialization in understanding the financial decisions of Congresspersons.
 
-In this study, I delve into the dynamics of congressional stock investments, revealing abnormal and asymmetrical excess returns. This suggests the potential influence of privileged information. Contrary to prior studies, I found that a congressperson's stock portfolio significantly mirrors stocks tied to their committee assignments, leveraging a novel graph-structured dataset. By employing a graph neural network, I discovered that committee assignments and firms' lobbying activities are predictive of congresspersons' stock choices. Furthermore, the use of GNNExplainer provided interpretative insights into these predictions. This research prompts a reevaluation of the motivations underpinning congressional service, indicating that personal financial gains could significantly influence decision-making. Additionally, it uncovers intriguing behavioral variations in stock trading among congresspersons. These variations could reflect individual characteristics or systemic factors within our political and financial systems, offering an intriguing avenue for further research.
+% In this study, I delve into the dynamics of congressional stock investments, revealing abnormal and asymmetrical excess returns. This suggests the potential influence of privileged information. Contrary to prior studies, I found that a congressperson's stock portfolio significantly mirrors stocks tied to their committee assignments, leveraging a novel graph-structured dataset. By employing a graph neural network, I discovered that committee assignments and firms' lobbying activities are predictive of congresspersons' stock choices. Furthermore, the use of GNNExplainer provided interpretative insights into these predictions. This research prompts a reevaluation of the motivations underpinning congressional service, indicating that personal financial gains could significantly influence decision-making. Additionally, it uncovers intriguing behavioral variations in stock trading among congresspersons. These variations could reflect individual characteristics or systemic factors within our political and financial systems, offering an intriguing avenue for further research.
+
+% In this study, I delve into the dynamics of congressional stock investments,
+%  uncovering abnormal excess returns. These findings suggest the potential influence of privileged information, 
+%  indicating that certain insights not available to the general public might be impacting these investment decisions. 
+%  Contrary to prior studies, I found that a congressperson’s stock portfolio significantly mirrors stocks tied to their committee assignments, 
+%  leveraging a novel graph-structured dataset. By employing a graph neural network, I discovered that committee assignments and firms’ lobbying activities are predictive of congresspersons’ stock choices. 
+%  Furthermore, the integration of a Large Language Model (LLM) Agent for link prediction tasks provided additional evidence, indicating that committee-level information, when combined with firms' lobbying efforts towards bills assigned to such committees, serves as an informative predictor.
+%  This underscores the imperative for ongoing investigations into electoral accountability and the necessity to ensure that personal gains do not overshadow the pursuit of public welfare.
+
+In this study, I delve into the dynamics of congressional stock investments, uncovering notable instances of abnormal excess returns. These instances are particularly pronounced with some legislators and specific stock transactions, emphasizing the timing of such activities. The findings suggest that information related to congressional activities, particularly industry-level information gathered through committee assignments, might be influencing these investment decisions. This observation deviates from previous research, as a significant correlation was identified between congresspersons' stock portfolios and stocks linked to their committee assignments, analyzed using a novel graph-structured dataset. The study involved the use of a Large Language Model (LLM) Agent for link prediction tasks to theorize about potential informative connections within this data. A subsequent deployment of a graph neural network (GNN) further corroborated the predictive value of committee assignments and firms' lobbying activities for congresspersons' stock choices. These results highlight the necessity of a deeper investigation into the motivations behind congressional service, pointing to a potential interplay between legislative activities and personal financial decision-making. This research underscores the importance of scrutinizing electoral accountability and ensuring that personal motivations do not overshadow the pursuit of the public good.
+
+
+
+
+
+
+
+
+
 
 
 
@@ -228,16 +249,14 @@ In this study, I delve into the dynamics of congressional stock investments, rev
 In democratic societies, electoral accountability is a central mechanism through which politicians, vested with the power to make significant public decisions, remain answerable for their actions \citep{besley2006,fearon1999,ferejohn1986}.
 However, the intermingling of public service and personal financial interests can blur the lines of accountability. A key question arises: how closely intertwined are a politician's personal financial gains and their public service role? Are these two realms neatly partitioned, or do they bleed into each other?
 
-The theory of moral hazard is particularly relevant when examining the actions of individuals who are shielded from the consequences of their decisions, as they may behave differently than if they were to bear the full brunt of their actions \citep{holmstrom1979}. This issue assumes critical importance in the political sphere, specifically in the context of congressional stock trading. Elected officials, due to their privileged access to non-public information and regulatory power, could potentially leverage this advantage for personal financial gains through strategic stock trades. Such behavior may lead to potential conflicts of interest and raises questions about the fairness and transparency of our political and financial systems. This dynamic underscores the necessity for a rigorous theoretical and empirical exploration of the stock trading behaviors of politicians, to ensure the accountability and integrity of those serving in public office.
+% The theory of moral hazard is particularly relevant when examining the actions of individuals who are shielded from the consequences of their decisions, as they may behave differently than if they were to bear the full brunt of their actions \citep{holmstrom1979}. This issue assumes critical importance in the political sphere, specifically in the context of congressional stock trading.
+Elected officials, due to their privileged access to non-public information and regulatory power, could potentially leverage this advantage for personal financial gains through strategic stock trades. Such behavior may lead to potential conflicts of interest and raises questions about the fairness and transparency of our political and financial systems. This dynamic underscores the necessity for a rigorous theoretical and empirical exploration of the stock trading behaviors of politicians, to ensure the accountability and integrity of those serving in public office.
 
-Public choice theory, in addition, posits that it is unrealistic to presume a clear-cut divide between the public and private domains of a politician's life \citep{buchanan1984}. The theory suggests that individuals aim to maximize their personal utility in both their public and private roles.
+Public choice theory complements this perspective by challenging the assumption of a distinct separation between the public and private spheres of a politician's life, as suggested by \cite{buchanan1984}.
+The theory suggests that individuals aim to maximize their personal utility in both their public and private roles.
 Building on this, we must consider that the actions of politicians are not solely influenced by their public roles and responsibilities, but also by their personal interests and ambitions. The public service that elected officials provide and their private financial gains are not separate spheres, but interconnected dimensions of their life. In fact, they might leverage their public role to augment their personal finances.
+
 Building on this perspective, our research taps into the broader literature in American politics that investigates the motivations of congresspersons. The prevailing wisdom holds that elected representatives primarily seek re-election \citep{mayhew1974congress}. They typically strive to achieve this goal by crafting effective public policies and securing influence within Congress \citep{fenno1977}. However, our study underscores that the realm of personal financial gain, although often less examined, can be an important facet of a congressperson's behavior.
-
-
-% This notion aligns with Fenno's home style approach, which suggests that personal interests can often shape political actions \citep{fenno1977}.
-
-
 
 Given these motivations, the financial behavior of politicians, particularly their stock trading activities, warrants closer examination. The trading activities of U.S. Congresspersons offer a unique opportunity to investigate the relationship between public service and personal financial interests. By analyzing the stock trading patterns of Congresspersons and their legislative activities, we can gain valuable insights into the potential conflicts of interest and the implications for electoral accountability.
 
@@ -248,41 +267,56 @@ While these legal studies provide valuable insights, there has also been attenti
 Recognizing this need to a broader analysis of patterns and trends, researchers have turned to the excess return approach, which has been used in the broader literature on insider trading, to assess whether politicians achieve abnormal returns on their investments.
 The excess return approach provides a foundation for understanding how informational advantages may lead to excess returns in financial markets \citep{jeng2003, ivkovic2005, seasholes2009}. 
 % For example, \cite{jeng2003} estimated the returns to insider trading from a performance-evaluation perspective, while \cite{ivkovic2005} examined the information content of the geography of individual investors' common stock investments. \cite{seasholes2009} similarly tested whether individual investors excel in investing in local non-S\&P 500 companies. 
-Building on this excess-return approach, several studies have specifically examined the stock trading activities of U.S. Congresspersons. \cite{zi24} and \cite{zi11} conducted pioneering research in this area, analyzing the common stock investments of members of the U.S. Senate and House of Representatives, respectively. Their findings suggest that members of Congress achieve abnormal returns on their stock investments, raising questions about the potential use of privileged information in their trading decisions.
+Building on this excess-return approach, several studies have specifically examined the stock trading activities of U.S. Congresspersons. 
 
-However, the notion that members of Congress achieve excess returns on their investments has been challenged by other researchers. \cite{eg13} call into question the consensus that members of Congress trade with an information advantage. They reinterpret existing studies of congressional stock trading between 1985 and 2001 and conduct their own analysis of trades in the 2004–2008 period. Their findings challenge the notion of ``widespread'' insider trading" in Congress, concluding that in neither period do members of Congress trade with an information advantage. Furthermore, they conduct the first analysis of members' portfolio holdings, showing that between 2004 and 2008, the average member of Congress would have earned higher returns in a passive index fund. 
+For example, \cite{zi24} and \cite{zi11} conducted pioneering research in this area, analyzing the common stock investments of members of the U.S. Senate and House of Representatives, respectively. Their findings suggest that members of Congress achieve abnormal returns on their stock investments, raising questions about the potential use of privileged information in their trading decisions.
 
-The studies that employ the ``excess return" approach to analyze congressional stock trading in the U.S. typically focus on the ``average'' performance of Congresspersons as a whole. This approach aggregates the stock trading activities and returns of all members of Congress, calculating an average excess return for the entire group. 
-While this methodology provides insights into the overall trading performance of Congress as a collective entity, it may not fully capture the individual-level behavior of specific politicians. By aggregating the data and calculating average returns, the approach may mask variations in the trading behavior of individual members of Congress. As a result, instances of potentially unethical trading behavior by specific politicians, who may leverage privileged information for personal financial gain, could be obscured within the average calculations. This limitation is particularly relevant in light of anecdotal findings, such as those presented by \cite{schweizer2011}, which highlight case studies of individual politicians who have allegedly profited from insider stock tips. These accounts underscore the need for a more granular examination of stock trading behavior at the individual level, moving beyond the analysis of average excess returns for the entire group of Congresspersons.
+However, the notion that members of Congress achieve excess returns on their investments has been challenged by other researchers. \cite{eg13} call into question the consensus that members of Congress trade with an information advantage. They reinterpret existing studies of congressional stock trading between 1985 and 2001 and conduct their own analysis of trades in the 2004–2008 period. Their findings challenge the notion of ``widespread'' insider trading in Congress, concluding that in neither period do members of Congress trade with an information advantage. Furthermore, they conduct the first analysis of members' portfolio holdings, showing that between 2004 and 2008, the average member of Congress would have earned higher returns in a passive index fund. 
 
-Additionally, the excess return approach on congressional stock trading mostly adopts a calendar time-based synthetic portfolio approach \citep{syn1, syn2}, which involves buying and selling stocks according to the Congressperson's decisions and then selling them a year later. This methodology obscures the importance of the ``timing'' aspect of such Congresspersons' stock trading, an aspect already well-highlighted by researches like \cite{schweizer2011} and \cite{tahoun2014}. By focusing on calendar time and ignoring the timing of trades, these studies may miss critical insights into the potential exploitation of non-public information by individual politicians. This underscores the need for further research and alternative methodologies that take into account both the individual-level trading behavior and the timing of trades to provide a more comprehensive understanding of congressional stock trading practices.
+The studies that employ the ``excess return" approach to analyze congressional stock trading in the U.S. typically focus on the ``average'' performance of Congresspersons as a whole \citep{zi24, zi11}. This approach aggregates the stock trading activities and returns of all members of Congress, calculating an average excess return for the entire group. 
+While this methodology provides insights into the overall trading performance of Congress as a collective entity, it may not fully capture the individual-level behavior of specific politicians. By aggregating the data and calculating average returns, the approach may mask variations in the trading behavior of individual members of Congress. 
+
+As a result, instances of potentially unethical trading behavior by specific politicians, who may leverage privileged information for personal financial gain, could be obscured within the average calculations. This limitation is particularly relevant in light of anecdotal findings, such as those presented by \cite{schweizer2011}, which highlight case studies of individual politicians who have allegedly profited from insider stock tips. These accounts underscore the need for a more granular examination of stock trading behavior at the individual level, moving beyond the analysis of average excess returns for the entire group of Congresspersons.
+
+Additionally, the excess return approach on congressional stock trading mostly adopts a calendar time-based synthetic portfolio approach \citep{syn1, syn2, eg13}, which involves buying and selling stocks according to the Congressperson's decisions and then selling them a year later. This methodology obscures the importance of the ``timing'' aspect of such Congresspersons' stock trading, an aspect already well-highlighted by researches like \cite{schweizer2011} and \cite{tahoun2014}. 
+
+By focusing on calendar time and ignoring the timing of trades, these studies may miss critical insights into the potential exploitation of non-public information by individual politicians. This underscores the need for further research and alternative methodologies that take into account both the individual-level trading behavior and the timing of trades to provide a more comprehensive understanding of congressional stock trading practices.
 
 In this regard, my research aims to delve deeper into the stock trading activities of individual Congresspersons, estimating the excess return of each Congressperson-ticker level transaction for buy-sell cycle of such transactions. 
 Throughout this estimation, the findings of this study lend further support to the conclusions drawn by \cite{eg13}. Their research found no widespread evidence of excess returns among Congresspersons, suggesting that insider trading is not a pervasive issue within the U.S. Congress. However, they noted that certain anomalies did exist, implying that a few individual Congresspersons could potentially be generating excess returns on specific tickers.
 % This granular analysis allows for a more precise examination of individual trading behavior, shedding light on potentially questionable activities that might otherwise be concealed within broader, aggregate assessments.
 % These transaction cycles begin with a series of iterative purchases up to a certain point, after which they transition into a series of sales. 
 % Take, for instance, the alleged well-timed trading activity of Senator Ron Wyden, involving the stock of Applied Materials Inc. (AMAT). Wyden's transactions with AMAT stock were executed in synchronization with U.S. legislative activity to subsidize the semiconductor industry in 2021. By estimating the excess return of Wyden's buy/sell transactions of AMAT stock, we can gain a clearer understanding of whether the timing of these transactions could potentially suggest the use of privileged information.
-In line with these observations, my estimation also shows a positively skewed distribution of excess returns. While negative excess returns are limited, positive excess returns span a wider range and include some notable outliers. This pattern suggests that while most Congresspersons do not achieve significant excess returns, a small number of individuals may be generating substantial positive returns on trade of specific tickers. 
+In line with these observations, my estimation also shows a positively skewed distribution of excess returns. While negative excess returns are limited, positive excess returns span a wider range and include some notable outliers. 
+This suggests that while most Congresspersons do not achieve significant excess returns, a small number of individuals may be generating substantial positive returns on trade of specific tickers. 
 % This lends further credence to the idea that a few individual Congresspersons could potentially be leveraging their informational advantages for financial gain.% Consequently, this approach will offer a much-needed transparency to congressional stock trading, allowing for the identification of any potentially unethical trading behavior.
 
 In addition, the breadth and depth of political connections, and their financial implications for both firms and politicians, have been extensively examined across a wide range of literature.  Political connections have been shown to significantly impact firm value \citep{roberts1990,khwaja2005,goldman2009}, and politicians have been found to derive financial benefits from them \citep{diermeier2005,lim2009,querubin2013}. \cite{boller1995} even demonstrated that members of the United States Congress regularly purchase common stock in companies that they regulate through legislation, highlighting the direct intersection between political activities and financial decision-making.
+
 Following this line of inquiry, \cite{eg14} delved further into the topic, attempting to understand why congressional stock transactions generally appeared to be low in profitability. Their research suggested that transactions with a ``political connection'', such as local ties or connections from campaign contributions, performed better than transactions without such connections. 
 % This revelation implies that political connections could facilitate a certain kind of information arbitrage where politicians can leverage their privileged knowledge obtained from their positions and legislative activities in their stock transactions.
 
 % However, they also found no significant evidence that members disproportionately invest in companies related to their committee assignments. This curious observation raises an intriguing question, given the well-established theory of committees specialization within their statutory jurisdiction or by their bill referral, and member's specialization in such topics (Patterson, 1959; King, 1994). It also contrasts with the assertion made by Boller (1995) about the regularity of Congress members purchasing stock in companies they regulate.
 % In addition, Eggers and Hainmueller further explored this topic in a subsequent research paper published in 2014. They sought to answer the question of why the profitability of congressional stock transactions appeared to be generally low, as revealed in their 2013 study. Their findings suggested that transactions with a political connection, such as local ties or campaign contributions, performed better than transactions without such connections.
 % This finding provides suggestive evidence that political connections could create an environment conducive to a certain kind of information arbitrage. Politicians, through their privileged knowledge acquired from their positions and legislative activities, might be able to use these connections to their advantage in their stock transactions.
-However, \cite{eg14} also found that ``we find no evidence that members disproportionately invest in companies to which they are connected through their committee assignments", despite finding such behaivors in local-connection or campaign finance connections. This introduces ``a new puzzle'', which stands in contrast with the well-established findings regarding committees' specialization in various topics within their authority conferred by statutory jurisdiction \citep{myers2009} or by their bill referral \citep{king1994}.
-Moreover, congressional members are known to specialize in such topics \citep{asher1974}, leveraging their unique knowledge and expertise to influence legislative outcomes \citep{10.2307/40709444, 10.2307/2111156, kiewiet1991logic, krehbiel1992information, curry2018knowledge}. Thus, the conflicting findings surrounding the link between committee assignments and members' stock trading activities warrant further exploration, enriching our understanding of congressional stock trading.
+However, \cite{eg14} also argues that they found no evidence that members disproportionately invest in companies to which they are connected through their committee assignments, despite finding such behaivors in local-connection or campaign finance connections. This introduces \textit{a new puzzle}, which stands in contrast with the well-established findings regarding committees' specialization in various topics within their authority conferred by statutory jurisdiction \citep{myers2009} or by their bill referral \citep{king1994}.
+Congressional members are known to specialize in such topics \citep{asher1974}, leveraging their unique knowledge and expertise to influence legislative outcomes \citep{10.2307/40709444, 10.2307/2111156, kiewiet1991logic, krehbiel1992information, curry2018knowledge}. Thus, the conflicting findings surrounding the link between committee assignments and members' stock trading activities warrant further exploration, to enrich our understanding of congressional stock trading.
 
 % The nature of committee assignments and the specialized knowledge they confer have been a central focus of legislative studies, with scholars recognizing their critical role in shaping legislative outcomes and individual member's behavior \citep{king1994,patterson1970}. Despite this, the connection between these committee assignments and stock trading behavior remains underexplored, presenting an interesting avenue for this research.
 
-In this regard, I re-examine the relationship between legislative activities and their stock transactions, using graph-structured data. This approach is motivated by the nature of the data we collected, which shows that 60\% of the Senators' stock transactions are mostly ETFs or mutual funds, which are typically targeted at specific industries, not individual firms.
-Previous research, such as the study conducted by \cite{eg14}, focused on estimating the impact of firm-level lobbying or committee-assignment of bills lobbied by specific firms on the increase of that specific firm's weight in a congressperson's portfolio. However, this approach does not account for a congressperson's specialization in ``industry-level'' knowledge, gained through their committee assignments, and the potential utilization of such industry-level knowledge in shaping their personal investment portfolio.
+In this regard, I re-examine the relationship between legislative activities and their stock transactions, using graph-structured data. This approach is motivated by the nature of the data I collected, which shows that 60\% of the Senators' stock transactions are mostly ETFs or mutual funds, which are typically targeted at specific industries, not individual firms.
+Previous research, such as the study conducted by \cite{eg14}, focused on estimating the impact of firm-level lobbying or committee-assignment of bills lobbied by specific firms on the increase of that specific firm's weight in a congressperson's portfolio. However, this approach does not account for a congressperson's specialization in industry-level knowledge, gained through their committee assignments, and the potential utilization of such industry-level knowledge in shaping their personal investment portfolio.
 
 
-To address this gap, I collected data that captures diverse aspects of legislative activities - such as firms' lobbying on specific bills, bills' assignment to specific committees, and committee membership of congresspersons - alongside with congresspersons' stock trading data. I sourced this data from various relevant platforms, such as Lobbyview \citep{kim2018}, Senate \& House's financial disclosures, and Congress.
-In order to investigate the relationship between a congressperson's portfolio and the industry-level specialization of the committees they are assigned to, I utilized a graph-structured data format. This facilitated an analysis capable of revealing a clear resemblance between the two. To substantiate this relationship statistically, I conducted a one-sided paired t-test \citep{hsu2014paired} aimed at determining whether the mean cross-entropy value measuring the similarity between the industry distribution of a congressperson's stock transactions and the industry distribution of their assigned committees was significantly smaller than that of their unassigned committees.
+To address this gap, I collected data that captures diverse aspects of legislative activities - such as firms' lobbying on specific bills, bills' assignment to specific committees, and committee membership of congresspersons - alongside with congresspersons' stock trading data. I sourced this data from various relevant platforms, such as Lobbyview \citep{kim2018}, Senate \& House's financial disclosures, and Congress website\footnote{\url{https://www.congress.gov/}}.
+
+This dataset inherently presents as a Heterogeneous Graph (Hetergraph), characterized by diverse types of nodes and a complex web of edges representing different relationships. 
+Given the high-dimensional nature of this network data, encompassing around 50,000 nodes and 260,000 edges, I utilized a Large Language Model (LLM) Agent to autonomously perform link prediction tasks. 
+The Agent's role was to predict the existence of a ``buy-sell" transactional connection between legislators and stock tickers. In its iterative process, the Agent was encouraged to develop and stack hypotheses or theories that might aid in generalizing findings. Interestingly, this approach revealed that industry-level specialization, derived through the bills lobbied by companies, could be a significant predictor of these transactional connections. This insight contributes to understanding the complex interplay between legislative influence and stock market activities.
+
+
+In order to verify such hypothesis generated by the LLM Agent, 
+I conducted an analysis capable of revealing a clear resemblance between the two. To substantiate this relationship statistically, I conducted a one-sided paired t-test \citep{hsu2014paired} aimed at determining whether the mean cross-entropy value measuring the similarity between the industry distribution of a congressperson's stock transactions and the industry distribution of their assigned committees was significantly smaller than that of their unassigned committees.
 
 % In the paired t-test, each pair consisted of the average cross-entropy value for a congressperson's assigned committees and the average cross-entropy value for their unassigned committees.
 
@@ -290,19 +324,22 @@ The result of the one-sided paired t-test shows that a congressperson's stock tr
 
 One possible explanation for the significant similarity between a congressperson's stock transactions and the industry specialization of their assigned committees may lie in the intersection of personal expertise and the congressional committee assignment process. Congresspersons often have backgrounds or interests in specific industries, leading to committee assignments that reflect these specializations \citep{10.2307/40709444, 10.2307/2111156, kiewiet1991logic, krehbiel1992information, curry2018knowledge}. This could naturally extend to their financial investments, with a congressperson who has a background or vested interest in, for example, technology being more likely to invest in technology-related stocks. Additionally, serving on a committee gives congresspersons privileged access to industry-specific information and insights, potentially informing and influencing their investment decisions in those sectors.
 
-However, it is crucial to consider alternative explanations and potential confounding factors. The concept of homophily, which suggests that people with similar characteristics are more likely to associate with each other, could play a role here. The congressperson might have been drawn to both their committee assignment and specific industry investments due to inherent interests or external factors such as the dominant industries in their district. It's also possible that both committee assignments and investment decisions could be influenced by external factors like market trends, policy interest, or campaign contributions from certain industries. Thus, while the observed correlation is intriguing, further research and rigorous controls are required to ensure these alternative explanations are adequately accounted for.
+% However, it is crucial to consider alternative explanations and potential confounding factors. The concept of homophily, which suggests that people with similar characteristics are more likely to associate with each other, could play a role here. The congressperson might have been drawn to both their committee assignment and specific industry investments due to inherent interests or external factors such as the dominant industries in their district. It's also possible that both committee assignments and investment decisions could be influenced by external factors like market trends, policy interest, or campaign contributions from certain industries. Thus, while the observed correlation is intriguing, further research and rigorous controls are required to ensure these alternative explanations are adequately accounted for.
 
 While this research arrives at a conclusion that is diametrically opposed to that of \cite{eg14} regarding the importance of committee assignments in shaping a congressperson's investment portfolio, it aligns with the broader trend in the study of congressional stock trading. The work of \cite{eg14} is valuable in that it moves beyond the traditional excess return approach and instead seeks to identify meaningful associations between various factors that could influence a congressperson's choice of stocks, such as PAC donations, district-level connections, or committee assignments.
 
 In a similar vein, this study emphasizes the need to understand how legislative activities in general, which encompass a vast and complex network of information flows and interactions, can impact a congressperson's choice of specific stocks. These activities include firms lobbying on bills of particular interest to them, the referral of these bills to specific committees based on statutory and historical jurisdiction, and the assignment of congresspersons to these committees based on their expertise.
 
-This approach is further justified by public choice theory, which posits that Congresspeople possess hybrid identities as both public and private entities \citep{buchanan1984}. Given that individual investors often experience failures \citep{barber2000,barberis2003}, it is reasonable to assume that Congresspeople may also face similar failures when investing as individuals, rather than utilizing privileged information as public figures. This underscores the importance of studying the direct relationship between congressional activities and stock trading patterns, rather than relying solely on tests of excess returns.
+% This approach is further justified by public choice theory, which posits that Congresspeople possess hybrid identities as both public and private entities \citep{buchanan1984}.
+Given that individual investors often experience failures \citep{barber2000,barberis2003}, it is reasonable to assume that Congresspeople may also face similar failures when investing as individuals, rather than utilizing privileged information as public figures. This underscores the importance of studying the direct relationship between congressional activities and stock trading patterns, rather than relying solely on tests of excess returns.
 
 
 
 
 
 In this regard, this research proposes a more fundamental approach to study these behaviors, directly tackling the problem from an information perspective. The aim is to test whether congressional activities, which are often centered around legislative activities, provide information to predict each Congressperson's specific ticker transactions. To achieve this, a predictive model is designed that takes into account a variety of factors tied to each Congressperson's legislative activities. This will include elements such as the committees they are assigned to, the bills being legislated through those committees, and the potential interests of various firms or industries related to those bills. The goal is to ascertain whether these factors can reliably predict a Congressperson's transaction with a specific ticker at a specific time. 
+% These relationships include firms lobbying on bills of particular interest to them, the referral of these bills to specific committees, and the assignment of congresspersons to these committees. 
+
 % For example, if a Congressperson, as posited by Public Choice Theory \citep{buchanan1984}, seeks to maximize personal utility, they may be motivated to transact with tickers of specific firms they are legislating about.% Although proving intentionality is challenging, it is worth investigating whether such legislation is connected to their stock transactions. Numerous finance papers suggest that individual investors often fail in their investments (Barber \& Odean, 2000; Barber, Lee, Liu, \& Odean, 2009; Barberis \& Thaler, 2003). Public choice theory posits that Congresspeople possess indivisible hybrid identities as public and private entities, which could result in investment failures (Buchanan \& Tollison, 1984). Consequently, it is essential to look beyond excess returns and examine the relationship between congressional activities and stock trading activities in general.
 
 % This research, therefore, conducted a paired t-test to test whether there exists significant difference of similarities (defined by cross entropy) between that NAICS Code distribution of firms transacted by congresspeople and that of committee among two different paired groups - one is the similarty between committees that the specific congressperson assinged to, the other one is that congressperson are not assigned to
@@ -313,8 +350,7 @@ In this regard, this research proposes a more fundamental approach to study thes
 
 % In order to effectively capture congressional activities, data has been collected and organized using a heterograph, which is a graph structure that incorporates different types of nodes and edges (Zhu et al., 2020). This graph-structured data represents various entities and their relationships, including the connections between firms lobbying for specific bills, the oversight of bills by particular committees, the assignment of Congresspersons to those committees, and the classification of companies within their respective industries. 
 
-In order to effectively capture the complex nature of congressional activities, I have collected and organized data using a heterograph, a type of graph structure that incorporates different types of nodes and edges. This graph-structured data is particularly useful for representing various entities and their relationships, which are inherent in the legislative process.
-These relationships include firms lobbying on bills of particular interest to them, the referral of these bills to specific committees, and the assignment of congresspersons to these committees. 
+% In order to effectively capture the complex nature of congressional activities, I have collected and organized data using a heterograph, a type of graph structure that incorporates different types of nodes and edges. This graph-structured data is particularly useful for representing various entities and their relationships, which are inherent in the legislative process.
 % Each of these elements can be represented as nodes in the heterograph, with edges indicating the relationships between them. For example, an edge can represent a firm lobbying on a bill, a bill being referred to a committee, or a congressperson being assigned to a committee.
 % Therefore, the heterograph structure allows for the inclusion of multiple types of relationships, or edges, between the same pair of nodes. This is crucial in our context, where a congressperson can have multiple types of connections to a committee or a bill.
 
@@ -333,7 +369,10 @@ Furthermore, to address the black-box nature of GNN predictions \citep{bb1, bb2,
 To summarize, this research contributes to the field in several significant ways.
 First, it corroborates the findings of \cite{eg13} by affirming the absence of widespread excess returns in congressional stock trading.
 Second, it reveals the presence of asymmetrically high excess returns when congresspersons earn, as opposed to when they incur losses. 
-Fourth, this study emphasizes the application of graph-structured data and implements a predictive analysis using a Graph Neural Network (GNN). The adoption of GNN enables a richer understanding of the relationship between congressional activities and stock transactions. Unlike conventional predictive modeling that merely relies on independent feature vectors, this approach integrates the topological properties of the network into the prediction task.
+Third, the incorporation of a Large Language Model (LLM) Agent for autonomous theorization in this study marks a pioneering step towards utilizing LLMs as automatic theory builders, potentially revolutionizing theoretical development in the field.
+Fourth, this study emphasizes the application of graph-structured data and implements a predictive analysis using a Graph Neural Network (GNN). The adoption of GNN enables a richer understanding of the relationship between congressional activities and stock transactions. 
+
+Unlike conventional predictive modeling that merely relies on independent feature vectors, this approach integrates the topological properties of the network into the prediction task.
 Finally, the research underscores the significance of a congressperson's committee assignments and firm-level lobbying in explaining the choice of stock transactions. This conclusion contradicts some previous studies, but aligns more closely with traditional literature on the influence of committee specialization and firm-level lobbying.
 In addition, this investigation redirects the traditional discourse on congressional motivation. Traditional research predominantly emphasizes the public career aspirations of congresspersons, such as re-election and the pursuit of sound public policies. However, the findings of this study reveal a marked similarity between a congressperson's legislative activities and their stock transaction patterns. This correlation necessitates an expansion of the current understanding of congresspersons' motivations, acknowledging the potential influence of personal financial success on their legislative behavior.
 
@@ -933,8 +972,8 @@ This subgraph illustrates the relationships between Senator Ron Wyden's congress
 \section{Identifying Informative Predictors in Congressional Stock Trading Using an LLM Agent}
 
 This section delves into the design of a link prediction task aimed at identifying key features and information within network data that are informative for predicting congressional stock trading. 
-We employ an emerging tool - a Large Language Model (LLM) agent - notable for its ability to reason and act autonomously. 
-By tasking this LLM agent with performing link prediction tasks across various legislator-ticker pairs, we assess the likelihood of transactions based on available network data. 
+I employ an emerging tool - a Large Language Model (LLM) agent - notable for its ability to reason and act autonomously. 
+By tasking this LLM agent with performing link prediction tasks across various legislator-ticker pairs, I assess the likelihood of transactions based on available network data. 
 This approach leverages the agent's advanced reasoning capabilities to analyze connections within the graph structured data explained in Section 3, providing insights into the dynamics of congressional stock trading behavior.
 % I find that the LLM agent can be particularly beneficial in analyzing high-dimensional network data, utilizing its discretion to stack up its own understanding and reflections on which features are beneficial to perform such a link prediction task.
 
@@ -947,9 +986,8 @@ In political science, handling high-dimensional data for tabular datasets has pr
 been addressed using two methods: tree-based models and LASSO.
 Tree-based models, as discussed in \cite{Montgomery}, are effective for detecting nonlinearities and interactions 
 in datasets with many covariates. 
+LASSO, as exemplified in \cite{lasso2}, is particularly beneficial for reducing model complexity by systematically identifying the most relevant predictors. This characteristic makes LASSO an effective tool for simplifying analyses in various domains, especially where reducing predictor dimensionality is crucial for clear interpretation.
 These models are valued for their flexibility and ability to uncover complex relationships within data. 
-LASSO, on the other hand, as exemplified in \cite{lasso2}, is particularly beneficial for reducing model complexity. 
-It systematically identifies relevant predictors, simplifying the interpretation of complex electoral analyses that involve multiple parties.
 
 However, for network data in political science, 
 there is a noticeable gap in the methodology. 
@@ -957,6 +995,7 @@ The field currently lacks a widely agreed-upon approach to manage the high dimen
 The challenge of managing high dimensionality in graph-structured data is further intensified when using heterographs as predictors. Heterographs, characterized by their diverse node and edge types, offer a comprehensive data representation format for social phenomena. Despite this, they are infrequently employed in social network analysis. This underutilization is notable given their potential as a general framework for capturing the complexities of social interactions.
 
 To address the challenges associated with the high dimensionality of graph-structured data, particularly when using heterographs as predictors in political science, this study introduces a novel method that leverages a Large Language Model (LLM) agent. The primary motivation behind employing an LLM agent is to effectively identify key features within the network—such as specific types of connections and combinations thereof—that can explain congressional stock trading behaviors in an interpretable manner.
+
 The LLM agent's role in this context is to sift through the complex network data, pinpointing potential predictors that might otherwise be overlooked due to the data's high dimensionality. For example, it could be hypothesized that if a legislator assigned to a committee handles a significant number of bills targeted at a particular industry, this could be a strong predictor of whether that legislator engages in transactions of certain stock tickers related to the same industry.
 The following sections will delve into a comprehensive explanation of what Large Language Models (LLMs) and LLM agents are, and the specific design of the theorizing agent being proposed.
 
@@ -970,7 +1009,7 @@ This capability makes them highly valuable in fields like political science \cit
 
 Continuing from the foundational understanding of Large Language Models (LLMs), a notable trend in their application is the shift from using them as mere one-time question-answering systems to leveraging them in a more dynamic and interconnected manner. Expanding on this concept, the proposed approach seeks to enhance the problem-solving capabilities of LLMs by enabling them to dissect complex problems into a sequence of interconnected steps. This methodology facilitates a more detailed and systematic exploration of solutions, where each step builds on the insights gained from the previous one. By breaking down problems in this manner, LLMs can provide a more nuanced and comprehensive understanding of each component of the problem, leading to a potentially more effective and holistic solution \citep{cot, yao2023tree}.
 
-In addition to the aforementioned step-by-step approach, there is an emerging trend of augmenting Large Language Models (LLMs) with a variety of tools, thereby enhancing their problem-solving capabilities. These augmented LLMs, or  ``LLM Agents'', are empowered to utilize these tools based on their own discretion and reasoning, choosing the most appropriate tool for a specific situation \citep{yao2023react}. For instance, an LLM augmented with search capabilities can effectively invoke this tool as a part of its problem-solving process whenever it deems necessary.
+In addition to the aforementioned step-by-step approach, there is an emerging trend of augmenting Large Language Models (LLMs) with a variety of tools, thereby enhancing their problem-solving capabilities. These augmented LLMs, or  ``LLM Agents'', are empowered to utilize these tools based on their own discretion and reasoning, choosing the most appropriate tool for a specific situation \citep{yao2023react}. For instance, an LLM augmented with web search tool can effectively invoke this tool as a part of its problem-solving process whenever it deems necessary.
 Since LLM Agents are designed with an awareness of their own data cut-off points, recognizing the limitations in their training data up to a certain point in time. This self-awareness enables them to identify situations where their existing knowledge base may be insufficient. In such scenarios, an LLM Agent can decide to refer to external sources of data, such as the web or apis, to acquire more current and accurate information \citep{Qin2023ToolLLMFL, patil2023gorilla}. 
 
 Then, how can we leverage these LLM Agents for theorizing and explaining complex phenomena such as congressional stock trading by letting them traverse over graph-structured data? This question opens up a new realm of possibilities in the application of LLM Agents. In the following section, I will propose a novel architecture that merges traditional machine learning techniques with the capabilities of LLM Agents. This hybrid approach aims to empower LLM Agents to not only analyze and interpret intricate data structures like graphs but also to generate their own explanations and hypotheses.
@@ -990,11 +1029,11 @@ This approach, known as ``no-derivative learning'',
 has rapidly evolved into a significant field of study \citep{yang2023large, zhu2023ghost, wang2023voyager}. 
 It involves crafting system architectures that enable LLMs or LLM Agents to learn and achieve specific goals without altering their underlying LLM model weights.
 
-A prime example of this method is the ``LLM as optimizer'' (OPRO) concept \citep{yang2023large}, which proposes no-derivative learning by creating a meta-prompt that is iteratively updated. The achievement of the task is scored, and this scoring is also performed by another LLM. This method demonstrates that prompts can evolve through self-evaluation or self-reflection, effectively allowing the LLM to function as an optimizer. This approach has been successfully applied to solve linear regression problems, showcasing the LLM's ability to operate in an optimizer-like capacity.
+A prime example of this method is the ``LLM as optimizer'' (OPRO) concept \citep{yang2023large}, which proposes no-derivative learning by creating a meta-prompt that is iteratively updated. The achievement of the task is scored, and this scoring is also conducted by LLM. This method demonstrates that prompts can evolve through self-evaluation or self-reflection, effectively allowing the LLM to function as an optimizer. This approach has been successfully applied to solve linear regression problems, showcasing the LLM's ability to operate in an optimizer-like capacity.
 
 Furthermore, from the perspective of optimizing actions, \cite{shinn2023reflexion} introduced a verbally reflecting agent that generates task feedbacks. These feedbacks are then maintained in an episodic memory buffer, aiding the agent in making better decisions in subsequent trials. This concept of self-evaluation or self-reflection, through designing a meta-prompt that allows the agent to assess its own performance and store these reflections for future reference, has become another cornerstone of no-derivative learning.
 
-Additionally, the \cite{wang2023voyager} presented a novel approach where embeddings of these reflections are stored in a database. 
+Additionally, the \cite{wang2023voyager} presented a novel approach where embeddings of these reflections are stored in a vector database. 
 This enables the utilization of similarity searches over vector space, enhancing the agent's ability to recall and act upon past experiences effectively. For instance, \cite{wang2023voyager} taught LLM Agents to play Minecraft by storing environment information as embeddings with corresponding skills as key-value pairs. These environment-skill pairs are retrieved based on the current environment, allowing the LLM Agent to augment its reasoning process with previously effective skill sets.
 
 \subsection{Predictive Theorization with Self-Learning LLM Agents}
@@ -1008,7 +1047,7 @@ The central inquiry revolves around the impact of these activities on stock trad
 
 As discussed in Section \ref{llm-agent-lit}, self-learning Large Language Model (LLM) Agents emerge as a promising solution to this challenge. By engaging these agents in iterative predictive tasks focused on the existence of links between legislator-ticker pairs, they can self-evaluate their performance. This process involves the agent assessing which observations within the dense graph data and which specific aspects of its topology or structure were pivotal in their problem-solving approach.
 
-In this context, I propose an innovative methodology where the traditional task of link prediction, commonly used in Graph Neural Networks (GNN), is approached through a self-learning LLM Agent. This method entails having the Agent predict the presence or absence of a link for a given legislator-ticker pair. Following each prediction, the agent engages in self-reflection or evaluation, analyzing the reasons behind its success or failure in comparison to the ground truth.
+In this context, I propose an innovative methodology where the traditional task of link prediction is approached through a self-learning LLM Agent. This method entails having the Agent predict the presence or absence of a link for a given legislator-ticker pair. Following each prediction, the agent engages in self-reflection or evaluation, analyzing the reasons behind its success or failure in comparison to the ground truth.
 
 This approach not only leverages the advanced capabilities of LLMs in handling high-dimensional data but also introduces a novel dimension of self-assessment and learning. It allows the LLM Agent to progressively refine its understanding and approach to the data, potentially uncovering significant insights about the relationship between congressional activities and stock trading behaviors. 
 
@@ -1025,7 +1064,8 @@ which in turn facilitates its achievement of high accuracy in the link predictio
 
 In order to undertake the link prediction task within the complex heterograph dataset, I developed an LLM Agent endowed with two distinctive tools: Graph Database (GraphDB) Access and Memory Database (MemoryDB) Access as follows: 
 
-\textbf{GraphDB Access:} This tool allows the agent to directly interact with the heterograph data from Section \ref{sec:data} stored in a GraphDB. The agent has the freedom to connect to this database and execute queries based on its own logic and requirements. For instance, it can formulate a query like "Legislator: Assignment -- [custom Cypher query to be defined later]", which could retrieve a list of all stock tickers that a legislator has transacted in, provided these tickers belong to the same NAICS code industry classification as the Ticker of interest. This tool empowers the agent with the ability to dynamically explore and analyze the relational data stored in the graph database.
+\textbf{GraphDB Access:} This tool allows the agent to directly interact with the heterograph data from Section \ref{sec:data} stored in a GraphDB. The agent has the freedom to connect to this database and execute queries based on its own logic and requirements. For instance, it can formulate a query like``MATCH (l:Legislator)-[:Buy\_Sell] $\rightarrow$ (t:Ticker)-[:BELONGS\_TO] $\rightarrow$ (n:NAICS) 
+RETURN t.ticker", which could retrieve a list of all stock tickers that a legislator has transacted in, provided these tickers belong to the same NAICS code industry classification as the Ticker of interest. This tool empowers the agent with the ability to dynamically explore and analyze the relational data stored in the graph database.
 
 \textbf{MemoryDB Access:} The second key component is the MemoryDB Access, which allows the agent to connect with a Vector Database. This database serves as a repository for the agent's historical analysis and decision-making processes. Following each iteration of the link prediction task, the agent is programmed to self-generate feedback on its performance. This introspective process is informed by the agent's own logs and reasoning paths used during prediction.
 
@@ -1035,10 +1075,257 @@ This approach enables the agent to query the Vector Database for relevant decisi
 
 Through this dual-tool system, the agent is equipped not only to access and analyze complex network data but also to learn from its experiences, improving its predictive accuracy and developing a more nuanced understanding of the underlying patterns and relationships within the data.
 
-\subsubsection{Prediction and Reflection Task Pipeline for the LLM Agent}
+\subsubsection{Operational Details of the LLM Agent's Prediction and Reflection Pipeline}
+
+This section elucidates the operational mechanics of the algorithm outlined in Algorithm \ref{alg:llm}, which governs the LLM Agent's functionality in the context of the link prediction task. The pipeline leverages GraphDB and MemoryDB tools, enabling the agent to iteratively perform predictions, evaluations, and self-reflections.
+
+\vspace{5mm} % Adjust the '5mm' to the desired space
+
+\begin{algorithm}[H]
+  \caption{LLM Agent Prediction and Reflection Pipeline}
+  \label{alg:llm}
+  \SetAlgoLined
+  % \KwResult{Improved agent prediction and reflection capabilities}
+  LLM $\leftarrow$ initialize LLM with model specification\;
+  $graphDB, memoryDB \leftarrow$ initialize database connectors\;
+  $agent \leftarrow$ initialize agent with (LLM, graphDB, memoryDB)\;
+  
+  \ForEach{$(legislator, ticker, label)$ in $TrainDataset$}{
+      $(pred, log) \leftarrow$ make\_pred$(legislator, ticker, agent)$\;
+      $eval \leftarrow$ evaluate$(pred, label)$\;
+      $reflection \leftarrow$ generate\_reflection$(log, eval, agent)$\;
+      insert\_memory$(reflection, memoryDB)$\;
+  }
+  \end{algorithm}
+
+\vspace{5mm} % Adjust the '5mm' to the desired space
+
+\textbf{1. LLM Initialization with GPT-4-1106-preview (GPT4-Turbo):} The agent utilizes the LLM model specified as `gpt-4-1106-preview', commercially known as GPT4-Turbo. This model is chosen for its superior token-length limit, 128K, allowing the agent to process the largest possible context length among currently available GPT models by OpenAI. This extensive context handling capability is crucial for analyzing complex, high-dimensional data.
+
+\textbf{2. Prediction Process:} The `make\_pred' function is executed by the agent using a prediction template. This template explicitly defines the task of link prediction, instructing the agent to determine the existence or non-existence of a link. The agent is guided to utilize specific data and tools. The template is available at Appendix \ref{app:log}.
+
+\textbf{3. Evaluation Function:} The `evaluate' function returns a binary outcome – 1 for a successful prediction (correct link existence) and 0 for an unsuccessful one (incorrect prediction).
+
+\textbf{4. Generation of Reflections:} Post-evaluation, the agent generates reflections in the form of a list of dictionaries, each containing 'condition' and `action' keys with their respective values. These reflections encapsulate the agent's reasoning and decision-making process in each prediction instance.
+The reflection is executed by the agent using a reflection prompt template. The template is available at Appendix \ref{app:log}.
+
+\textbf{5. Memory Insertion:} The `insert\_memory' function processes each `condition' in the reflection list, creating OpenAI embeddings for them. These embeddings, along with their associated actions, are then stored in the MemoryDB. This process facilitates the agent’s future recall and application of learned strategies and decisions.
+
+An illustrative example demonstrating a complete cycle of this pipeline, specifically for the case of Ron Wyden's interaction with Applied Materials (AMAT), is provided in the Appendix \ref{app:log}. This example offers a practical insight into how the agent navigates through a single iteration of the prediction and reflection process.
+
+\subsubsection{Assessment of the LLM Agent's Predictive Performance on Selected Cases}
+
+I tested LLM Agent's capabilities on a carefully chosen subset of cases involving legislator-ticker pairs, 
+with a focus on assessing its ability to predict transactional relationships. 
+Due to the expansive nature of the dataset, which includes about 24K transaction edges, 
+a full-scale analysis was constrained by both time and cost. A more practical approach was adopted, where the analysis was conducted on 20 cases, 
+striking a balance between existent and non-existent transactional edges. This sample selection not only addressed resource limitations — costing approximately \$31 in total, averaging to \$1.55 per inference 
+— but also adhered to a feasible time frame, with the entire process taking around 30 minutes, 
+translating to roughly 1.5 minutes per case.
+
+The top 10 Legislator-Ticker 
+pairs, characterized by their 
+unusually high excess returns as depicted in Figure \ref{fig:erfin}, were chosen. 
+To maintain diversity among the legislators and to simulate a realistic scenario, only one pair per unique legislator was included. Additionally, for each legislator, a ticker with which they had no prior transactions was randomly selected to create a hypothetical `negative' edge. 
+This approach not only facilitated a balanced examination of both positive and negative aspects of the transactional relationships but also allowed for a more fair understanding of the agent's predictive accuracy.
+
+The selected cases are systematically detailed in Table \ref{tab:prediction_analysis}, 
+providing an overview of the pairs analyzed and their respective classifications in terms of transaction existence. 
+Following the detailed presentation of cases in Table \ref{tab:prediction_analysis}, the performance of the LLM Agent's predictions can be further elucidated by referencing the computed metrics, as outlined in Table \ref{tab:metrics}. 
+This table presents the counts of True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN), along with the calculated values for key performance indicators: Accuracy, Precision, Recall, and F1 Score.
+% Overall, these metrics highlight the agent's strengths and weaknesses in its current predictive model. The moderate accuracy and balanced F1 Score suggest a fair level of performance, while the precision and recall indicate specific areas where further refinement and improvement could be beneficial. The insights gleaned from these metrics are crucial for guiding future enhancements to the agent’s predictive algorithms.
+
+% This structured analysis offers valuable insights into the agent's performance in a controlled environment, highlighting its potential in navigating complex datasets while being mindful of practical constraints such as time and cost efficiency.
+
+\begin{table}[h]
+  \centering
+  \caption{\textbf{Predictions on Legislator-Ticker Pairs using LLM Agent}}
+  \begin{tabular}{|l|l|l|c|c|c|}
+  \hline
+  \textbf{Legislator} & \textbf{Ticker} & \textbf{Ticker Name} & \textbf{Pred} & \textbf{Label} & \textbf{Eval} \\
+  \hline
+  Ron Wyden & AMAT & Applied Materials & EXIST & EXIST & Accurate \\
+  Ron Wyden & BKNG & Booking Holdings & EXIST & NON-EXIST & Inaccurate \\
+  Angus King & QQQ & NASDAQ-100 & EXIST & EXIST & Accurate \\
+  Angus King & CZR & Caesars Entertainment Inc & NON-EXIST & NON-EXIST & Accurate \\
+  Sheldon Whitehouse & IHI & iShares US Medical Devices ETF & EXIST & EXIST & Accurate \\
+  Sheldon Whitehouse & AVGO & Broadcom Inc. & NON-EXIST & NON-EXIST & Accurate \\
+  Timothy Kaine & VB & Vanguard Small-Cap Index Fund & NON-EXIST & EXIST & Inaccurate \\
+  Timothy Kaine & IJH & iShares Core S\&P Mid-Cap ETF & EXIST & NON-EXIST & Inaccurate \\
+  David Perdue & DISCA & Warner Bros Discovery Inc & NON-EXIST & EXIST & Inaccurate \\
+  David Perdue & XBI & SPDR S\&P Biotech ETF & EXIST & NON-EXIST & Inaccurate \\
+  Mike Rounds & VCR & Vanguard Consumer Discretionary ETF & EXIST & EXIST & Accurate \\
+  Mike Rounds & GLW & Corning Incorporated & EXIST & NON-EXIST & Inaccurate \\
+  Jerry Moran & FB & Facebook & NON-EXIST & EXIST & Inaccurate \\
+  Jerry Moran & RF & Regions Financial Corp & EXIST & NON-EXIST & Inaccurate \\
+  Benjamin Cardin & XLC & Communication Services Select Sector & EXIST & EXIST & Accurate \\
+  Benjamin Cardin & WMT & Walmart & EXIST & NON-EXIST & Inaccurate \\
+  Shelley Capito & MSFT & Microsoft Corporation & EXIST & EXIST & Accurate \\
+  Shelley Capito & SNE & Snap-On Inc & NON-EXIST & NON-EXIST & Accurate \\
+  Pat Roberts & WMT & Walmart & EXIST & EXIST & Accurate \\
+  Pat Roberts & CB & Chubb Limited & NON-EXIST & NON-EXIST & Accurate \\
+  \hline
+  \end{tabular}
+  \label{tab:prediction_analysis}
+  \end{table}
+
+  \begin{table}[h]
+    \centering
+    \caption{\textbf{Performance Metrics of the LLM Agent's Predictions}}
+    \begin{tabular}{|l|c|}
+    \hline
+    \textbf{Metric} & \textbf{Value} \\
+    \hline
+    True Positives (TP) & 7 \\
+    True Negatives (TN) & 4 \\
+    False Positives (FP) & 6 \\
+    False Negatives (FN) & 3 \\
+    \hline
+    Accuracy & $\frac{TP + TN}{TP + TN + FP + FN} = \frac{7 + 4}{7 + 4 + 6 + 3} = 0.55$ \\
+    Precision & $\frac{TP}{TP + FP} = \frac{7}{7 + 6} = 0.5385$ \\
+    Recall & $\frac{TP}{TP + FN} = \frac{7}{7 + 3} = 0.7$ \\
+    F1 Score & $2 \cdot \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}} = 2 \cdot \frac{0.5385 \times 0.7}{0.5385 + 0.7} = 0.6087$ \\
+    \hline
+    \end{tabular}
+    \label{tab:metrics}
+    \end{table}
+  
+The performance metrics of the LLM Agent, as detailed in Table \ref{tab:metrics}, clearly indicate that its current level of predictive accuracy and precision is suboptimal. 
+The low accuracy and precision suggest that the agent is not yet sufficiently reliable, particularly due to its tendency to produce a significant number of false positives. 
+This performance shortfall underscores the need for further refinement and training of the agent, especially considering the limited size of the dataset used for its evaluation.
+It's important to recognize, however, that this outcome is largely influenced by the nature and scale of the dataset used for the learning task. The agent's training and evaluation were conducted on a relatively small set of data, comprising just 20 cases.
+
+However, it is crucial to highlight the LLM Agent's innate ability to develop its own hypotheses and theorization through reflection. This capability is demonstrated by its continual generation of conditions, directing its focus on specific features by utilizing its memory module. This aspect of self-reflection and self-directed learning shows promise in the agent's development, indicating a capabilities of reasoning and adaptability. 
+In the following subsection, I will delve deeper into the contents of the memory module, exploring and investigating the hypotheses and theories formulated by the agent during its learning process. This examination will shed light on the agent's internal reasoning mechanisms and its potential for growth and improved performance with further training and exposure to more extensive datasets.
+
+\subsubsection{Exploration of the LLM Agent's Memory Module: Unraveling Internal Hypotheses and Theorizations}
+
+During the training involving 20 distinct pairs of legislator and ticker data, the LLM Agent successfully generated and stored 27 unique condition-action pairs within its memory module. 
+This accumulation of pairs indicates the agent's ability to recognize and adapt to a variety of scenarios. 
+Below is one such example that illustrates how the agent operates:
+
+\vspace{5mm} % Adjust the '5mm' to the desired space
+
+\begin{mdframed}
+\textbf{Example Condition-Action Pair:}
+
+\textbf{Condition:} When a publicly traded company has lobbied on bills that are assigned to the committees a legislator is a member of.
+
+\textbf{Action:} Investigate the bills lobbied by the ticker and their assignment to the legislator's committees using the following Cypher query: \texttt{`MATCH (t:Ticker)-[:LOBBY\_ON]->(b:Bill) MATCH (b)-[:ASSIGNED\_TO]->(c:Committee) WHERE c.id = `<committee\_id>' RETURN b.official\_title, b.id'}, and then predict 'EXIST' based on the relevance of the bills to the legislator's committee assignments.
+
+\textbf{Interpretation of the Cypher Query:} This query extracts data from a graph database, focusing on the interaction between legislative committees and lobbying efforts by companies. Specifically, it identifies bills that a company (ticker) has lobbied for and which have been assigned to specific committees that a legislator is part of. By specifying a committee ID, the query returns the titles and IDs of relevant bills. This information is used to assess the potential influence of the company's lobbying efforts on the legislator, based on their committee involvement. 
+If there's significant relevance found between the lobbying activities and the legislator's committee work, the agent predicts an `EXIST' relationship, suggesting a possible transactional or influential connection.
+\end{mdframed}
+
+\vspace{5mm} % Adjust the '5mm' to the desired space
+
+Following the specific example provided above, for a broader understanding of the LLM Agent's learning and decision-making capabilities, GPT-4 was employed to summarize all 27 unique condition-action pairs. This synthesis allows for a convenient interpretation of the agent's internal hypotheses and theories, providing insights into its reasoning process:
+
+\vspace{5mm} % Adjust the '5mm' to the desired space
+
+\begin{mdframed}
+  \subsection*{Consolidated Summary of Memory Pairs}
+  % \textbf{Overview:} 
+  % Over the course of training with 20 legislator-ticker pairs, the agent developed 27 unique memory entries. These entries, consolidated and categorized for clarity, represent the agent's learning and decision-making processes.
+  
+  \subsubsection*{Category: Legislative Committee and Ticker Lobbying Interactions}
+  \textbf{Condition:} When a ticker (company) lobbies on bills related to a legislator's committee assignments.\\
+  \textbf{Actions:} 
+  \begin{itemize}
+      \item Investigate lobbyist activities and committee assignments.
+      \item Predict `EXIST' for a `BUY\_SELL' relationship based on bill-ticker-legislator committee overlaps.
+  \end{itemize}
+  \textbf{Cypher Query:} 
+  \begin{verbatim}
+  MATCH (t:Ticker)-[:LOBBY_ON]->(b:Bill)-[:ASSIGNED_TO]->(c:Committee),
+        (l:Legislator)-[:COMMITTEE_ASSIGNMENT]->(c)
+  WHERE t.ticker = '<Ticker>' RETURN b.official_title, b.id
+  \end{verbatim}
+  
+  \subsubsection*{Category: ETF Sector and Legislative Committee Alignment}
+  \textbf{Condition:} When an ETF's sector representation aligns with a legislator's committee memberships.
+  \\ \textbf{Actions:}
+  \begin{itemize}
+      \item Predict `EXIST' for `BUY\_SELL' relationships considering sector overlap.
+  \end{itemize}
+  \textbf{Cypher Query:} 
+  \begin{verbatim}
+  MATCH (t:Ticker {ticker: '<ETF_Ticker>'})-[:BELONGS_TO]->(n:NAICS)
+  RETURN n.desc
+  \end{verbatim}
+  
+  \subsubsection*{Category: Broad Indirect Connections}
+  \textbf{Condition:} Absence of direct `BUY\_SELL' relationship data and lack of explicit NAICS code overlaps.
+  \\ \textbf{Actions:}
+  \begin{itemize}
+      \item Explore broader indirect connections like historical trading patterns, personal interests, or market trends.
+  \end{itemize}
+  
+  \subsubsection*{Category: Industry-Specific Legislative Influence}
+  \textbf{Condition:} Legislators with transactions in specific NAICS categories and companies lobbying on related bills.
+  \\\textbf{Actions:}
+  \begin{itemize}
+      \item Investigate committee assignments relevant to the industry of a ticker.
+      \item Predict `EXIST' based on industry interests and legislative influence.
+  \end{itemize}
+  \textbf{Cypher Query:} 
+  \begin{verbatim}
+  MATCH (l:Legislator)-[:COMMITTEE_ASSIGNMENT]->(c:Committee), 
+        (t:Ticker)-[:LOBBY_ON]->(b:Bill)
+  WHERE l.bioguide = '<bioguide>' AND t.ticker = '<Ticker>' 
+  RETURN b.official_title, b.id
+  \end{verbatim}
+  
+  \end{mdframed}
+
+  \vspace{5mm} % Adjust the '5mm' to the desired space
+
+  As evidenced in the above summary, the Agent demonstrates a capacity for generating decision-making frameworks autonomously. This process involves the identification of specific conditions under which relevant information is collected using Cypher queries, and subsequent decision-making based on these established conditions.
+  
+  This capability is not just a testament to the Agent's advanced analytical abilities but also opens up new possibilities in the realm of theory building. By allowing the LLM to stack memories and reflect upon them, researchers can derive nuanced insights and form hypotheses based on the model's internal decision-making patterns. This method showcases a novel way of leveraging Large Language Models for more than just data analysis, extending into the domain of theoretical development and hypothesis generation.
+  
+  Furthermore, the hypotheses formulated by the Agent lead us to an intriguing avenue for further exploration. The next phase of this study will focus on a detailed comparison between the industry codes of legislators' stock portfolios and those associated with their committee assignments. By examining these industry distributions and drawing on data from both the stock transactions and the committees' lobbying activities, the study aims to uncover any significant correlations that might suggest legislative influence in specific industry sectors. This comparison will be instrumental in understanding the extent to which committee assignments may affect or reflect congressional stock trading behaviors.
+  
+\vspace{5mm} % Adjust the '5mm' to the desired space
+
+% The LLM Agent's memory module, containing 27 unique entries, demonstrates its capability to generate hypotheses and decide on actions under specific conditions. These entries, each a unique condition-action pair, can be broadly categorized and summarized to understand the agent's learning process. A decision tree-like structure would be an effective way to visualize this learning, although it's important to note that creating an actual decision tree from these entries would be complex and would require a detailed analysis of each condition and action. Below is a high-level summary of the agent's learning, organized in a decision tree-like format:
+
+% Condition: Absence of Direct 'BUY_SELL' Relationship
+
+% Action: Use indirect evidence like committee assignments and bill lobbying activities.
+% Cypher Query: 'MATCH (l:Legislator {bioguide: '<bioguide>'})-[:COMMITTEE_ASSIGNMENT]->(c:Committee)<-[:ASSIGNED_TO]-(b:Bill)<-[:LOBBY_ON]-(t:Ticker {ticker: '<Ticker>'}) RETURN l.name, c.name, b.official_title, t.ticker'
+% Condition: Broad Transactions Across Diverse Sectors
+
+% Action: Predict 'EXIST' for 'BUY_SELL' relationships based on diverse interests.
+% Cypher Query: None specific; general prediction based on behavioral patterns.
+% Condition: Lobbying on Bills by Ticker Assigned to Legislator's Committees
+
+% Action: Investigate the lobbyist activities and committee assignments.
+% Cypher Query: 'MATCH (t:Ticker)-[:LOBBY_ON]->(b:Bill)-[:ASSIGNED_TO]->(c:Committee), (l:Legislator)-[:COMMITTEE_ASSIGNMENT]->(c) WHERE t.ticker = '<Ticker>' RETURN b.official_title, b.id'
+% Condition: ETF's Sector Alignment with Legislator's Committees
+
+% Action: Predict 'EXIST' based on sector overlap and committee memberships.
+% Cypher Query: 'MATCH (t:Ticker {ticker: '<ETF_Ticker>'})-[:BELONGS_TO]->(n:NAICS) RETURN n.desc'
+% Condition: Overlap in NAICS Sectors and No Direct 'BUY_SELL' Data
+
+% Action: Predict 'EXIST' based on NAICS sector overlap.
+% Cypher Query: None specific; prediction based on sector analysis.
+% Condition: No Direct Evidence and No NAICS Code Overlaps
+
+% Action: Consider broader indirect connections and historical trading patterns.
+% Cypher Query: None specific; broader analysis beyond database entries.
+% This summary provides an overview of the types of hypotheses and actions the LLM Agent has learned to generate. Each entry represents a unique scenario in which the agent determines the likelihood of a 'BUY_SELL' relationship, often employing Cypher queries to retrieve relevant data from the database. The agent shows an ability to adapt its strategies based on the available evidence, whether direct or indirect, and to utilize its memory module to guide its decision-making process in complex scenarios.
 
 
 
+
+
+
+% In machine learning and particularly in tasks involving complex predictive modeling, the size and diversity of the training dataset play a crucial role in shaping the accuracy and generalizability of the model.
+  
+% A limited dataset may not provide a comprehensive representation of the varied and nuanced scenarios the model might encounter in a broader context. This restriction can lead to a model that is not thoroughly trained to handle diverse or rare occurrences, which in turn impacts its predictive accuracy and reliability.
+  
+% Therefore, while the current metrics provide valuable insights into the agent's present capabilities, they should be interpreted with an understanding of the constraints imposed by the limited training set. Expanding the dataset, introducing a wider range of scenarios, and incorporating more diverse data points could significantly enhance the agent's learning, leading to improvements in its predictive accuracy and overall utility.
 
 % Network data, with its intricate web of relationships and interactions, requires more nuanced analytical tools that can effectively capture and analyze these dynamics. This gap underscores the need for innovative methods, like the LLM agent approach, which can navigate the complexities of network data and provide interpretable insights into phenomena such as congressional stock trading behaviors.
 
@@ -1196,7 +1483,7 @@ To test this, I performed a one-sided paired t-test on the differences in these 
 
 The results of the one-sided paired t-test are presented in Figure \ref{fig:paired_ttest}, with a sample size of 235 unique pairs of (Congressperson, Congressional year). The statistical test indicates that the average cross-entropy of the assigned committees is significantly lower than that of the unassigned committees. This finding suggests that a Congressperson's stock trading pattern significantly aligns with the industry-level specialization of the committees they are assigned to, supporting the hypothesis that congressional activities influence stock transaction behavior.
 
-The paired t-test used in this analysis is based on several assumptions. Firstly, the data must consist of pairs of observations, where each pair represents a particular entity under two conditions or at two time points. In our case, these pairs consist of average cross-entropy values for each Congressperson for each congressional year, under two conditions: assigned and unassigned committees. This pairing is meaningful as it controls for individual-level variation and trends across time, isolating the effect of committee assignment on stock transaction behavior.
+The paired t-test used in this analysis is based on several assumptions. Firstly, the data must consist of pairs of observations, where each pair represents a particular entity under two conditions or at two time points. In our case, these pairs consist of average cross-entropy values for each Congressperson for each congressional year, under two conditions: assigned and unassigned committees. This pairing is meaningful as it controls for individual level variation and trends across time, isolating the effect of committee assignment on stock transaction behavior.
 
 Secondly, the paired t-test assumes that the differences between paired observations are independently and identically distributed. In the context of our study, this would mean that the difference in cross-entropy values between the assigned and unassigned committees for a specific Congressperson in a specific Congressional year should be independent of the differences observed for other Congresspersons or other Congressional years.
 
@@ -1485,6 +1772,8 @@ In this study, I delved into the dynamics of congressional stock investment, exp
 
 Secondly, I addressed a puzzle originating from the conclusions drawn by \cite{eg14}, who found no clear evidence that congresspersons disproportionately invested in stocks linked to their lobbying and committee assignments. This finding seemed somewhat counterintuitive and diverged from the extensive research on committee assignment and congresspersons' specialization in specific topics governed by committees. Stemming from this, I compiled a novel graph-structured dataset that more comprehensively captures congressional activities. This data utilizes a hetero-graph type, representing the interactions between different types of entities. Leveraging this dataset, I proposed a novel measure using cross-entropy, demonstrating that a congressperson's stock portfolio significantly resembles the stocks related to their assigned committees, compared to unassigned ones.
 
+Thirdly, this study pioneers the application of a Large Language Model (LLM) Agent for automatic theorization in the realm of congressional stock trading analysis. This approach marks a contribution to the field, introducing a new method for generating theoretical hypotheses and potential explanations from complex high dimensional data sets.
+
 Furthermore, I expanded on the work of \cite{eg14} by using the graph neural network to determine how possibly relevant factors, such as congressional activities captured in the graph data, predict congresspersons' stock transactions. The results showed that, contrary to \cite{eg14}, the committee assignment of congresspersons and lobbying activities of firms are the most important features predicting their stock selections. In addition, to address the black-box nature of predictions leveraging neural networks, I proposed using GNNExplainer \citep{gex}. This type of explainability method complements the evaluation metric to interpret case-by-case predictions and provides a more interpretable and semantically rich explanation of why a particular congressperson may choose certain stocks.
 
 Adding onto these findings, it's worth examining the broader implications of our results. On a macro level, this research invites us to reassess our understanding of the motivations underpinning congressional service. The common perception is that congresspersons are primarily motivated by the goal of reelection, with their actions driven by a desire to serve their constituents and deliver policy outcomes that align with their promises and their party's platform.
@@ -1522,5 +1811,236 @@ By leveraging the capabilities of the GPT-3.5 Turbo language model, I was able t
 
 
 In summary, this innovative approach to entity disambiguation through URL acquisition and parallelization enables efficient data merging from diverse sources, ensuring the accuracy and scalability of the analysis.
+
+\section{Appendix: Task \& Reflection Prompt and Detailed Log from LLM Agent Performing Prediction and Reflection} \label{app:log}
+
+\subsection*{Task Prompt for the Agent to Perform `Make\_Prediction'}\label{app:log:task_prompt}
+\begin{Verbatim}[breaklines=true, frame=single]
+You are granted access to a graph database that encompasses interactions and activities related to the U.S. Congress, its Legislators, and publicly traded companies. 
+Your mission is to deduce the probability of a financial transaction between a designated U.S. Legislator, {Legis}, and a specific publicly traded company or ETF, {Company}, whose ticker is {Ticker} and name is {Company}.
+
+Available Nodes:
+- Legislator: Represents members of the U.S. Congress. Essential attributes include their 'name' and an identifier called 'bioguide'.
+- Ticker: Symbolizes publicly traded companies or ETF on stock exchanges. Each company or ETF is uniquely identified by its 'ticker' symbol, a shorthand used on stock trading platforms, and it has additional property 'name', the official corporate designation or name of the ETF.
+- Committee: Stands for the specialized committees within the U.S. Congress, each of which focuses on specific domains like finance, defense, health, or education. Crucial properties include 'name' and 'id'.
+- NAICS: Corresponds to the North American Industry Classification System, which categorizes businesses and industries. Pertinent attributes are 'ticker' and 'desc', which describe the sector or industry where 
+a publicly traded company belongs.
+- Bill: Denotes legislative bills processed within the U.S. Congress. Essential attributes include 'summary', 'id', 'official_title', and 'short_title'.
+
+Available Relationships:
+- BUY_SELL: Indicates a financial transaction or stock trading activity between a U.S. Legislator and a publicly traded company, with date specifics. (Legislator -> BUY_SELL -> Ticker)
+- COMMITTEE_ASSIGNMENT: Relays the assignment of a U.S. Legislator to a specific Committee within Congress for a set tenure. (Legislator -> COMMITTEE_ASSIGNMENT -> Committee)
+- LOBBY_ON: Chronicles the endeavors where a publicly traded company, via its Ticker, lobbied a particular Bill. (Ticker -> LOBBY_ON -> Bill). However, ETF does not lobby on a bill like QQQ or SPY.
+- BELONGS_TO: Designates the industry or sector, as per the NAICS system, where a publicly traded company operates. (Ticker -> BELONGS_TO -> NAICS)
+- ASSIGNED_TO: Signals the allocation of a Bill to a distinct Committee within Congress. (Bill -> Assigned_to -> Committee)
+
+[TASK]
+Using the information, scrutinize the nodes and relationships to estimate the likelihood of a "BUY_SELL" link between {Legis} and {Ticker}. You should give your guess (prediction) about a EXIST or NOT-EXIST of the transaction between {Legis} and {Ticker} as a final answer. 
+
+[Note]
+1. For the purposes of this task, any existing direct "BUY_SELL" relationships between {Legis} and {Ticker} have been intentionally deleted from graph database. Your goal is to infer the likelihood of such a relationship based on indirect data points.
+Therefore, make sure that 
+    - 1. You don't need to check whether there exist a direct "BUY_SELL" relationship between {Legis} and {Ticker} because it's already and intentionally deleted if exists.
+    - 2. You should "guess" a EXIST or NOT-EXIST of the transaction between {Legis} and {Ticker} as a final answer.
+
+2. When you fetch the bill node, do not fetch the `summary` attribute of the node because it's too long and this will deplete your Token limits to conduct the task successfully. Instead, you should fetch the `official_title` attribute of the node to understand the bill's content.
+
+[Harnessing the Memory Vector Database]
+You have a Memory Vector Database that encapsulates key strategies derived from your history of analyzing legislator-company stock transactions. This tool operates on a principle of condition-action pairs:
+
+    Condition: A specific scenario or set of circumstances from past tasks.
+    Action: The strategic response that was effective in that scenario.
+
+When faced with a new task, the database can be leveraged as follows:
+
+Describe the Condition: Input a description of the current task's conditions into the database. Then the database uses vector similarity to find past conditions that closely match your description.
+It then presents you with a list of condition-action pairs that were effective in similar past scenarios. This process helps you to quickly identify the most relevant strategies for the current task, drawing on successful experiences to inform your decision-making.
+
+The following is a list of condition-action pairs that you may be able to find in the database:
+    [Example 1]
+        Condition: Scenarios where a legislator has multiple overlapping NAICS codes with the tickers they've engaged in transactions with.
+        Action: In such scenarios, confidently assert the existence of a relationship.
+
+    [Example 2]
+        Condition: Situations where there are no overlapping NAICS codes between a ticker and the legislator's transactions.
+        Action: In these instances, scrutinize any bill titles lobbied by the ticker that are pertinent to the committees the legislator belongs to.
+
+In addition, make sure you start your chain-of-action by using this "Memory" tool by describing your task so that you can more faster and more accurately solve the task.  
+\end{Verbatim}
+
+
+\subsection*{Detailed Log of the Agent's Make\_Prediction Process: Ron Wyden - Applied Materials (AMAT)}\label{app:log:make_prediction}
+
+\begin{Verbatim}[breaklines=true, frame=single]
+> Entering new AgentExecutor chain...
+To begin with, I need to assess the indirect data points that could suggest a financial transaction between Ron Wyden and AMAT. Since direct "BUY_SELL" relationships have been intentionally deleted, I should look for overlapping interests, such as committee assignments, bills lobbied by AMAT, and NAICS codes that might indicate a connection between the legislator and the company.  
+  
+Action: MemoryDB Query
+Action Input: I am trying to predict whether a "BUY_SELL" relationship exists between Ron Wyden and AMAT based on indirect data points such as committee assignments, bills lobbied by AMAT, and overlapping NAICS codes, despite the direct relationship being intentionally deleted from the database.
+
+Observation: [{'condition': "Predicting a 'BUY_SELL' relationship between a legislator and an ETF based on indirect data points, where the ETF targets multiple companies in the same industry or theme.", 'action': "Consider the legislator's committee assignments, the bills lobbied by the ETF, and the sectors or industries where the ETF operates. Check for any overlap between the committees that the legislator is assigned to and the bills that the ETF has lobbied on. Also check if the legislator has had any financial transactions with companies in the same industry as the ETF."}, {'condition': "When there is a lack of data or relationships to infer the likelihood of a 'BUY_SELL' link between a legislator and a company.", 'action': "In these instances, consider other factors such as the legislator's overall trading activity, the company's overall lobbying activity, and the general trends in the legislator's transactions and the company's lobbying activities. Use these factors to make an educated guess about the likelihood of a 'BUY_SELL' link."}]
+  
+Thought:Based on the observations from the Memory tool, I should consider Ron Wyden's committee assignments, the bills lobbied by AMAT, and the NAICS codes related to AMAT. I should check for any overlap between the committees that Ron Wyden is assigned to and the bills that AMAT has lobbied on. Additionally, I should consider if Ron Wyden has had any financial transactions with companies in the same industry as AMAT. Since direct "BUY_SELL" relationships are intentionally deleted, I need to use these indirect data points to make an educated guess about the likelihood of a "BUY_SELL" relationship.
+
+Action: GraphDB Query
+Action Input: 
+MATCH (l:Legislator {name: 'Ron Wyden'})-[:COMMITTEE_ASSIGNMENT]->(c:Committee)<-[:ASSIGNED_TO]-(b:Bill)<-[:LOBBY_ON]-(t:Ticker {ticker: 'AMAT'})
+RETURN DISTINCT c.name, b.official_title
+
+Observation: [[{'c.name': 'Senate Committee on the Judiciary', 'b.official_title': 'To amend the Immigration and Nationality Act to eliminate the per-country numerical limitation for employment-based immigrants, to increase the per-country numerical limitation for family-sponsored immigrants, and for other purposes.'}
+, {'c.name': 'Senate Committee on Finance', 'b.official_title': 'A bill to amend the Internal Revenue Code of 1986 to establish the semiconductor manufacturing investment credit.'}, 
+{'c.name': 'House Committee on Energy and Commerce', 'b.official_title': 'To restore American leadership in semiconductor manufacturing by increasing Federal incentives in order to enable advanced research and development, secure the supply chain, and ensure long-term national security and economic competitiveness.'}, 
+{'c.name': 'Senate Committee on Finance', 'b.official_title': 'A bill to restore American leadership in semiconductor manufacturing by increasing Federal incentives in order to enable advanced research and development, secure the supply chain, and ensure long-term national security and economic competitiveness.'}, 
+{'c.name': 'House Committee on Energy and Commerce', 'b.official_title': 'To modernize and strengthen the Committee on Foreign Investment in the United States to more effectively guard against the risk to the national security of the United States posed by certain types of foreign investment, and for other purposes.'}, 
+{'c.name': 'Senate Committee on Finance', 'b.official_title': 'A bill to amend the Internal Revenue Code of 1986 to enhance tax benefits for research activities.'}, {'c.name': 'Senate Committee on the Judiciary', 'b.official_title': 'A bill to amend the Immigration and Nationality Act to eliminate the per-country numerical limitation for employment-based immigrants, to increase the per-country numerical limitation for family-sponsored immigrants, and for other purposes.'}, 
+{'c.name': 'House Committee on Energy and Commerce', 'b.official_title': 'To establish a new Directorate for Technology and Innovation in the National Science Foundation, to establish a regional technology hub program, to require a strategy and report on economic security, science, research, innovation, manufacturing, and job creation, to establish a critical supply chain resiliency program, and for other purposes.'}, 
+{'c.name': 'Senate Committee on Commerce, Science, and Transportation', 'b.official_title': 'A bill to establish a new Directorate for Technology and Innovation in the National Science Foundation, to establish a regional technology hub program, to require a strategy and report on economic security, science, research, innovation, manufacturing, and job creation, to establish a critical supply chain resiliency program, and for other purposes.'}, 
+{'c.name': 'Senate Committee on the Judiciary', 'b.official_title': 'A bill to amend the Immigration and Nationality Act to authorize additional visas for well-educated aliens to live and work in the United States, and for other purposes.'}, 
+{'c.name': 'House Committee on Energy and Commerce', 'b.official_title': 'To provide for a coordinated Federal research initiative to ensure continued United States leadership in engineering biology.'}]]
+
+Thought:The query results show that there are bills related to semiconductor manufacturing and technology innovation that have been lobbied on by AMAT and are assigned to committees that Ron Wyden is a member of, particularly the Senate Committee on Finance. This suggests that there is an overlap in the interests of Ron Wyden and AMAT, which could be an indicator of a potential "BUY_SELL" relationship. 
+Next, I should check if Ron Wyden has had any financial transactions with companies in the same industry as AMAT to further support the likelihood of a "BUY_SELL" relationship.
+
+Action: GraphDB Query
+Action Input: 
+MATCH (l:Legislator {name: 'Ron Wyden'})-[:BUY_SELL]->(t:Ticker)-[:BELONGS_TO]->(n:NAICS)
+WHERE EXISTS((:Ticker {ticker: 'AMAT'})-[:BELONGS_TO]->(n))
+RETURN DISTINCT t.ticker, n.desc
+Parsing Cypher queries...
+Input text: MATCH (l:Legislator {name: 'Ron Wyden'})-[:BUY_SELL]->(t:Ticker)-[:BELONGS_TO]->(n:NAICS)
+WHERE EXISTS((:Ticker {ticker: 'AMAT'})-[:BELONGS_TO]->(n))
+RETURN DISTINCT t.ticker, n.desc
+
+
+Observation: [[{'t.ticker': 'AVGO', 'n.desc': 'Semiconductor and Related Device Manufacturing'}, {'t.ticker': 'INTC', 'n.desc': 'Semiconductor and Related Device Manufacturing'}, {'t.ticker': 'NVDA', 'n.desc': 'Semiconductor and Related Device Manufacturing'}]]
+
+Thought:The results indicate that Ron Wyden has engaged in financial transactions with other companies in the semiconductor and related device manufacturing industry, which is the same industry as AMAT. This further supports the likelihood of a "BUY_SELL" relationship between Ron Wyden and AMAT, as there is a pattern of interest in this sector.
+Given the overlap in committee interests and the legislator's previous financial transactions within the same industry as AMAT, I can make an educated guess about the existence of a "BUY_SELL" relationship.
+
+Final Answer: Based on the indirect data points such as committee assignments related to technology and semiconductor manufacturing, bills lobbied by AMAT that are assigned to these committees, and Ron Wyden's financial transactions with other companies in the same industry, it is likely that a "BUY_SELL" relationship between Ron Wyden and AMAT exists (EXISTS).
+
+> Finished chain.
+\end{Verbatim}
+
+\subsection*{Reflection Prompt for the Agent to Perform `Generate\_Reflection': Ron Wyden - Applied Materials (AMAT)}\label{app:log:reflect_prompt}
+\begin{Verbatim}[breaklines=true, frame=single]
+  Previously, I presented you with a link prediction task:
+
+  [Previous TASK]-----------------
+  {Task Prompt}
+  -------------------------------
+
+  Your response was:
+
+  [LOG]---------------------------
+  {Log from Make_Prediction}
+  --------------------------------
+
+  % Either one of the below two lines based on eval:
+  Your response was ACCURATE, as there is indeed a "BUY-SELL" relationship between "{Legis}" and "{Ticker}".
+
+  Your response was INACCURATE, as there exists a "BUY-SELL" relationship between "{Legis}" and "{Ticker}".  
+
+
+  Moving on, your next objective involves self-reflection:
+
+  [TASK]
+  Building upon your failure with the previous task, take a moment to consider the key factors that contributed to your failure. Then reflect on how and when certain strategies can be applied in future scenarios to avoid such failure. 
+  Now that you know the answer of the task, you can try multiple possible queries using the tool GraphDB Query to see which features of the data could have helped you to solve the task.
+
+  Then, structure your self-assessment in two parts:
+
+  Condition: Identify specific conditions under which the strategy you came up with reflection employed.
+  Action: Outline the steps of the strategy to be employed under these conditions.
+
+  This analysis will serve as a guide for tackling similar tasks in the future, where "similarity" is determined by the conditions you delineate. You will be provided with a new task later on, along with a tool to detect conditions akin to those you've described by assessing vector similarity, enabling you to retrieve and apply the successful action from your previous experience.
+
+  For example:
+
+      [Example 1]
+          Condition: Scenarios where a legislator has multiple overlapping NAICS codes with the tickers they've engaged in transactions with.
+          Action: In such scenarios, confidently assert the existence of a relationship.
+
+      [Example 2]
+          Condition: Situations where there are no overlapping NAICS codes between a ticker and the legislator's transactions.
+          Action: In these instances, scrutinize any bill titles lobbied by the ticker that are pertinent to the committees the legislator belongs to.
+
+  However, as you reflect on the task you've just completed, distill a novel condition-action pair that captures a new understanding or strategy not previously recorded in your memory. This pair should be informed by unique aspects or outcomes of the current task. If no new insights have emerged or if the task's conditions do not warrant a fresh approach distinct from existing entries, please return an empty list.
+
+
+  [Output Format]
+  We want your answer to be jsonl format with the list of your pair of "Condition" and "Action" as follows:
+
+  [{{
+  "condition": "Instances where a legislator has several overlapping NAICS codes among the tickers they've transacted with.",
+  "action": "In such a data landscape, confidently indicate 'EXIST'."
+  }}, ... ] # store multiple pairs of "Condition" and "Action" in a list if you have multiple pairs of "Condition" and "Action" to store in your memory.
+\end{Verbatim}
+
+
+\subsection*{Detailed Log of the Agent's `Generate\_Reflection' Process}\label{app:log:reflect}
+
+\begin{Verbatim}[breaklines=true, frame=single]
+  > Entering new AgentExecutor chain...
+  To complete the self-assessment, I need to identify the conditions under which the strategy I previously employed can be effectively utilized and outline the steps of the strategy to be employed under these conditions.
+  
+Action: Memory
+Action Input: I need to reflect on the key factors that contributed to the successful prediction of a "BUY_SELL" relationship between Ron Wyden and AMAT, and how to apply similar strategies in future scenarios with similar conditions.
+Observation: [{'condition': "Predicting a 'BUY_SELL' relationship between a legislator and an ETF based on indirect data points, where the ETF targets multiple companies in the same industry or theme.", 'action': "Consider the legislator's committee assignments, the bills lobbied by the ETF, and the sectors or industries where the ETF operates. Check for any overlap between the committees that the legislator is assigned to and the bills that the ETF has lobbied on. Also check if the legislator has had any financial transactions with companies in the same industry as the ETF."}, {'condition': "When there is a lack of data or relationships to infer the likelihood of a 'BUY_SELL' link between a legislator and a company.", 'action': "In these instances, consider other factors such as the legislator's overall trading activity, the company's overall lobbying activity, and the general trends in the legislator's transactions and the company's lobbying activities. Use these factors to make an educated guess about the likelihood of a 'BUY_SELL' link."}, {'condition': "When predicting a 'BUY_SELL' relationship between a legislator and a ticker, and there are no indirect relationships between them in the graph database.", 'action': "In these instances, consider the possibility of a direct 'BUY_SELL' relationship between the legislator and the ticker. Use a query to check for such a direct relationship. If there is a direct 'BUY_SELL' relationship, confidently assert the existence of a relationship."}]
+
+Thought:I now have a list of condition-action pairs that were effective in similar past scenarios. I can use these to create a self-assessment of the strategy I employed in the current task.
+
+Final Answer:
+```jsonl
+[
+    {
+        "condition": "When a legislator's committee assignments overlap with bills lobbied by a company.",
+        "action": "Use a Cypher query to identify any overlap between the committees a legislator is assigned to and the bills a company has lobbied on. 
+        If overlap exists, this suggests a potential 'BUY_SELL' relationship. Cypher query example: MATCH (l:Legislator)-[:COMMITTEE_ASSIGNMENT]->(c:Committee)<-[:ASSIGNED_TO]-(b:Bill)
+        <-[:LOBBY_ON]-(t:Ticker) RETURN DISTINCT c.name, b.official_title"
+    },
+    {
+        "condition": "When a legislator has engaged in financial transactions with companies in the same industry as another company.",
+        "action": "Use a Cypher query to check if a legislator has had financial transactions with companies in the same NAICS industry as the company in question. If transactions exist, this indicates a higher likelihood of a 'BUY_SELL' relationship. Cypher query example: MATCH (l:Legislator)-[:BUY_SELL]->(t:Ticker)-[:BELONGS_TO]->(n:NAICS) WHERE EXISTS((:Ticker)-[:BELONGS_TO]->(n)) RETURN DISTINCT t.ticker, n.desc"
+    }
+]
+```
+> Finished chain.
+
+\end{Verbatim}
+
+% \section*{Detailed Memory Pairs of the LLM Agent}
+
+% \subsection*{Memory Pair 1}
+% \textbf{Condition:} When there is no direct 'BUY\_SELL' relationship data available, but there is indirect evidence of a connection between a legislator's committee assignments and a ticker's lobbying activities on related bills.
+
+% \textbf{Action:} Use indirect evidence such as committee assignments and bill lobbying to infer the likelihood of a 'BUY\_SELL' relationship.
+
+% \textbf{Cypher Query:} 
+% \begin{verbatim}
+% MATCH (l:Legislator {bioguide: '<bioguide>'})-[:COMMITTEE_ASSIGNMENT]->(c:Committee)
+% <-[:ASSIGNED_TO]-(b:Bill)<-[:LOBBY_ON]-(t:Ticker {ticker: '<Ticker>'}) 
+% RETURN l.name, c.name, b.official_title, t.ticker
+% \end{verbatim}
+
+% % Repeat the above format for each memory pair, changing the content accordingly.
+
+% \subsection*{Memory Pair 2}
+% \textbf{Condition:} When a legislator has a history of transactions with companies across diverse sectors, and the ETF in question also represents a broad range of sectors.
+
+% \textbf{Action:} Predict the existence of a 'BUY\_SELL' relationship between the legislator and the ETF, considering the legislator's broad investment interests and the ETF's diverse sector coverage.
+
+% \textbf{Cypher Query:} None specific; general prediction based on behavioral patterns.
+
+
+% \subsection*{Memory Pair 27}
+% \textbf{Condition:} When there is an overlap in NAICS sectors between the companies a legislator has transacted with and the industry of a ticker, and direct 'BUY\_SELL' relationships are intentionally deleted from the database.
+
+% \textbf{Action:} Predict 'EXIST' for a 'BUY\_SELL' relationship between the legislator and the ticker, as the overlap in NAICS sectors suggests a potential alignment of interests that could lead to financial transactions.
+
+% \textbf{Cypher Query:} 
+
+\end{document}
+
 
 \end{document}
