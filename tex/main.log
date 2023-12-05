@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.15)  4 DEC 2023 10:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.15)  5 DEC 2023 10:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1201,273 +1201,283 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [1
 
 ] [2] [3] [4]
-Overfull \hbox (1.51709pt too wide) in paragraph at lines 313--316
-\OT1/cmr/m/n/10 types of nodes and a com-plex web of edges rep-re-sent-ing dif-fer-ent re-la-tion-ships. Given the high-dimensional
- []
-
-[5] [6]
-Overfull \hbox (10.80307pt too wide) in paragraph at lines 366--367
+Overfull \hbox (10.80307pt too wide) in paragraph at lines 283--284
 []\OT1/cmr/m/n/10 Furthermore, to ad-dress the black-box na-ture of GNN pre-dic-tions ([]Day-hoff and DeLeo[], []2001[]; []Buhrmester
  []
 
-[7] [8] [9] [10]
-<imgs/tb-trans.png, id=468, 1197.47375pt x 450.68375pt>
+[5]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 549.
+
+[6] [7]
+<imgs/tb-trans.png, id=357, 1197.47375pt x 450.68375pt>
 File: imgs/tb-trans.png Graphic file (type png)
 <use imgs/tb-trans.png>
-Package pdftex.def Info: imgs/tb-trans.png  used on input line 554.
+Package pdftex.def Info: imgs/tb-trans.png  used on input line 599.
 (pdftex.def)             Requested size: 453.405pt x 170.64267pt.
- [11 <./imgs/tb-trans.png>]
-<imgs/trans.png, id=486, 931.48pt x 694.595pt>
+ [8 <./imgs/tb-trans.png>]
+<imgs/trans.png, id=381, 931.48pt x 694.595pt>
 File: imgs/trans.png Graphic file (type png)
 <use imgs/trans.png>
-Package pdftex.def Info: imgs/trans.png  used on input line 570.
+Package pdftex.def Info: imgs/trans.png  used on input line 615.
 (pdftex.def)             Requested size: 453.405pt x 338.09702pt.
- [12 <./imgs/trans.png>] [13]
-<imgs/long-du.png, id=523, 1433.355pt x 891.33pt>
-File: imgs/long-du.png Graphic file (type png)
-<use imgs/long-du.png>
-Package pdftex.def Info: imgs/long-du.png  used on input line 652.
-(pdftex.def)             Requested size: 453.405pt x 281.9401pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14] [15 <./imgs/long-du.png>]
-<imgs/RWAMAT.png, id=541, 709.65125pt x 555.07375pt>
+[9] [10 <./imgs/trans.png>] [11]
+<imgs/long-du.png, id=421, 1433.355pt x 891.33pt>
+File: imgs/long-du.png Graphic file (type png)
+<use imgs/long-du.png>
+Package pdftex.def Info: imgs/long-du.png  used on input line 697.
+(pdftex.def)             Requested size: 453.405pt x 281.9401pt.
+ [12 <./imgs/long-du.png>] [13]
+<imgs/RWAMAT.png, id=440, 709.65125pt x 555.07375pt>
 File: imgs/RWAMAT.png Graphic file (type png)
 <use imgs/RWAMAT.png>
-Package pdftex.def Info: imgs/RWAMAT.png  used on input line 686.
+Package pdftex.def Info: imgs/RWAMAT.png  used on input line 731.
 (pdftex.def)             Requested size: 204.03085pt x 159.58669pt.
-<imgs/RWMAR.png, id=542, 520.94624pt x 407.5225pt>
+<imgs/RWMAR.png, id=441, 520.94624pt x 407.5225pt>
 File: imgs/RWMAR.png Graphic file (type png)
 <use imgs/RWMAR.png>
-Package pdftex.def Info: imgs/RWMAR.png  used on input line 693.
+Package pdftex.def Info: imgs/RWMAR.png  used on input line 738.
 (pdftex.def)             Requested size: 204.03085pt x 159.6047pt.
- [16]
-<imgs/ERFin3.png, id=551, 1457.445pt x 872.25874pt>
+<imgs/ERFin3.png, id=444, 1457.445pt x 872.25874pt>
 File: imgs/ERFin3.png Graphic file (type png)
 <use imgs/ERFin3.png>
-Package pdftex.def Info: imgs/ERFin3.png  used on input line 708.
+Package pdftex.def Info: imgs/ERFin3.png  used on input line 753.
 (pdftex.def)             Requested size: 453.40448pt x 356.29744pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17 <./imgs/RWAMAT.png> <./imgs/RWMAR.png>] [18 <./imgs/ERFin3.png>] [19] [20]
-Overfull \hbox (47.6515pt too wide) in paragraph at lines 923--935
+[14 <./imgs/RWAMAT.png> <./imgs/RWMAR.png>] [15 <./imgs/ERFin3.png>] [16]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 936.
+
+[17]
+Overfull \hbox (47.6515pt too wide) in paragraph at lines 970--982
  [][] 
  []
 
-<imgs/etfmf.png, id=621, 1090.0725pt x 518.93875pt>
+<imgs/etfmf.png, id=514, 1090.0725pt x 518.93875pt>
 File: imgs/etfmf.png Graphic file (type png)
 <use imgs/etfmf.png>
-Package pdftex.def Info: imgs/etfmf.png  used on input line 939.
+Package pdftex.def Info: imgs/etfmf.png  used on input line 986.
 (pdftex.def)             Requested size: 453.405pt x 215.8465pt.
-[21 <./imgs/etfmf.png>]
-<imgs/trip.png, id=629, 742.775pt x 537.00626pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/trip.png, id=516, 742.775pt x 537.00626pt>
 File: imgs/trip.png Graphic file (type png)
 <use imgs/trip.png>
-Package pdftex.def Info: imgs/trip.png  used on input line 949.
+Package pdftex.def Info: imgs/trip.png  used on input line 996.
 (pdftex.def)             Requested size: 453.405pt x 327.80276pt.
 
-Overfull \hbox (14.03949pt too wide) in paragraph at lines 972--972
-|[]\OT1/cmr/bx/n/14.4 Identifying In-for-ma-tive Pre-dic-tors in Con-gres-sional Stock Trad-
- []
-
-[22 <./imgs/trip.png>] [23] [24] [25] [26] [27] [28] [29]
-Overfull \hbox (77.19434pt too wide) in paragraph at lines 1143--1170
- [][] 
- []
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[30] [31]
-Overfull \hbox (24.98096pt too wide) in paragraph at lines 1214--1215
-\OT1/cmtt/m/n/10 (b)-[:ASSIGNED[]TO]->(c:Committee) WHERE c.id = `<committee[]id>' RETURN b.official[]title,
- []
-
-[32]
-Package mdframed Info: Not enough space on this page on input line 1279.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 1279.
- [33] [34]
-Overfull \hbox (5.96786pt too wide) in paragraph at lines 1341--1341
+Overfull \hbox (5.96786pt too wide) in paragraph at lines 1021--1021
 |[]\OT1/cmr/bx/n/14.4 Industry-level Sim-i-lar-i-ties be-tween Con-gressper-sons and Com-
  []
 
-[35] [36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1381--1381
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 1021.
+
+[18] [19 <./imgs/etfmf.png>] [20 <./imgs/trip.png>] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1063
 [][][]\OT1/cmr/m/n/8 See []$\OT1/cmtt/m/n/8 https : / / www . whitehouse . senate . gov / news / release / whitehouse -[] supports -[] biden -[] plan -[] to -[] fully -[] utilize -[]
  []
 
-[38]
-<imgs/sheldonwhite.png, id=858, 416.2752pt x 327.3831pt>
+[22]
+<imgs/sheldonwhite.png, id=592, 416.2752pt x 327.3831pt>
 File: imgs/sheldonwhite.png Graphic file (type png)
 <use imgs/sheldonwhite.png>
-Package pdftex.def Info: imgs/sheldonwhite.png  used on input line 1398.
+Package pdftex.def Info: imgs/sheldonwhite.png  used on input line 1080.
 (pdftex.def)             Requested size: 136.02464pt x 142.52039pt.
-<imgs/ssfi-entire2.png, id=859, 769.87625pt x 602.25pt>
+<imgs/ssfi-entire2.png, id=593, 769.87625pt x 602.25pt>
 File: imgs/ssfi-entire2.png Graphic file (type png)
 <use imgs/ssfi-entire2.png>
-Package pdftex.def Info: imgs/ssfi-entire2.png  used on input line 1404.
+Package pdftex.def Info: imgs/ssfi-entire2.png  used on input line 1086.
 (pdftex.def)             Requested size: 136.02257pt x 142.52124pt.
 
-Underfull \hbox (badness 1442) in paragraph at lines 1405--1405
+Underfull \hbox (badness 1442) in paragraph at lines 1087--1087
 []\OT1/cmr/m/n/9 (b) |Sen-ate Fi-nance Com-mit-tee
  []
 
-<imgs/ssbk-entire2.png, id=860, 758.835pt x 597.23125pt>
+<imgs/ssbk-entire2.png, id=594, 758.835pt x 597.23125pt>
 File: imgs/ssbk-entire2.png Graphic file (type png)
 <use imgs/ssbk-entire2.png>
-Package pdftex.def Info: imgs/ssbk-entire2.png  used on input line 1410.
+Package pdftex.def Info: imgs/ssbk-entire2.png  used on input line 1092.
 (pdftex.def)             Requested size: 136.01704pt x 142.51825pt.
 
-Underfull \hbox (badness 1163) in paragraph at lines 1411--1411
+Underfull \hbox (badness 1163) in paragraph at lines 1093--1093
 []\OT1/cmr/m/n/9 (c) |Sen-ate Bank-ing Com-mit-tee
  []
 
-[39 <./imgs/sheldonwhite.png> <./imgs/ssfi-entire2.png> <./imgs/ssbk-entire2.png>]
-<imgs/onspt.png, id=870, 1168.365pt x 682.55pt>
-File: imgs/onspt.png Graphic file (type png)
-<use imgs/onspt.png>
-Package pdftex.def Info: imgs/onspt.png  used on input line 1472.
-(pdftex.def)             Requested size: 453.405pt x 264.87074pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<imgs/wstat2.png, id=871, 780.9175pt x 771.88374pt>
-File: imgs/wstat2.png Graphic file (type png)
-<use imgs/wstat2.png>
-Package pdftex.def Info: imgs/wstat2.png  used on input line 1479.
-(pdftex.def)             Requested size: 453.405pt x 448.164pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[40] [41 <./imgs/onspt.png>] [42 <./imgs/wstat2.png>] [43] [44]
-Overfull \hbox (8.81955pt too wide) in paragraph at lines 1520--1520
+[23] [24 <./imgs/sheldonwhite.png> <./imgs/ssfi-entire2.png> <./imgs/ssbk-entire2.png>]
+<imgs/output-new.png, id=615, 496.4949pt x 380.1402pt>
+File: imgs/output-new.png Graphic file (type png)
+<use imgs/output-new.png>
+Package pdftex.def Info: imgs/output-new.png  used on input line 1209.
+(pdftex.def)             Requested size: 453.405pt x 347.1636pt.
+ [25 <./imgs/output-new.png>] [26]
+Overfull \hbox (8.81955pt too wide) in paragraph at lines 1251--1251
 |[]\OT1/cmr/bx/n/14.4 Predicting Con-gres-sional Stock Trans-ac-tions us-ing Graph Neu-
  []
 
-[45] [46] [47]
+[27] [28] [29]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 1573.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 1298.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 1573.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 1298.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 1573.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 1298.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 1573.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 1298.
 
-[48] [49]
-Overfull \hbox (14.97505pt too wide) in paragraph at lines 1620--1621
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1312--1313
+
+ []
+
+[31]
+Overfull \hbox (14.97505pt too wide) in paragraph at lines 1342--1343
 \OT1/cmr/m/n/10 this case, the down-stream task is gen-er-at-ing the best logit in the pre-dic-tion head, $[](\OT1/cmr/bx/n/10 h[]\OML/cmm/m/it/10 ; \OT1/cmr/bx/n/10 h[]\OT1/cmr/m/n/10 )$.
  []
 
-[50] [51] [52]
-<imgs/acc2.png, id=1033, 1659.19875pt x 748.7975pt>
+[32] [33] [34]
+<imgs/acc2.png, id=772, 1659.19875pt x 748.7975pt>
 File: imgs/acc2.png Graphic file (type png)
 <use imgs/acc2.png>
-Package pdftex.def Info: imgs/acc2.png  used on input line 1662.
+Package pdftex.def Info: imgs/acc2.png  used on input line 1383.
 (pdftex.def)             Requested size: 498.72552pt x 285.03731pt.
 
-Overfull \hbox (45.32053pt too wide) in paragraph at lines 1662--1663
+Overfull \hbox (45.32053pt too wide) in paragraph at lines 1383--1384
  [][] 
  []
 
-<imgs/auc2.png, id=1034, 1659.19875pt x 759.83875pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<imgs/auc2.png, id=773, 1659.19875pt x 759.83875pt>
 File: imgs/auc2.png Graphic file (type png)
 <use imgs/auc2.png>
-Package pdftex.def Info: imgs/auc2.png  used on input line 1669.
+Package pdftex.def Info: imgs/auc2.png  used on input line 1390.
 (pdftex.def)             Requested size: 498.72552pt x 285.04317pt.
 
-Overfull \hbox (45.32053pt too wide) in paragraph at lines 1669--1670
+Overfull \hbox (45.32053pt too wide) in paragraph at lines 1390--1391
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[53 <./imgs/acc2.png>] [54 <./imgs/auc2.png>]
-<imgs/shapeee.png, id=1054, 1227.58624pt x 712.6625pt>
+[35]
+<imgs/shapeee.png, id=790, 1227.58624pt x 712.6625pt>
 File: imgs/shapeee.png Graphic file (type png)
 <use imgs/shapeee.png>
-Package pdftex.def Info: imgs/shapeee.png  used on input line 1688.
+Package pdftex.def Info: imgs/shapeee.png  used on input line 1408.
 (pdftex.def)             Requested size: 498.74315pt x 285.03821pt.
 
-Overfull \hbox (45.33815pt too wide) in paragraph at lines 1688--1689
+Overfull \hbox (45.33815pt too wide) in paragraph at lines 1408--1409
  [][] 
  []
 
-[55 <./imgs/shapeee.png>] [56]
-<imgs/gnnex-rw-amat.png, id=1072, 1379.1525pt x 834.11626pt>
+[36 <./imgs/acc2.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 1418.
+
+[37 <./imgs/auc2.png>] [38 <./imgs/shapeee.png>]
+<imgs/gnnex-rw-amat.png, id=816, 1379.1525pt x 834.11626pt>
 File: imgs/gnnex-rw-amat.png Graphic file (type png)
 <use imgs/gnnex-rw-amat.png>
-Package pdftex.def Info: imgs/gnnex-rw-amat.png  used on input line 1733.
+Package pdftex.def Info: imgs/gnnex-rw-amat.png  used on input line 1447.
 (pdftex.def)             Requested size: 498.74625pt x 285.034pt.
 
-Overfull \hbox (45.34125pt too wide) in paragraph at lines 1733--1734
- [][] 
- []
-
-[57 <./imgs/gnnex-rw-amat.png>]
-<imgs/gnnex-rob-pat.png, id=1081, 1398.22375pt x 848.16875pt>
-File: imgs/gnnex-rob-pat.png Graphic file (type png)
-<use imgs/gnnex-rob-pat.png>
-Package pdftex.def Info: imgs/gnnex-rob-pat.png  used on input line 1751.
-(pdftex.def)             Requested size: 498.73044pt x 285.03452pt.
-
-Overfull \hbox (45.32544pt too wide) in paragraph at lines 1751--1752
+Overfull \hbox (45.34125pt too wide) in paragraph at lines 1447--1448
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[58] [59 <./imgs/gnnex-rob-pat.png>] [60] [61] (./main.bbl [62] [63] [64] [65] [66] [67] [68] [69]) [70] [71] [72] [73] [74] [75] [76]
-Overfull \hbox (73.14046pt too wide) in paragraph at lines 1887--1887
+[39] [40 <./imgs/gnnex-rw-amat.png>]
+<imgs/gnnex-rob-pat.png, id=829, 1398.22375pt x 848.16875pt>
+File: imgs/gnnex-rob-pat.png Graphic file (type png)
+<use imgs/gnnex-rob-pat.png>
+Package pdftex.def Info: imgs/gnnex-rob-pat.png  used on input line 1465.
+(pdftex.def)             Requested size: 498.73044pt x 285.03452pt.
+
+Overfull \hbox (45.32544pt too wide) in paragraph at lines 1465--1466
+ [][] 
+ []
+
+[41 <./imgs/gnnex-rob-pat.png>]
+Overfull \hbox (14.03949pt too wide) in paragraph at lines 1485--1485
+|[]\OT1/cmr/bx/n/14.4 Identifying In-for-ma-tive Pre-dic-tors in Con-gres-sional Stock Trad-
+ []
+
+[42] [43] [44] [45] [46] [47] [48] [49]
+Overfull \hbox (77.19434pt too wide) in paragraph at lines 1653--1680
+ [][] 
+ []
+
+[50]
+Overfull \hbox (24.98096pt too wide) in paragraph at lines 1724--1725
+\OT1/cmtt/m/n/10 (b)-[:ASSIGNED[]TO]->(c:Committee) WHERE c.id = `<committee[]id>' RETURN b.official[]title,
+ []
+
+[51]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1789.
+ [52] [53] [54] [55] [56] (./main.bbl [57] [58] [59] [60] [61] [62] [63]) [64] [65] [66] [67] [68] [69] [70]
+Overfull \hbox (73.14046pt too wide) in paragraph at lines 1974--1974
 \OT1/cmtt/m/n/10 Wyden^^M})-[:COMMITTEE_ASSIGNMENT]->(c:Committee)<-[:ASSIGNED_TO]-(b:Bill)<-[:LOBBY_ON]-(t:Ticker 
  []
 
-[77] [78] [79] [80] [81] [82]
-Overfull \hbox (9.51332pt too wide) in paragraph at lines 1981--1981
+[71] [72] [73] [74] [75] [76]
+Overfull \hbox (9.51332pt too wide) in paragraph at lines 2068--2068
 |\OT1/cmr/bx/n/12 Detailed Log of the Agent's `Gen-er-ate[]Reflection' Pro-cess: Ron Wyden-Applied
  []
 
-[83] [84]
-Overfull \hbox (25.89087pt too wide) in paragraph at lines 1999--1999
+[77] [78]
+Overfull \hbox (25.89087pt too wide) in paragraph at lines 2086--2086
 \OT1/cmtt/m/n/10 (l:Legislator)-[:COMMITTEE_ASSIGNMENT]->(c:Committee)<-[:ASSIGNED_TO]-(b:Bill)|  
  []
 
-[85] (./main.aux)
+[79] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0FB81648BED5B943EE23EC3033575D92;10808.
+(rerunfilecheck)             Checksum: 1D1DD79A530722F128809F0A546768A7;10611.
  ) 
 Here is how much of TeX's memory you used:
- 56295 strings out of 478268
- 1380260 string characters out of 5846347
- 1872118 words of memory out of 5000000
- 73405 multiletter control sequences out of 15000+600000
- 485941 words of font info for 95 fonts, out of 8000000 for 9000
+ 56234 strings out of 478268
+ 1379297 string characters out of 5846347
+ 1873380 words of memory out of 5000000
+ 73366 multiletter control sequences out of 15000+600000
+ 487513 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,13n,104p,1626b,1140s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,13n,104p,1626b,1109s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (86 pages, 4537109 bytes).
+Output written on main.pdf (80 pages, 4087678 bytes).
 PDF statistics:
- 1400 PDF objects out of 1440 (max. 8388607)
- 1198 compressed objects within 12 object streams
- 269 named destinations out of 1000 (max. 500000)
- 447 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1299 PDF objects out of 1440 (max. 8388607)
+ 1105 compressed objects within 12 object streams
+ 248 named destinations out of 1000 (max. 500000)
+ 442 words of extra memory for PDF output out of 10000 (max. 10000000)
 

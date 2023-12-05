@@ -16,8 +16,14 @@ Annaert, J., Van~Osselaer, S., and Verstraete, B. (2009).
   stochastic dominance criteria.
 \newblock {\em Journal of Banking \& Finance}, 33(2):272--280.
 
-\bibitem[Asher, 1974]{asher1974}
-Asher, H.~B. (1974).
+\bibitem[Asher, 1974a]{Asher1974CommitteesAT}
+Asher, H.~B. (1974a).
+\newblock Committees and the norm of specialization.
+\newblock {\em The Annals of the American Academy of Political and Social
+  Science}, 411:63 -- 74.
+
+\bibitem[Asher, 1974b]{asher1974}
+Asher, H.~B. (1974b).
 \newblock Committees and the norm of specialization.
 \newblock {\em The Annals of the American Academy of Political and Social
   Science}, 411:63--74.
@@ -44,20 +50,10 @@ Bauer, M. and Rudebusch, G.~D. (2014).
 \newblock The signaling channel for federal reserve bond purchases.
 \newblock {\em International Journal of Central Banking}.
 
-\bibitem[Besley, 2006]{besley2006}
-Besley, T. (2006).
-\newblock {\em Principled Agents?: The Political Economy of Good Government}.
-\newblock Oxford University Press, Oxford, UK.
-
 \bibitem[Bia{\l}kowski et~al., 2008]{vwap2}
 Bia{\l}kowski, J., Darolles, S., and Le~Fol, G. (2008).
 \newblock Improving vwap strategies: A dynamic volume approach.
 \newblock {\em Journal of Banking \& Finance}, 32(9):1709--1722.
-
-\bibitem[Boller, 1995]{boller1995}
-Boller, G. (1995).
-\newblock Taking stock in congress.
-\newblock {\em Mother Jones}.
 
 \bibitem[Boros and Fenno, 1968]{10.2307/40709444}
 Boros, H.~S. and Fenno, R.~F. (1968).
@@ -110,11 +106,6 @@ Dayhoff, J.~E. and DeLeo, J.~M. (2001).
 \newblock {\em Cancer: Interdisciplinary International Journal of the American
   Cancer Society}, 91(S8):1615--1635.
 
-\bibitem[Diermeier et~al., 2005]{diermeier2005}
-Diermeier, D., Keane, M., and Merlo, A. (2005).
-\newblock A political economy model of congressional careers.
-\newblock {\em The American Economic Review}, 95(1):347--373.
-
 \bibitem[Duffie and Dworczak, 2021]{vwap3}
 Duffie, D. and Dworczak, P. (2021).
 \newblock Robust benchmark design.
@@ -132,14 +123,6 @@ Eggers, A.~C. and Hainmueller, J. (2014).
   u.s. congress, 2004-2008.
 \newblock {\em ERN: Models of Political Processes: Rent-Seeking}.
 
-\bibitem[Fearon, 1999]{fearon1999}
-Fearon, J.~D. (1999).
-\newblock Electoral accountability and the control of politicians: Selecting
-  good types versus sanctioning poor performance.
-\newblock In Przeworski, A., Stokes, S.~C., and Manin, B., editors, {\em
-  Democracy, Accountability, and Representation}, pages 55--97. Cambridge
-  University Press, Cambridge.
-
 \bibitem[Fenno, 1977]{fenno1977}
 Fenno, Richard~F., J. (1977).
 \newblock U.s. house members in their constituencies: An exploration.
@@ -149,11 +132,6 @@ Fenno, Richard~F., J. (1977).
 F{\'e}raud, R. and Cl{\'e}rot, F. (2002).
 \newblock A methodology to explain neural network classification.
 \newblock {\em Neural networks}, 15(2):237--246.
-
-\bibitem[Ferejohn, 1986]{ferejohn1986}
-Ferejohn, J. (1986).
-\newblock Incumbent performance and electoral control.
-\newblock {\em Public Choice}, 50(1/3):5--25.
 
 \bibitem[Gardner and Dorling, 1998]{Gardner1998ArtificialNN}
 Gardner, M.~W. and Dorling, S.~R. (1998).
@@ -172,11 +150,6 @@ Gilmer, J., Schoenholz, S.~S., Riley, P.~F., Vinyals, O., and Dahl, G.~E.
   (2017).
 \newblock Neural message passing for quantum chemistry.
 \newblock {\em CoRR}, abs/1704.01212.
-
-\bibitem[Goldman et~al., 2009]{goldman2009}
-Goldman, E., Rocholl, J., and So, J. (2009).
-\newblock Do politically connected boards affect firm value?
-\newblock {\em Review of Financial Studies}, 22(6):2331--2360.
 
 \bibitem[Hart, 1989]{shapley2}
 Hart, S. (1989).
@@ -205,11 +178,6 @@ Hoechle, D. and Zimmermann, H. (2007).
   performance of private investors.
 \newblock {\em Faculty of Business and Economics - University of Basel, Working
   papers}.
-
-\bibitem[Hsu and Lachenbruch, 2014]{hsu2014paired}
-Hsu, H. and Lachenbruch, P.~A. (2014).
-\newblock Paired t test.
-\newblock {\em Wiley StatsRef: statistics reference online}.
 
 \bibitem[Ivković and Weisbenner, 2005]{ivkovic2005}
 Ivković, Z. and Weisbenner, S. (2005).
@@ -241,22 +209,11 @@ Kaushik, R., Shenoy, P., Bohannon, P., and Gudes, E. (2002).
 \newblock In {\em Proceedings 18th International Conference on Data
   Engineering}, pages 129--140. IEEE.
 
-\bibitem[Khwaja and Mian, 2005]{khwaja2005}
-Khwaja, A.~I. and Mian, A. (2005).
-\newblock Do lenders favor politically connected firms? rent provision in an
-  emerging financial market.
-\newblock {\em The Quarterly Journal of Economics}, 120(4):1371--1411.
-
 \bibitem[Kiewiet and McCubbins, 1991]{kiewiet1991logic}
 Kiewiet, D.~R. and McCubbins, M.~D. (1991).
 \newblock {\em The Logic of Delegation}.
 \newblock American Politics and Political Economy Series. University of Chicago
   Press, Chicago.
-
-\bibitem[Kim, 2018]{kim2018}
-Kim, I.~S. (2018).
-\newblock Lobbyview: Firm-level lobbying and congressional bills database.
-\newblock Working Paper.
 
 \bibitem[King, 1994]{king1994}
 King, D.~C. (1994).
@@ -324,26 +281,9 @@ Mao, J., Yao, D., and Wang, C. (2013).
   applications.
 \newblock {\em Knowledge-Based Systems}, 48:37--45.
 
-\bibitem[Mauerer et~al., 2015]{lasso2}
-Mauerer, I., Pößnecker, W., Thurner, P., and Tutz, G. (2015).
-\newblock Modeling electoral choices in multiparty systems with
-  high-dimensional data: A regularized selection of parameters using the lasso
-  approach.
-\newblock {\em Journal of Choice Modelling}, 16:23--42.
-
-\bibitem[Mayhew, 1974]{mayhew1974congress}
-Mayhew, D.~R. (1974).
-\newblock {\em Congress: The Electoral Connection}.
-\newblock Yale University Press, illustrated paperback edition.
-
 \bibitem[Mayhew, 1975]{Mayhew1975CongressTE}
 Mayhew, D.~R. (1975).
 \newblock Congress: The electoral connection.
-
-\bibitem[Montgomery and Olivella, 2018]{Montgomery}
-Montgomery, J.~M. and Olivella, S. (2018).
-\newblock Tree-based models for political science data.
-\newblock {\em American Journal of Political Science}, 62(3):729--744.
 
 \bibitem[Myers, 2009]{myers2009}
 Myers, B.~W. (2009).
@@ -355,6 +295,12 @@ Olden, J.~D. and Jackson, D.~A. (2002).
 \newblock Illuminating the “black box”: a randomization approach for
   understanding variable contributions in artificial neural networks.
 \newblock {\em Ecological modelling}, 154(1-2):135--150.
+
+\bibitem[Park et~al., 2022]{park2022social}
+Park, J.~S., Popowski, L., Cai, C.~J., Morris, M.~R., Liang, P., and Bernstein,
+  M.~S. (2022).
+\newblock Social simulacra: Creating populated prototypes for social computing
+  systems.
 
 \bibitem[Patil et~al., 2023]{patil2023gorilla}
 Patil, S.~G., Zhang, T., Wang, X., and Gonzalez, J.~E. (2023).
@@ -380,12 +326,6 @@ Qin, Y., Liang, S., Ye, Y., Zhu, K., Yan, L., Lu, Y.-T., Lin, Y., Cong, X.,
   real-world apis.
 \newblock {\em ArXiv}, abs/2307.16789.
 
-\bibitem[Querubin and Snyder, 2013]{querubin2013}
-Querubin, P. and Snyder, James~M., J. (2013).
-\newblock The control of politicians in normal times and times of crisis:
-  Wealth accumulation by u.s. congressmen, 1850–1880.
-\newblock {\em Quarterly Journal of Political Science}, 8(4):409--450.
-
 \bibitem[Radford and Narasimhan, 2018]{Radford2018ImprovingLU}
 Radford, A. and Narasimhan, K. (2018).
 \newblock Improving language understanding by generative pre-training.
@@ -395,12 +335,6 @@ Rauber, P.~E., Fadel, S.~G., Falcao, A.~X., and Telea, A.~C. (2016).
 \newblock Visualizing the hidden activity of artificial neural networks.
 \newblock {\em IEEE transactions on visualization and computer graphics},
   23(1):101--110.
-
-\bibitem[Roberts, 1990]{roberts1990}
-Roberts, B.~E. (1990).
-\newblock A dead senator tells no lies: Seniority and the distribution of
-  federal benefits.
-\newblock {\em American Journal of Political Science}, 34(1):31--58.
 
 \bibitem[Rom{\'a}n et~al., 2012]{onm}
 Rom{\'a}n, J.~H., Hulin, K.~J., Collins, L.~M., and Powell, J.~E. (2012).
@@ -433,12 +367,6 @@ Schweizer, P. (2011).
   Off Insider Stock Tips, Land Deals, and Cronyism That Would Send the Rest of
   Us to Prison}.
 \newblock Houghton Mifflin Harcourt (HMH).
-
-\bibitem[Seasholes and Zhu, 2009]{seasholes2009}
-Seasholes, M.~S. and Zhu, N. (2009).
-\newblock Individual investors and local bias.
-\newblock {\em Journal of Finance}.
-\newblock Forthcoming.
 
 \bibitem[Shanken, 1996]{syn1}
 Shanken, J. (1996).
