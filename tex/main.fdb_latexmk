@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main"] 1701788969 "main.aux" "main.bbl" "main" 1701789082
+["bibtex main"] 1701789873 "main.aux" "main.bbl" "main" 1701789881
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   "biblo.bib" 1701742633 57625 ee1cd46cafeabe91591fd6fc2a4880f2 ""
-  "main.aux" 1701789082 32806 1f3eba733e540d11f39cf1982e10bcd4 "pdflatex"
+  "main.aux" 1701789881 32806 1f3eba733e540d11f39cf1982e10bcd4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1701789075 "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" "main.pdf" "main" 1701789082
-  "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" 1701789075 300593 ea4108aaa5fb7cca3b7574faabb3dec5 ""
+["pdflatex"] 1701789873 "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" "main.pdf" "main" 1701789881
+  "/Users/syyun/Dropbox (MIT)/syp/tex/main.tex" 1701789864 300592 a71a4db4e87483fa67f0e850fd0cedde ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -363,10 +363,10 @@
   "imgs/tb-trans.png" 1683307499 1089056 ed1d6715e59bfeedeaced89d4fa7fdae ""
   "imgs/trans.png" 1678821609 1409648 ec5cecead992f92172e2bc727d2464d2 ""
   "imgs/trip.png" 1678814286 138618 4c99436a0526afb1cd54133d47bfea18 ""
-  "main.aux" 1701789082 32806 1f3eba733e540d11f39cf1982e10bcd4 "pdflatex"
-  "main.bbl" 1701788969 21127 2298dab31efb3eef0c6ca96b07995f4a "bibtex main"
-  "main.out" 1701789082 10611 1d1dd79a530722f128809f0a546768a7 "pdflatex"
-  "main.tex" 1701789075 300593 ea4108aaa5fb7cca3b7574faabb3dec5 ""
+  "main.aux" 1701789881 32806 1f3eba733e540d11f39cf1982e10bcd4 "pdflatex"
+  "main.bbl" 1701789873 21127 2298dab31efb3eef0c6ca96b07995f4a "bibtex main"
+  "main.out" 1701789881 10611 1d1dd79a530722f128809f0a546768a7 "pdflatex"
+  "main.tex" 1701789864 300592 a71a4db4e87483fa67f0e850fd0cedde ""
   (generated)
   "main.aux"
   "main.log"

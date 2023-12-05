@@ -1289,7 +1289,7 @@ Formally, the logit of the classifier is defined as:
 % \end{align*}
 
 \begin{align*}
-  \operatorname{logit} &= \operatorname{MLP}\left(x\right) \operatorname{ where } \operatorname{MLP}(x) &= \operatorname{ReLU}(Ax + b) \\
+  \operatorname{logit} &= \operatorname{MLP}\left(x\right) \operatorname{ where } \operatorname{MLP}(x) = \operatorname{ReLU}(Ax + b) \\
   x &= \operatorname{concat}\left(h_{\text{congressperson}}, h_{\text{ticker}}\right) \\
   A &\in \mathbb{R}^{(d+d) \times 1} \\
   b &\in \mathbb{R}^{1}
