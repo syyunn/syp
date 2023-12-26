@@ -283,53 +283,80 @@ Decoding Congressional Stock Trades: An Industry and Committee-Focused Analysis 
 
 \end{titlepage}
 
-% == TITLE (includes DraftDate)
-{\title{
-    \tit
-  }
-  \author{
-    Suyeol Yun
-  \thanks{Master Student, Department of Political Science, MIT. Email: \href{mailto:syyun@mit.edu}{syyun@mit.edu}\\
-  % **The reproducible code and data can be found at the following link: \href{https://github.com/syyunn/efd}{https://github.com/syyunn/efd}.
-  }
-  }
-  \maketitle
-}
-
-\thispagestyle{empty}
-\vspace{-.1in}
 
 \begin{abstract}
+  \singlespacing % Ensures single-spacing
+
   \thispagestyle{plain}
   \setcounter{page}{2}
+  \centering
+  \Large{Decoding Congressional Stock Trades: An Industry and Committee-Focused Analysis with Graph Neural Network and Large Language Model}
+  \vspace{0.5cm}
+  
+  by
+  
+  \vspace{0.5cm}
+  Suyeol Yun
 
-  % In this paper, I reassess a specific claim made in a previous study that a U.S. Congressperson’s stock trading behavior is not significantly associated with their committee assignments. Instead, I present evidence to support the notion that Congresspersons demonstrate an industry specialization in their stock trading, which tends to align with the industries relevant to their committee assignments. This alignment suggests that, whether intentional or unconscious, a Congressperson's legislative specialization can influence their personal financial decisions.
-  % My analysis, conducted using graph neural networks on a graph-structured dataset that captures a range of legislative activities, confirms that the excess return of Congresspersons is not widespread, but rather confined to a select few. This finding provides compelling evidence that Congresspersons' stock trading is primarily based on an industry-level understanding, rather than specific firm-level information.  
-  % To unravel this complex relationship, I apply the Graph Neural Network Explainer, an algorithm designed to demystify the inner workings of neural networks. By performing an ablation study on the predictions made by the Graph Neural Network, I identify which types of congressional activities are most influential in predicting stock trading behavior.  
-  % My findings challenge the assumptions of the specific prior study and present a more nuanced understanding of Congressional stock trading behavior. This study adds depth to our understanding of the intersection between financial interests and legislative roles, suggesting the need for more comprehensive research and policy considerations regarding financial ethics in public service.
+  \vspace{0.5cm}
+  Submitted to the Department of Political Science on December 11, 2023, in Partial Fulfillment of the Requirements for the Degree of Master of Sciences in Political Science.
 
-% In this paper, I revisit a claim from a previous study asserting that a U.S. Congressperson's stock trading behavior lacks significant associations with their committee assignments and firm-level lobbying on bills. I challenge this view by presenting evidence suggesting that Congresspersons tend to exhibit industry specialization in their stock trading, aligning with the industries pertinent to their committee assignments.
-% To explore this relationship, I employ a graph-structured dataset that comprehensively encapsulates a variety of legislative activities. Leveraging the Graph Neural Network (GNN), I elucidate the complex interplay between congressional activities and stock trading behavior.
-% Through an ablation study on the GNN's predictions, I identify the committee assignment of a congressperson and firm-level lobbying on specific bills as crucial factors in predicting a congressperson's specific stock choices.
-% This research thus offers a fresh perspective that aligns more closely with traditional literature on committee specialization, demonstrating that such legislative roles also significantly influence a congressperson's stock trading behavior. This finding underscores the relevance of committee-level specialization in understanding the financial decisions of Congresspersons.
+  \vspace{1cm} % Adjust spacing as necessary
 
-% In this study, I delve into the dynamics of congressional stock investments, revealing abnormal and asymmetrical excess returns. This suggests the potential influence of privileged information. Contrary to prior studies, I found that a congressperson's stock portfolio significantly mirrors stocks tied to their committee assignments, leveraging a novel graph-structured dataset. By employing a graph neural network, I discovered that committee assignments and firms' lobbying activities are predictive of congresspersons' stock choices. Furthermore, the use of GNNExplainer provided interpretative insights into these predictions. This research prompts a reevaluation of the motivations underpinning congressional service, indicating that personal financial gains could significantly influence decision-making. Additionally, it uncovers intriguing behavioral variations in stock trading among congresspersons. These variations could reflect individual characteristics or systemic factors within our political and financial systems, offering an intriguing avenue for further research.
+  \raggedright % Align the text to the left
+  \textbf{ABSTRACT}  
+  % Your abstract text goes here
+  In this study on congressional stock trading, I refine the estimation of excess returns by focusing on the congressperson-ticker-timing level, departing from the traditional congress-aggregate level, calendar-based yearly approach methods which are less specific. This enhanced estimation provides a more detailed and relevant analysis for individual trades. Additionally, I advance the understanding of influential factors beyond traditional methods that relied on manual feature design and regression on tabular data. By employing a Graph Neural Network (GNN), adept at machine learning in graph-structured data, I effectively train the model to learn how to aggregate information channeled through the network, identifying industry sectors and committee assignments as pivotal factors in congressional stock trading. To address the interpretability challenges of the GNN, I initially use GNNExplainer, and subsequently introduce a Large Language Model (LLM) for predictive analysis and theorizing. Although the LLM does not yet equal the GNN in predictive power, it provides crucial interpretability, enabling deeper insights into the motivations and behaviors in congressional stock trading. This comprehensive approach emphasizes the importance of specific industry and committee assignments in these transactions and underscores the necessity for more stringent scrutiny and regulatory frameworks to ensure ethical financial practices.
 
-% In this study, I delve into the dynamics of congressional stock investments,
-%  uncovering abnormal excess returns. These findings suggest the potential influence of privileged information, 
-%  indicating that certain insights not available to the general public might be impacting these investment decisions. 
-%  Contrary to prior studies, I found that a congressperson’s stock portfolio significantly mirrors stocks tied to their committee assignments, 
-%  leveraging a novel graph-structured dataset. By employing a graph neural network, I discovered that committee assignments and firms’ lobbying activities are predictive of congresspersons’ stock choices. 
-%  Furthermore, the integration of a Large Language Model (LLM) Agent for link prediction tasks provided additional evidence, indicating that committee-level information, when combined with firms' lobbying efforts towards bills assigned to such committees, serves as an informative predictor.
-%  This underscores the imperative for ongoing investigations into electoral accountability and the necessity to ensure that personal gains do not overshadow the pursuit of public welfare.
+  \vspace{1cm} % Adjust spacing as necessary
 
-% In this study, I delve into the dynamics of congressional stock investments, uncovering notable instances of abnormal excess returns. These instances are particularly pronounced with some legislators and specific stock transactions, emphasizing the timing of such activities. The findings suggest that information related to congressional activities, particularly industry-level information gathered through committee assignments, might be influencing these investment decisions. This observation deviates from previous research, as a significant correlation was identified between congresspersons' stock portfolios and stocks linked to their committee assignments, analyzed using a novel graph-structured dataset. The study involved the use of a Large Language Model (LLM) Agent for link prediction tasks to theorize about potential informative connections within this data. A subsequent deployment of a graph neural network (GNN) further corroborated the predictive value of committee assignments and firms' lobbying activities for congresspersons' stock choices. These results highlight the necessity of a deeper investigation into the motivations behind congressional service, pointing to a potential interplay between legislative activities and personal financial decision-making. This research underscores the importance of scrutinizing electoral accountability and ensuring that personal motivations do not overshadow the pursuit of the public good.
+  Thesis Supervisor: In Song Kim % Supervisor's name
 
-In this study on congressional stock trading, I refine the estimation of excess returns by focusing on the congressperson-ticker-timing level, departing from the traditional congress-aggregate level, calendar-based yearly approach methods which are less specific. This enhanced estimation provides a more detailed and relevant analysis for individual trades. Additionally, I advance the understanding of influential factors beyond traditional methods that relied on manual feature design and regression on tabular data. By employing a Graph Neural Network (GNN), adept at machine learning in graph-structured data, I effectively train the model to learn how to aggregate information channeled through the network, identifying industry sectors and committee assignments as pivotal factors in congressional stock trading. To address the interpretability challenges of the GNN, I initially use GNNExplainer, and subsequently introduce a Large Language Model (LLM) for predictive analysis and theorizing. Although the LLM does not yet equal the GNN in predictive power, it provides crucial interpretability, enabling deeper insights into the motivations and behaviors in congressional stock trading. This comprehensive approach emphasizes the importance of specific industry and committee assignments in these transactions and underscores the necessity for more stringent scrutiny and regulatory frameworks to ensure ethical financial practices.
+  \vspace{0.3cm} % Adjust vertical spacing as needed
+
+  Title: Associate Professor of Political Science
+
+  \vspace{0.6cm}  % Adjust vertical spacing as needed 
+
+  Thesis Supervisor: Teppei Yamamoto % Supervisor's name
+
+  \vspace{0.3cm} % Adjust vertical spacing as needed
+
+  Title: Professor of Political Science \\
+
+  \end{abstract}
+
+  \clearpage
+  \tableofcontents
+
+  % Adding the List of Figures
+  \clearpage
+  \listoffigures
 
 
-\singlespacing % make sure
-\end{abstract}
+% % == TITLE (includes DraftDate)
+% {\title{
+%     \tit
+%   }
+%   \author{
+%     Suyeol Yun
+%   \thanks{Master Student, Department of Political Science, MIT. Email: \href{mailto:syyun@mit.edu}{syyun@mit.edu}\\
+%   % **The reproducible code and data can be found at the following link: \href{https://github.com/syyunn/efd}{https://github.com/syyunn/efd}.
+%   }
+%   }
+%   \maketitle
+% }
+
+% \thispagestyle{empty}
+% \vspace{-.1in}
+
+% \begin{abstract}
+%   \thispagestyle{plain}
+%   \setcounter{page}{2}
+% In this study on congressional stock trading, I refine the estimation of excess returns by focusing on the congressperson-ticker-timing level, departing from the traditional congress-aggregate level, calendar-based yearly approach methods which are less specific. This enhanced estimation provides a more detailed and relevant analysis for individual trades. Additionally, I advance the understanding of influential factors beyond traditional methods that relied on manual feature design and regression on tabular data. By employing a Graph Neural Network (GNN), adept at machine learning in graph-structured data, I effectively train the model to learn how to aggregate information channeled through the network, identifying industry sectors and committee assignments as pivotal factors in congressional stock trading. To address the interpretability challenges of the GNN, I initially use GNNExplainer, and subsequently introduce a Large Language Model (LLM) for predictive analysis and theorizing. Although the LLM does not yet equal the GNN in predictive power, it provides crucial interpretability, enabling deeper insights into the motivations and behaviors in congressional stock trading. This comprehensive approach emphasizes the importance of specific industry and committee assignments in these transactions and underscores the necessity for more stringent scrutiny and regulatory frameworks to ensure ethical financial practices.
+% \singlespacing % make sure the abstract is single-spaced
+% \end{abstract}
+
 \clearpage
 
 % == INTRO ==
