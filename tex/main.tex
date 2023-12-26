@@ -1,4 +1,6 @@
 \documentclass[15pt,letterpaper]{article}
+\renewcommand{\familydefault}{\sfdefault} % Sans Serif Font
+
 \PassOptionsToPackage{hyphens}{url}
 
 \usepackage{booktabs}
@@ -137,7 +139,7 @@ colormap/viridis
 
 \usepackage{titlesec}
 
-\setcounter{secnumdepth}{4}
+% \setcounter{secnumdepth}{4}
 
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -155,7 +157,7 @@ colormap/viridis
 \Large \bf
 % Industry, Committee, and Lobbying - Uncovering
 % Congressional Stock Trading using Graph Data
-Decoding Congressional Stock Trades: An Industry and Committee-Focused Analysis with Graph Neural Networks and Large Language Models
+Decoding Congressional Stock Trades: An Industry and Committee-Focused Analysis with Graph Neural Network and Large Language Model
 }
 \newcommand\spacingset[1]{\renewcommand{\baselinestretch}
 {#1}\small\normalsize}
@@ -184,8 +186,102 @@ Decoding Congressional Stock Trades: An Industry and Committee-Focused Analysis 
 
 \spacingset{1.25}
 
-\setcounter{page}{0}
+\setcounter{page}{1}
 \vspace{-.1in}
+
+
+% Title page starts here
+\begin{titlepage}
+  \thispagestyle{plain}
+  \begin{center}
+      % Title of the Thesis
+      \Large{Decoding Congressional Stock Trades: An Industry and Committee-Focused Analysis with Graph Neural Network and Large Language Model}
+
+      \vspace{0.5cm}
+      \large{By}
+
+      \vspace{0.5cm}
+      % Author's preferred name
+      \large{Suyeol Yun}
+
+      \vspace{0.5cm}
+      % Previous degree information
+      B.A. International Political Economy\\
+      B.S. Mathematical Science\\
+      \vspace{0.5cm}
+      % Department name
+      Submitted to the Department of Political Science in partial fulfillment of the requirements for the degree of
+
+      \vspace{0.5cm}
+      % Degree name
+      MASTER OF SCIENCES IN POLITICAL SCIENCE
+
+      \vspace{0.5cm}
+      at the
+
+      \vspace{0.5cm}
+      % University name
+      MASSACHUSETTS INSTITUTE OF TECHNOLOGY 
+
+      \vspace{0.5cm}
+      % Month and year
+      Feburary 2024
+
+      \vspace{0.5cm}
+      % Copyright statement
+      Copyright statement
+
+      \vspace{0.5cm}
+      % Permission legend
+      The author hereby grants to MIT a nonexclusive, worldwide, irrevocable, royalty-free license to exercise any and all rights under copyright, including to reproduce, preserve, distribute and publicly display copies of the thesis, or release the thesis under an open-access license.
+
+      \vspace{1cm}
+  \end{center}
+
+  % Left aligned section starts here
+  % Authored by: Suyeol Yun
+
+  % \hspace{1.9cm} Department of Political Science
+  
+  % \hspace{1.9cm} December 11th, 2023
+
+  % \vspace{0.5cm}
+ 
+% Left aligned section starts here
+\begin{tabular}{@{}ll@{}}
+  Authored by: & Suyeol Yun \\
+               & Department of Political Science \\
+               & December 11th, 2023 \\
+\end{tabular}
+
+\vspace{0.5cm} % Space between the two sections
+
+
+% First "Certified by" section
+\begin{tabular}{@{}ll@{}}
+  Certified by: & In Song Kim \\
+                & Associate Professor of Political Science, Thesis Supervisor \\
+\end{tabular}
+
+\vspace{0.5cm} % Space between the two sections
+
+% Second "Certified by" section
+\begin{tabular}{@{}ll@{}}
+  Certified by: & Teppei Yamamoto \\
+                & Professor of Political Science, Thesis Supervisor \\
+\end{tabular}
+
+\vspace{0.5cm} % Additional space if needed
+
+  
+% "Accepted by" section
+\begin{tabular}{@{}ll@{}}
+  Accepted by: & Fotini Christia \\
+               & Ford International Professor of the Social Sciences \\
+               & Director, MIT Sociotechnical Systems Research Center \\
+\end{tabular}
+
+\end{titlepage}
 
 % == TITLE (includes DraftDate)
 {\title{
@@ -204,6 +300,8 @@ Decoding Congressional Stock Trades: An Industry and Committee-Focused Analysis 
 \vspace{-.1in}
 
 \begin{abstract}
+  \thispagestyle{plain}
+  \setcounter{page}{2}
 
   % In this paper, I reassess a specific claim made in a previous study that a U.S. Congressperson’s stock trading behavior is not significantly associated with their committee assignments. Instead, I present evidence to support the notion that Congresspersons demonstrate an industry specialization in their stock trading, which tends to align with the industries relevant to their committee assignments. This alignment suggests that, whether intentional or unconscious, a Congressperson's legislative specialization can influence their personal financial decisions.
   % My analysis, conducted using graph neural networks on a graph-structured dataset that captures a range of legislative activities, confirms that the excess return of Congresspersons is not widespread, but rather confined to a select few. This finding provides compelling evidence that Congresspersons' stock trading is primarily based on an industry-level understanding, rather than specific firm-level information.  
@@ -227,10 +325,10 @@ Decoding Congressional Stock Trades: An Industry and Committee-Focused Analysis 
 
 % In this study, I delve into the dynamics of congressional stock investments, uncovering notable instances of abnormal excess returns. These instances are particularly pronounced with some legislators and specific stock transactions, emphasizing the timing of such activities. The findings suggest that information related to congressional activities, particularly industry-level information gathered through committee assignments, might be influencing these investment decisions. This observation deviates from previous research, as a significant correlation was identified between congresspersons' stock portfolios and stocks linked to their committee assignments, analyzed using a novel graph-structured dataset. The study involved the use of a Large Language Model (LLM) Agent for link prediction tasks to theorize about potential informative connections within this data. A subsequent deployment of a graph neural network (GNN) further corroborated the predictive value of committee assignments and firms' lobbying activities for congresspersons' stock choices. These results highlight the necessity of a deeper investigation into the motivations behind congressional service, pointing to a potential interplay between legislative activities and personal financial decision-making. This research underscores the importance of scrutinizing electoral accountability and ensuring that personal motivations do not overshadow the pursuit of the public good.
 
-In this study on congressional stock trading, I refine the estimation of excess returns by focusing on the congressperson-ticker-timing level, departing from the traditional congress-aggregate level, calendar-based yearly approach methods which are less specific. This enhanced estimation provides a more detailed and relevant analysis for individual trades. Additionally, I significantly advance the understanding of influential factors beyond traditional methods that relied on manual feature design and regression on tabular data. By employing a Graph Neural Network (GNN), adept at machine learning in graph-structured data, I effectively train the model to learn how to aggregate information channeled through the network, identifying industry sectors and committee assignments as pivotal factors in congressional stock trading. To address the interpretability challenges of the GNN, I initially use GNNExplainer, and subsequently introduce a Large Language Model (LLM) for predictive analysis and theorizing. Although the LLM does not yet equal the GNN in predictive power, it provides crucial interpretability, enabling deeper insights into the motivations and behaviors in congressional stock trading. This comprehensive approach emphasizes the importance of specific industry and committee assignments in these transactions and underscores the necessity for more stringent scrutiny and regulatory frameworks to ensure ethical financial practices.
+In this study on congressional stock trading, I refine the estimation of excess returns by focusing on the congressperson-ticker-timing level, departing from the traditional congress-aggregate level, calendar-based yearly approach methods which are less specific. This enhanced estimation provides a more detailed and relevant analysis for individual trades. Additionally, I advance the understanding of influential factors beyond traditional methods that relied on manual feature design and regression on tabular data. By employing a Graph Neural Network (GNN), adept at machine learning in graph-structured data, I effectively train the model to learn how to aggregate information channeled through the network, identifying industry sectors and committee assignments as pivotal factors in congressional stock trading. To address the interpretability challenges of the GNN, I initially use GNNExplainer, and subsequently introduce a Large Language Model (LLM) for predictive analysis and theorizing. Although the LLM does not yet equal the GNN in predictive power, it provides crucial interpretability, enabling deeper insights into the motivations and behaviors in congressional stock trading. This comprehensive approach emphasizes the importance of specific industry and committee assignments in these transactions and underscores the necessity for more stringent scrutiny and regulatory frameworks to ensure ethical financial practices.
 
 
-
+\singlespacing % make sure
 \end{abstract}
 \clearpage
 
@@ -242,7 +340,7 @@ In this study on congressional stock trading, I refine the estimation of excess 
 In April 2020, Senator Ron Wyden began buying stocks in semiconductor companies such as Broadcom, Applied Materials, and KLA Corporation, initiating these purchases on April 6th, 2020, and then selling them a year later on either April 6th or April 16th, 2021. This sequence of transactions demonstrates a deliberate pattern of multiple buys followed by sales, highlighting not only strategic decision-making but also the significance of precise timing. The critical nature of this timing is accentuated by a key legislative event: just days before Senator Wyden sold his semiconductor stocks, on April 1st, 2021, President Biden announced a substantial investment plan for the U.S. chip industry. The synchronization of Wyden's stock sales with this major legislative announcement suggests that members of Congress may have access to industry-level information that informs their trading decisions, enabling them to time their actions in alignment with events that could impact the market. This scenario emphasizes the vital role of timing in congressional stock trading, indicating that legislators might leverage sensitive, industry-specific information to coordinate their trading activities with legislative developments, thus raising important questions about the interplay of legislative insight, personal financial benefit, and the anticipation of market-moving events.
 
 % Two primary strands of research
-Following the examination of Senator Wyden's trading activities, it becomes evident that the academic exploration of congressional stock trading is divided into two primary strands with distinct objectives. The first strand, exemplified by the works of \cite{zi24, zi11} and \cite{eg13}, focuses on estimating excess returns, quantifying the financial gains that congress members might realize through their stock transactions. This research investigates whether members of Congress achieve returns exceeding standard market benchmarks, potentially indicating an informational advantage from access to non-public information. The second strand, as seen in the work of \cite{eg14}, delves into identifying the predictors or driving factors behind congressional stock trading, aiming to uncover the various influences on congress members’ stock trading decisions, including specific events, legislative activities, and personal connections. Together, these strands offer a multifaceted view of congressional stock trading, one quantifying financial outcomes and the other investigating the decision-making processes and influences behind these trades.
+Following the examination of Senator Wyden's trading activities, the academic exploration of congressional stock trading is divided into two primary strands with distinct objectives. The first strand, exemplified by the works of \cite{zi24, zi11} and \cite{eg13}, focuses on estimating excess returns, quantifying the financial gains that congress members might realize through their stock transactions. This research investigates whether members of Congress achieve returns exceeding standard market benchmarks, potentially indicating an informational advantage from access to non-public information. The second strand, as seen in the work of \cite{eg14}, delves into identifying the predictors or driving factors behind congressional stock trading, aiming to uncover the various influences on congress members’ stock trading decisions, including specific events, legislative activities, and personal connections. Together, these strands offer a multifaceted view of congressional stock trading, one quantifying financial outcomes and the other investigating the decision-making processes and influences behind these trades.
 
 % Limitations of the first strand
 The case of Senator Wyden's 2020 trading activities brings to light a critical shortcoming in the prevailing research on congressional stock trading, particularly in the context of excess return studies by authors like \cite{zi24,zi11} and \cite{eg13}. These studies predominantly focus on the collective trading performance of Congress as a whole, determining an average excess return for all members. However, such an approach may not reveal the full picture, especially regarding our primary goal of understanding whether individual Congress members can achieve excess returns from specific transactions involving certain firms or industries. The generalization inherent in these studies, which emphasize aggregate data, potentially obscures the instances where individual members might realize significant excess returns from trades in particular sectors or companies.
@@ -1780,10 +1878,8 @@ For a clearer understanding of the LLM Agent's decision-making, I used GPT-4 to 
   \end{itemize}
   \textbf{Cypher Query:} 
   \begin{verbatim}
-  MATCH (l:Legislator)-[:COMMITTEE_ASSIGNMENT]->(c:Committee), 
-        (t:Ticker)-[:LOBBY_ON]->(b:Bill)
-  WHERE l.bioguide = '<bioguide>' AND t.ticker = '<Ticker>' 
-  RETURN b.official_title, b.id
+  MATCH (l:Legislator)-[:BUY_SELL]->(t:Ticker)-[:BELONGS_TO]->(n:NAICS) WHERE
+  EXISTS((:Ticker)-[:BELONGS_TO]->(n)) RETURN DISTINCT t.ticker, n.desc
   \end{verbatim}
   
   \end{mdframed}
